@@ -21,12 +21,18 @@
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
         });
 
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
             });
         });
 
@@ -122,6 +128,41 @@
                 updateSlider(index);
             });
         });
+
+        /* Swipe gestures for testimonials carousel */
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const trackContainer = document.querySelector('.testimonials-track-container');
+
+        if (trackContainer) {
+            trackContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            trackContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+        }
+
+        const handleSwipe = () => {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swiped Left (finger moved right-to-left) -> Show next slide (visually to the left)
+                    let prevIndex = currentSlideIndex + 1;
+                    if (prevIndex >= slides.length) prevIndex = 0;
+                    updateSlider(prevIndex);
+                } else {
+                    // Swiped Right (finger moved left-to-right) -> Show previous slide (visually to the right)
+                    let nextIndex = currentSlideIndex - 1;
+                    if (nextIndex < 0) nextIndex = slides.length - 1;
+                    updateSlider(nextIndex);
+                }
+            }
+        };
 
         setInterval(() => {
             let nextIndex = currentSlideIndex + 1;
@@ -488,3 +529,43 @@
                 lucide.createIcons();
             });
         });
+
+        /* ==========================================================================
+           9. PREMIUM VISA LIGHTBOX MODAL LOGIC
+           ========================================================================== */
+        window.openVisaLightbox = function(imgSrc, captionText) {
+            const lightbox = document.getElementById('visa-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const mainHeader = document.getElementById('main-header');
+            
+            if (lightbox && lightboxImg && lightboxCaption) {
+                lightboxImg.src = imgSrc;
+                lightboxCaption.textContent = captionText || 'تأشيرة مقبولة لعملائنا';
+                lightbox.style.display = 'flex';
+                // Trigger reflow
+                lightbox.offsetHeight;
+                lightbox.classList.add('active');
+                document.body.classList.add('no-scroll');
+                
+                // Hide header standard glass navbar to avoid overlap issues
+                if (mainHeader) mainHeader.style.transform = 'translateY(-100%)';
+            }
+        };
+
+        window.closeVisaLightbox = function() {
+            const lightbox = document.getElementById('visa-lightbox');
+            const mainHeader = document.getElementById('main-header');
+            
+            if (lightbox) {
+                lightbox.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+                
+                // Show header navbar again
+                if (mainHeader) mainHeader.style.transform = 'translateY(0)';
+                
+                setTimeout(() => {
+                    lightbox.style.display = 'none';
+                }, 400);
+            }
+        };
