@@ -48,9 +48,8 @@
 
                 <ul class="nav-links" id="nav-menu">
                     <li><a href="#" class="nav-link active-link">الرئيسية</a></li>
-                    <li><a href="#services" class="nav-link">خدماتنا</a></li>
-                    <li><a href="#process" class="nav-link">خطواتنا</a></li>
                     <li><a href="#countries" class="nav-link">وجهاتنا</a></li>
+                    <li><a href="#process" class="nav-link">خطواتنا</a></li>
                     <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
                     <li><a href="#faq" class="nav-link">الأسئلة الشائعة</a></li>
                 </ul>
@@ -85,7 +84,7 @@
         <div class="hero-grid-overlay"></div>
 
         <div class="container">
-            <div class="grid-2">
+            <div class="hero-flex-container">
                 <div class="hero-content" data-reveal="blur">
                     <div class="hero-badge">
                         <i data-lucide="award"></i>
@@ -107,13 +106,6 @@
                                 class="lucide-message-square"></i> تواصل عبر الواتساب</a>
                     </div>
 
-                </div>
-
-                <div class="hero-graphic" data-reveal="blur">
-                    <div class="main-hero-frame">
-                        <img src="https://goforvisa.ma/wp-content/uploads/2026/05/Pro-LandingPage-23.jpg"
-                            alt="المسافرين السعداء">
-                    </div>
                 </div>
             </div>
         </div>
@@ -143,74 +135,133 @@
     </section>
 
     <!-- ==========================================================================
-       SERVICES SECTION
+       COUNTRY DESTINATIONS SHOWCASE
        ========================================================================== -->
-    <section class="services-section section-padding" id="services">
+    <section class="countries-section section-padding" id="countries">
         <div class="container">
             <div class="section-header">
-                <span class="tag">الخدمات الاحترافية</span>
-                <h2>تخصصنا تجهيز تأشيرتك السياحية لأبرز الوجهات</h2>
-                <p>نجهز ملفك باحترافية كاملة ودقة متناهية لرفع نسبة القبول لجميع الوجهات العالمية المتميزة.</p>
+                <span class="tag">وجهاتنا المتميزة</span>
+                <h2>تجهيز ملف التأشيرة السياحية وفق متطلبات كل وجهة</h2>
+                <p>نقدم لك خدمات متكاملة لتجهيز ملف تأشيرتك السياحية وفق المتطلبات الرسمية والتعليمات الدقيقة لكل دولة
+                    لرفع نسبة قبولك.</p>
             </div>
 
-            <div class="grid-4">
-                <div class="glass-card service-card" data-reveal="blur">
-                    <div class="service-border-glow"></div>
-                    <div class="service-icon-box">
-                        <i data-lucide="globe"></i>
+            <div class="country-tabs">
+                <button class="tab-btn active" data-filter="all">عرض الكل</button>
+                <button class="tab-btn" data-filter="schengen">دول شنغن والأوروبية</button>
+                <button class="tab-btn" data-filter="america">أمريكا الشمالية</button>
+                <button class="tab-btn" data-filter="commonwealth">دول الكومنولث</button>
+            </div>
+
+            <div class="grid-3" id="country-grid">
+                <div class="country-card" data-category="america" data-reveal="blur">
+                    <div class="country-img-wrapper">
+                        <img src="assets/usa.png" alt="الولايات المتحدة الأمريكية">
+                        <div class="country-img-overlay"></div>
+                        <div class="country-flag-badge">
+                            <img src="https://flagcdn.com/w160/us.png" alt="العلم الأمريكي">
+                        </div>
+                        <span class="country-name-badge">الولايات المتحدة</span>
                     </div>
-                    <div>
-                        <h3>تأشيرة شنغن الدينمارك السياحية</h3>
-                        <p>إعداد ملفات الفيزا السياحية لدولة الدينمارك (شنغن) بما يطابق معايير القنصلية تماماً.</p>
+                    <div class="country-body">
+                        <span class="country-tag">تأشيرة سياحة</span>
+                        <p>نقوم بترتيب مستنداتك وترجمة الوثائق للإنجليزية وتعبئة نموذج DS-160 الخاص بالتأشيرة السياحية
+                            بدقة، كما نحضر معك أسئلة المقابلة لرفع نسبة القبول أمام القنصل الأمريكي.</p>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
                     </div>
-                    <a href="javascript:void(0)"
-                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                        class="service-arrow">طلب الخدمة <i data-lucide="chevron-left"></i></a>
                 </div>
 
-                <div class="glass-card service-card stagger-delay-1" data-reveal="blur">
-                    <div class="service-border-glow"></div>
-                    <div class="service-icon-box">
-                        <i data-lucide="map"></i>
+                <div class="country-card stagger-delay-1" data-category="commonwealth" data-reveal="blur">
+                    <div class="country-img-wrapper">
+                        <img src="assets/uk.png" alt="المملكة المتحدة">
+                        <div class="country-img-overlay"></div>
+                        <div class="country-flag-badge">
+                            <img src="https://flagcdn.com/w160/gb.png" alt="العلم البريطاني">
+                        </div>
+                        <span class="country-name-badge">المملكة المتحدة</span>
                     </div>
-                    <div>
-                        <h3>تأشيرة كندا السياحية</h3>
-                        <p>تجهيز وتدقيق ملفات تأشيرة الزيارة والسياحة الكندية وتعبئة النماذج الرسمية وتوجيهك لأفضل
-                            الإثباتات لضمان القبول.</p>
+                    <div class="country-body">
+                        <span class="country-tag">تأشيرة سياحة</span>
+                        <p>ننسق ملف تأشيرة السياحة والزيارة للمملكة المتحدة حسب متطلبات UKVI الدقيقة، مع تدقيق كشوف
+                            الحساب البنكي وصياغة خطابات إثبات الغرض السياحي بدقة وترتيب المستندات باحترافية.</p>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
                     </div>
-                    <a href="javascript:void(0)"
-                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                        class="service-arrow">طلب الخدمة <i data-lucide="chevron-left"></i></a>
                 </div>
 
-                <div class="glass-card service-card stagger-delay-2" data-reveal="blur">
-                    <div class="service-border-glow"></div>
-                    <div class="service-icon-box">
-                        <i data-lucide="landmark"></i>
+                <div class="country-card stagger-delay-2" data-category="america" data-reveal="blur">
+                    <div class="country-img-wrapper">
+                        <img src="assets/canada.png" alt="كندا">
+                        <div class="country-img-overlay"></div>
+                        <div class="country-flag-badge">
+                            <img src="https://flagcdn.com/w160/ca.png" alt="العلم الكندي">
+                        </div>
+                        <span class="country-name-badge">كندا</span>
                     </div>
-                    <div>
-                        <h3>تأشيرة أمريكا السياحية</h3>
-                        <p>مساعدتك في تعبئة نموذج DS-160 المعقد وتنسيق ملفك المالي وإعدادك بشكل كامل لأسئلة المقابلة
-                            الشخصية في القنصلية الأمريكية.</p>
+                    <div class="country-body">
+                        <span class="country-tag">تأشيرة سياحة</span>
+                        <p>نجهز ملف تأشيرة السياحة والزيارة لكندا، بما في ذلك إعداد نماذج IRCC الرسمية وصياغة خطابات
+                            مبررات السفر وترتيب الوثائق المالية وتراجمها المعتمدة بدقة متناهية.</p>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
                     </div>
-                    <a href="javascript:void(0)"
-                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                        class="service-arrow">طلب الخدمة <i data-lucide="chevron-left"></i></a>
                 </div>
 
-                <div class="glass-card service-card stagger-delay-3" data-reveal="blur">
-                    <div class="service-border-glow"></div>
-                    <div class="service-icon-box">
-                        <i data-lucide="compass"></i>
+                <div class="country-card stagger-delay-3" data-category="schengen" data-reveal="blur">
+                    <div class="country-img-wrapper">
+                        <img src="assets/denmark.png" alt="الدنمارك">
+                        <div class="country-img-overlay"></div>
+                        <div class="country-flag-badge">
+                            <img src="https://flagcdn.com/w160/dk.png" alt="العلم الدنماركي">
+                        </div>
+                        <span class="country-name-badge">الدنمارك</span>
                     </div>
-                    <div>
-                        <h3>تأشيرة بريطانيا السياحية</h3>
-                        <p>إعداد ملفات تأشيرة السياحة للمملكة المتحدة وترجمة وثائقك بدقة عالية وتقديم الطلبات
-                            الإلكترونية حسب اشتراطات UKVI.</p>
+                    <div class="country-body">
+                        <span class="country-tag">تأشيرة سياحة (شنغن)</span>
+                        <p>نهيئ ملف التأشيرة السياحية لدولة الدنمارك ودول الإتحاد الأوروبي "شنغن" ليتوافق تماماً مع
+                            متطلبات القنصليات الأوروبية والأنظمة المعتمدة حديثاً.</p>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
                     </div>
-                    <a href="javascript:void(0)"
-                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                        class="service-arrow">طلب الخدمة <i data-lucide="chevron-left"></i></a>
+                </div>
+
+                <div class="country-card stagger-delay-4" data-category="commonwealth" data-reveal="blur">
+                    <div class="country-img-wrapper">
+                        <img src="assets/australia.png" alt="أستراليا">
+                        <div class="country-img-overlay"></div>
+                        <div class="country-flag-badge">
+                            <img src="https://flagcdn.com/w160/au.png" alt="العلم الأسترالي">
+                        </div>
+                        <span class="country-name-badge">أستراليا</span>
+                    </div>
+                    <div class="country-body">
+                        <span class="country-tag">تأشيرة سياحة</span>
+                        <p>نعد طلب تأشيرة السياحة الأسترالية بدقة عبر بوابة ImmiAccount، مع تنسيق كشوفات الحساب وإثباتات
+                            الدخل والترجمات الضرورية للغة الإنجليزية لضمان قبول الطلب.</p>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,8 +339,7 @@
                     style="color: #E1251B; background: rgba(225, 37, 27, 0.08); border-color: rgba(225, 37, 27, 0.15);">شراكة
                     استراتيجية لوجستية</span>
                 <h2>شراكة استراتيجية حصرية لتسهيل معاملاتكم</h2>
-                <p>نوفر لكم بالتعاون مع أرامكس أحدث الحلول اللوجستية المتكاملة لتجهيز وثائق السفر الرسمية مباشرة من
-                    عنوانكم دون عناء التنقل.</p>
+
             </div>
 
             <!-- Co-Branding Card component -->
@@ -404,7 +454,7 @@
                         </div>
                         <div class="aramex-step-node-text">
                             <h5>1. تواصل معنا</h5>
-                            <p>لحجز الخدمة وتحديد طريقة الاستلام.</p>
+                            <p>لحجز الخدمة وتحديد الدولة مهتم بها</p>
                         </div>
                     </div>
 
@@ -414,42 +464,54 @@
                             <i data-lucide="folder-down"></i>
                         </div>
                         <div class="aramex-step-node-text">
-                            <h5>2. استلام الملفات</h5>
-                            <p>نستلم أوراقكم من عنوانكم.</p>
+                            <h5>2. استلام الأوراق</h5>
+                            <p>نستلم الأوراق منكم.</p>
                         </div>
                     </div>
 
                     <!-- Step 3 -->
                     <div class="aramex-step-node">
-                        <div class="aramex-step-icon-circle">
-                            <i data-lucide="file-signature"></i>
+                        <div class="aramex-step-icon-circle"
+                            style="border-color: var(--accent-gold); color: var(--accent-gold);">
+                            <i data-lucide="check-square"></i>
                         </div>
                         <div class="aramex-step-node-text">
-                            <h5>3. تجهيز وإعداد الملف</h5>
-                            <p>نقوم بمراجعة وتجهيز ملف التأشيرة بالكامل.</p>
+                            <h5>3. مراجعة الوثائق</h5>
+                            <p>نقوم بمراجعة جميع الوثائق والتأكد من مطابقتها للمتطلبات.</p>
                         </div>
                     </div>
 
                     <!-- Step 4 -->
                     <div class="aramex-step-node">
-                        <div class="aramex-step-icon-circle" style="border-color: #E1251B; color: #E1251B;">
-                            <i data-lucide="truck"></i>
+                        <div class="aramex-step-icon-circle">
+                            <i data-lucide="file-signature"></i>
                         </div>
                         <div class="aramex-step-node-text">
-                            <h5>4. إرسال عبر ARAMEX</h5>
-                            <p>نرسل الملف إليكم بسرعة وأمان.</p>
+                            <h5>4. تجهيز وإعداد الملف</h5>
+                            <p>نقوم بإعداد ملف التأشيرة بشكل احترافي وكامل.</p>
                         </div>
                     </div>
 
                     <!-- Step 5 -->
+                    <div class="aramex-step-node">
+                        <div class="aramex-step-icon-circle" style="border-color: #E1251B; color: #E1251B;">
+                            <i data-lucide="truck"></i>
+                        </div>
+                        <div class="aramex-step-node-text">
+                            <h5>5. إرسال الملف عبر ARAMEX</h5>
+                            <p>نرسل الملف إليكم بسرعة وأمان.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
                     <div class="aramex-step-node">
                         <div class="aramex-step-icon-circle"
                             style="border-color: var(--accent-gold); color: var(--accent-gold);">
                             <i data-lucide="landmark"></i>
                         </div>
                         <div class="aramex-step-node-text">
-                            <h5>5. توجه إلى القنصلية</h5>
-                            <p>تأخذ ملفك جاهزاً لتقديمه والقيام بالإجراءات.</p>
+                            <h5>6. التوجه إلى القنصلية</h5>
+                            <p>تتوجهون إلى مركز التأشيرات أو القنصلية لإتمام الإجراءات المطلوبة</p>
                         </div>
                     </div>
                 </div>
@@ -522,125 +584,6 @@
 
         </div>
     </section>
-
-    <!-- ==========================================================================
-       COUNTRY DESTINATIONS SHOWCASE
-       ========================================================================== -->
-    <section class="countries-section section-padding" id="countries">
-        <div class="container">
-            <div class="section-header">
-                <span class="tag">وجهاتنا المتميزة</span>
-                <h2>تجهيز ملف التأشيرة السياحية وفق متطلبات كل وجهة</h2>
-                <p>نقدم لك خدمات متكاملة لتجهيز ملف تأشيرتك السياحية وفق المتطلبات الرسمية والتعليمات الدقيقة لكل دولة
-                    لرفع نسبة قبولك.</p>
-            </div>
-
-            <div class="country-tabs">
-                <button class="tab-btn active" data-filter="all">عرض الكل</button>
-                <button class="tab-btn" data-filter="schengen">دول شنغن والأوروبية</button>
-                <button class="tab-btn" data-filter="america">أمريكا الشمالية</button>
-                <button class="tab-btn" data-filter="commonwealth">دول الكومنولث</button>
-            </div>
-
-            <div class="grid-3" id="country-grid">
-                <div class="country-card" data-category="america" data-reveal="blur">
-                    <div class="country-img-wrapper">
-                        <img src="assets/usa.png" alt="الولايات المتحدة الأمريكية">
-                        <div class="country-img-overlay"></div>
-                        <div class="country-flag-badge">
-                            <img src="https://flagcdn.com/w160/us.png" alt="العلم الأمريكي">
-                        </div>
-                        <span class="country-name-badge">الولايات المتحدة</span>
-                    </div>
-                    <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>نقوم بترتيب مستنداتك وترجمة الوثائق للإنجليزية وتعبئة نموذج DS-160 الخاص بالتأشيرة السياحية
-                            بدقة، كما نحضر معك أسئلة المقابلة لرفع نسبة القبول أمام القنصل الأمريكي.</p>
-                        <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="country-card stagger-delay-1" data-category="commonwealth" data-reveal="blur">
-                    <div class="country-img-wrapper">
-                        <img src="assets/uk.png" alt="المملكة المتحدة">
-                        <div class="country-img-overlay"></div>
-                        <div class="country-flag-badge">
-                            <img src="https://flagcdn.com/w160/gb.png" alt="العلم البريطاني">
-                        </div>
-                        <span class="country-name-badge">المملكة المتحدة</span>
-                    </div>
-                    <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>ننسق ملف تأشيرة السياحة والزيارة للمملكة المتحدة حسب متطلبات UKVI الدقيقة، مع تدقيق كشوف
-                            الحساب البنكي وصياغة خطابات إثبات الغرض السياحي بدقة وترتيب المستندات باحترافية.</p>
-                        <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="country-card stagger-delay-2" data-category="america" data-reveal="blur">
-                    <div class="country-img-wrapper">
-                        <img src="assets/canada.png" alt="كندا">
-                        <div class="country-img-overlay"></div>
-                        <div class="country-flag-badge">
-                            <img src="https://flagcdn.com/w160/ca.png" alt="العلم الكندي">
-                        </div>
-                        <span class="country-name-badge">كندا</span>
-                    </div>
-                    <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>نجهز ملف تأشيرة السياحة والزيارة لكندا، بما في ذلك إعداد نماذج IRCC الرسمية وصياغة خطابات
-                            مبررات السفر وترتيب الوثائق المالية وتراجمها المعتمدة بدقة متناهية.</p>
-                        <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="country-card stagger-delay-3" data-category="schengen" data-reveal="blur">
-                    <div class="country-img-wrapper">
-                        <img src="assets/denmark.png" alt="الدنمارك">
-                        <div class="country-img-overlay"></div>
-                        <div class="country-flag-badge">
-                            <img src="https://flagcdn.com/w160/dk.png" alt="العلم الدنماركي">
-                        </div>
-                        <span class="country-name-badge">الدنمارك</span>
-                    </div>
-                    <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة (شنغن)</span>
-                        <p>نهيئ ملف التأشيرة السياحية لدولة الدنمارك ودول الإتحاد الأوروبي "شنغن" ليتوافق تماماً مع
-                            متطلبات القنصليات الأوروبية والأنظمة المعتمدة حديثاً.</p>
-                        <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="country-card stagger-delay-4" data-category="commonwealth" data-reveal="blur">
-                    <div class="country-img-wrapper">
-                        <img src="assets/australia.png" alt="أستراليا">
-                        <div class="country-img-overlay"></div>
-                        <div class="country-flag-badge">
-                            <img src="https://flagcdn.com/w160/au.png" alt="العلم الأسترالي">
-                        </div>
-                        <span class="country-name-badge">أستراليا</span>
-                    </div>
-                    <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>نعد طلب تأشيرة السياحة الأسترالية بدقة عبر بوابة ImmiAccount، مع تنسيق كشوفات الحساب وإثباتات
-                            الدخل والترجمات الضرورية للغة الإنجليزية لضمان قبول الطلب.</p>
-                        <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
     <!-- ==========================================================================
@@ -1031,7 +974,7 @@
                     </div>
                     <div class="faq-content">
                         <div class="faq-body">
-                            تختلف المدة حسب الدولة ونوع التأشيرة، وتتراوح عادة بين عدة أيام وعدة أسابيع.
+                            من تلات ايام إلى خمس ايام كحد أقصى.
                         </div>
                     </div>
                 </div>
