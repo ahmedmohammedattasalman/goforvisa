@@ -48,6 +48,15 @@
             box-sizing: border-box;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            position: relative;
         }
 
         html {
@@ -60,7 +69,6 @@
             background-color: var(--surface-light);
             color: var(--text-main);
             line-height: 1.6;
-            overflow-x: hidden;
             direction: rtl;
         }
 
