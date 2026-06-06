@@ -164,12 +164,6 @@
             }
         };
 
-        setInterval(() => {
-            let nextIndex = currentSlideIndex + 1;
-            if (nextIndex >= slides.length) nextIndex = 0;
-            updateSlider(nextIndex);
-        }, 8000);
-
         /* ==========================================================================
            6. ADVANCED INTERSECTION OBSERVER FOR SCROLL ANIMATIONS & COUNTERS
            ========================================================================== */
@@ -436,17 +430,42 @@
                     const originalText = submitBtn.innerHTML;
 
                     submitBtn.disabled = true;
-                    submitBtn.innerHTML = 'جاري تأكيد دفع الرسوم والتحقق... <i data-lucide="loader-2" class="animate-spin"></i>';
+                    submitBtn.innerHTML = 'جاري إرسال طلبك... <i data-lucide="loader-2" class="animate-spin"></i>';
                     lucide.createIcons();
+
+                    const name = document.getElementById('paid-name').value;
+                    const phone = document.getElementById('paid-phone').value;
+                    const destSelect = document.getElementById('paid-destination');
+                    const destinationText = destSelect.options[destSelect.selectedIndex].text;
+                    const durationRadio = document.querySelector('input[name="paid-duration"]:checked');
+                    const durationVal = durationRadio ? durationRadio.value : '20 دقيقة';
+
+                    let amount = "222MAD";
+                    if (durationVal.includes("10")) {
+                        amount = "111MAD";
+                    } else if (durationVal.includes("20")) {
+                        amount = "222MAD";
+                    } else if (durationVal.includes("30")) {
+                        amount = "333MAD";
+                    }
+
+                    const reqId = Math.floor(Math.random() * 90) + 10;
+
+                    const whatsappMessage = `طلب الحصول على رقم حساب التجاري وفا بنك من أجل الدفع\nالطلب: إستشارة حول الدراسة بـ ${destinationText}\nرقم الطلب: ${reqId}\nالمبلغ: ${amount}\nرقم صاحب الطلب: ${phone}`;
+                    
+                    const whatsappUrl = `https://wa.me/212660830970?text=${encodeURIComponent(whatsappMessage)}`;
 
                     setTimeout(() => {
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = originalText;
                         paidForm.style.display = 'none';
 
+                        // Open WhatsApp chat in a new tab
+                        window.open(whatsappUrl, '_blank');
+
                         if (successMsg) {
                             successTitle.textContent = 'تم استلام طلب الاستشارة المدفوعة بنجاح!';
-                            successDesc.innerHTML = 'لقد تم إرسال طلبك وصورة وصل تحويل الرسوم بنجاح. سيقوم فريق المالية والتحقق بمراجعة العملية فوراً وتأكيد حجز استشارتك مع المنسق وتزويدك برابط اللقاء الإلكتروني عبر الواتساب <strong>خلال أقل من ساعة واحدة</strong>.';
+                            successDesc.innerHTML = 'لقد تم تسجيل طلب الاستشارة بنجاح. سيتم التواصل معك عبر الواتساب لتأكيد الحجز وتنسيق الاستشارة والإجابة عن استفساراتك <strong>خلال مدة أقصاها 24 ساعة</strong>.';
                             successMsg.style.display = 'block';
                             successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }

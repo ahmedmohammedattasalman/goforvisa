@@ -3803,3 +3803,201 @@
                 height: 130px;
             }
         }
+
+        /* ==========================================================================
+           EXPRESS & COMBINED VISAS STYLING (.express-card)
+           ========================================================================== */
+        .express-card {
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+
+        .express-header {
+            position: relative;
+            height: 165px !important; /* Shorter header to save space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* Luxury custom gradients for headers */
+        .header-gradient-1 {
+            background: linear-gradient(135deg, #081120 0%, #152642 100%) !important;
+            border-bottom: 2px solid rgba(14, 165, 233, 0.25);
+        }
+
+        .header-gradient-2 {
+            background: linear-gradient(135deg, #0e1e38 0%, #180920 100%) !important;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .header-gradient-3 {
+            background: linear-gradient(135deg, #022c22 0%, #064e3b 100%) !important;
+            border-bottom: 2px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .express-glow {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, transparent 70%);
+            opacity: 0.15;
+            filter: blur(25px);
+            pointer-events: none;
+        }
+
+        .header-gradient-2 .express-glow {
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+        }
+
+        .header-gradient-3 .express-glow {
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+        }
+
+        .express-flags-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            direction: ltr; /* Keeps flags ordered standard left-to-right */
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .express-flags-row .micro-flag {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 50% !important;
+            border: 2px solid rgba(255, 255, 255, 0.9) !important;
+            object-fit: cover !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+            transition: all 0.3s ease;
+            margin-right: -10px; /* Overlap effect */
+        }
+
+        .express-flags-row .micro-flag:last-child {
+            margin-right: 0;
+        }
+
+        .express-flags-row .micro-flag:hover {
+            transform: translateY(-4px) scale(1.15);
+            z-index: 10;
+            border-color: var(--accent-sky) !important;
+        }
+
+        .header-gradient-2 .express-flags-row .micro-flag:hover {
+            border-color: var(--accent-gold) !important;
+        }
+
+        .header-gradient-3 .express-flags-row .micro-flag:hover {
+            border-color: #10B981 !important;
+        }
+
+        .express-card .country-name-badge {
+            position: relative !important;
+            bottom: 0 !important;
+            right: 0 !important;
+            left: 0 !important;
+            font-size: 1.15rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            text-align: center;
+            width: 100%;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            z-index: 2;
+        }
+
+        .express-details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 5px;
+            flex-grow: 1;
+        }
+
+        .express-sub-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: right;
+        }
+
+        .express-sub-section > strong {
+            font-size: 0.88rem;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+        }
+
+        .express-icon {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-sky);
+            flex-shrink: 0;
+        }
+
+        .header-gradient-2 .express-icon {
+            color: var(--accent-gold);
+        }
+
+        .header-gradient-3 .express-icon {
+            color: #10B981;
+        }
+
+        .express-sub-section p {
+            font-size: 0.82rem !important;
+            color: var(--text-muted) !important;
+            line-height: 1.55 !important;
+            margin: 0 !important;
+        }
+
+        .express-spec-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: rgba(8, 17, 32, 0.02);
+            border: 1px dashed var(--border-color);
+            border-radius: 14px;
+            padding: 12px;
+            margin-top: 8px;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .spec-item i {
+            width: 14px;
+            height: 14px;
+            color: var(--accent-gold);
+        }
+
+        /* Adjustments for express-card in the grid */
+        .express-card .country-body {
+            padding: 24px !important;
+            gap: 12px !important;
+        }
+
+        .express-card .country-tag {
+            font-size: 0.75rem !important;
+            padding: 4px 10px !important;
+            margin-bottom: 4px;
+        }
+
+        .express-card .country-meta {
+            margin-top: auto;
+            padding-top: 15px !important;
+            border-top: 1px solid var(--border-color);
+        }
+

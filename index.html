@@ -151,6 +151,7 @@
                 <button class="tab-btn" data-filter="schengen">دول شنغن والأوروبية</button>
                 <button class="tab-btn" data-filter="america">أمريكا الشمالية</button>
                 <button class="tab-btn" data-filter="commonwealth">دول الكومنولث</button>
+                <button class="tab-btn" data-filter="express">التأشيرات الإلكترونية والباقات</button>
             </div>
 
             <div class="grid-3" id="country-grid">
@@ -255,6 +256,135 @@
                         <span class="country-tag">تأشيرة سياحة</span>
                         <p>نعد طلب تأشيرة السياحة الأسترالية بدقة عبر بوابة ImmiAccount، مع تنسيق كشوفات الحساب وإثباتات
                             الدخل والترجمات الضرورية للغة الإنجليزية لضمان قبول الطلب.</p>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. التأشيرات الإلكترونية الفورية والباقات المشتركة -->
+                <div class="country-card express-card" data-category="express" data-reveal="blur">
+                    <div class="country-img-wrapper express-header header-gradient-1">
+                        <div class="express-glow"></div>
+                        <div class="express-flags-row">
+                            <img src="https://flagcdn.com/w80/ae.png" alt="الإمارات" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/eg.png" alt="مصر" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/qa.png" alt="قطر" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/om.png" alt="عمان" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/bh.png" alt="البحرين" class="micro-flag">
+                        </div>
+                        <span class="country-name-badge">التأشيرات الإلكترونية والباقات المشتركة</span>
+                    </div>
+                    <div class="country-body">
+                        <span class="country-tag">تأشيرة إلكترونية فورية (e-Visa)</span>
+                        <div class="express-details">
+                            <div class="express-sub-section">
+                                <strong><i data-lucide="zap" class="express-icon"></i> التأشيرة الفورية
+                                    (e-Visa):</strong>
+                                <p>دبي (شهر/شهرين)، قطر (منصة هيا)، عمان والبحرين (غير المكفولة)، الأردن، أذربيجان،
+                                    تنزانيا (زنجبار)، وكينيا.</p>
+                            </div>
+                            <div class="express-sub-section">
+                                <strong><i data-lucide="globe" class="express-icon"></i> الباقة الخليجية (The Gulf
+                                    Pass):</strong>
+                                <p>باقة موحدة تشمل (قطر + البحرين + عُمان).</p>
+                            </div>
+                            <div class="express-sub-section">
+                                <strong><i data-lucide="package" class="express-icon"></i> باقات سياحية خاصة:</strong>
+                                <p>باقة دبي ومصر المشتركة لقضاء عطلة مميزة.</p>
+                            </div>
+                            <div class="express-spec-box">
+                                <div class="spec-item"><i data-lucide="file-check"></i> صورة الجواز فقط أو ملف بسيط جداً
+                                </div>
+                                <div class="spec-item"><i data-lucide="clock"></i> الإصدار خلال 24 إلى 72 ساعة</div>
+                            </div>
+                        </div>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> معالجة فائقة السرعة</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. دول الخليج العربي والشرق الأوسط -->
+                <div class="country-card express-card" data-category="express" data-reveal="blur">
+                    <div class="country-img-wrapper express-header header-gradient-2">
+                        <div class="express-glow"></div>
+                        <div class="express-flags-row">
+                            <img src="https://flagcdn.com/w80/ae.png" alt="الإمارات" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/sa.png" alt="السعودية" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/qa.png" alt="قطر" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/om.png" alt="عمان" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/bh.png" alt="البحرين" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/jo.png" alt="الأردن" class="micro-flag">
+                        </div>
+                        <span class="country-name-badge">تأشيرة دول الخليج العربي</span>
+                    </div>
+                    <div class="country-body">
+                        <span class="country-tag">الخليج والشرق الأوسط</span>
+                        <div class="express-details">
+                            <div class="express-sub-section">
+                                <strong><i data-lucide="map" class="express-icon"></i> الدول المشمولة بالخدمة:</strong>
+                                <p>الإمارات العربية المتحدة، المملكة العربية السعودية، دولة قطر، مملكة البحرين، سلطنة
+                                    عُمان، والمملكة الأردنية الهاشمية.</p>
+                            </div>
+                            <div class="express-sub-section">
+                                <strong><i data-lucide="check-circle" class="express-icon"></i> خدماتنا تشمل:</strong>
+                                <p>مراجعة كاملة وتجهيز وتدقيق النماذج الرسمية وتأمين متطلبات السفر لهذه الدول لضمان قبول
+                                    مضمون وسريع.</p>
+                            </div>
+                            <div class="express-spec-box">
+                                <div class="spec-item"><i data-lucide="shield-check"></i> متطلبات ميسرة بالكامل</div>
+                                <div class="spec-item"><i data-lucide="zap"></i> معالجة سريعة ومرنة</div>
+                            </div>
+                        </div>
+                        <div class="country-meta">
+                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 2-3 أيام</div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. آسيا وإفريقيا وسياحة الطبيعة -->
+                <div class="country-card express-card" data-category="express" data-reveal="blur">
+                    <div class="country-img-wrapper express-header header-gradient-3">
+                        <div class="express-glow"></div>
+                        <div class="express-flags-row">
+                            <img src="https://flagcdn.com/w80/cn.png" alt="الصين" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/jp.png" alt="اليابان" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/kr.png" alt="كوريا الجنوبية" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/eg.png" alt="مصر" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/tz.png" alt="تنزانيا" class="micro-flag">
+                        </div>
+                        <span class="country-name-badge">تأشيرات آسيا وإفريقيا</span>
+                    </div>
+                    <div class="country-body">
+                        <span class="country-tag">آسيا وإفريقيا وسياحة الطبيعة</span>
+                        <div class="express-details">
+                            <div class="express-sub-section">
+                                <strong><i data-lucide="compass" class="express-icon"></i> وجهات آسيا المميزة:</strong>
+                                <p><strong>الصين</strong> (تأشيرة سياحية وتأشيرة أعمال لأصحاب الشركات والتجار)،
+                                    <strong>اليابان</strong>، و<strong>كوريا الجنوبية</strong> (تصريح السفر KETA).
+                                </p>
+                            </div>
+                            <div class="express-sub-section">
+                                <strong><i data-lucide="trees" class="express-icon"></i> إفريقيا وسياحة
+                                    الطبيعة:</strong>
+                                <p>جمهورية مصر العربية، تنزانيا (جزيرة زنجبار)، كينيا، جنوب إفريقيا، وإثيوبيا.</p>
+                            </div>
+                            <div class="express-spec-box">
+                                <div class="spec-item"><i data-lucide="file-text"></i> تجهيز النماذج والخطابات المالية
+                                </div>
+                                <div class="spec-item"><i data-lucide="languages"></i> تراجم معتمدة للوثائق</div>
+                            </div>
+                        </div>
                         <div class="country-meta">
                             <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
                             <a href="javascript:void(0)"
@@ -454,7 +584,7 @@
                         </div>
                         <div class="aramex-step-node-text">
                             <h5>1. تواصل معنا</h5>
-                            <p>لحجز الخدمة وتحديد الدولة مهتم بها</p>
+                            <p>لحجز الخدمة وتحديد الدولة المهتم بها</p>
                         </div>
                     </div>
 
@@ -1013,7 +1143,7 @@
                     </div>
                     <div class="faq-content">
                         <div class="faq-body">
-                            يمكن الدفع نقدًا، أو عبر التحويل البنكي، أو عبر وسائل الدفع الإلكترونية المتاحة.
+                            يمكن الدفع نقدا في المكتب او عبر التحويل البنكي او عبر وسائل دفع الإلكترونية المتاحة
                         </div>
                     </div>
                 </div>
@@ -1153,11 +1283,29 @@
                                 <div class="form-group form-select-wrapper">
                                     <select class="form-input form-select" id="free-destination" required>
                                         <option value="" disabled selected hidden></option>
+                                        <!-- الوجهات الرئيسية -->
                                         <option value="usa">الولايات المتحدة الأمريكية</option>
                                         <option value="canada">كندا</option>
-                                        <option value="uk">مملكة متحدة (بريطانيا)</option>
-                                        <option value="schengen">دنمارك(دولشنغن)</option>
+                                        <option value="uk">المملكة المتحدة (بريطانيا)</option>
+                                        <option value="schengen">الدنمارك (دول شنغن)</option>
                                         <option value="australia">أستراليا</option>
+                                        <!-- دول الخليج والشرق الأوسط -->
+                                        <option value="uae">الإمارات العربية المتحدة (دبي)</option>
+                                        <option value="saudi">المملكة العربية السعودية</option>
+                                        <option value="qatar">دولة قطر</option>
+                                        <option value="bahrain">مملكة البحرين</option>
+                                        <option value="oman">سلطنة عمان</option>
+                                        <option value="jordan">المملكة الأردنية</option>
+                                        <option value="egypt">جمهورية مصر العربية</option>
+                                        <!-- وجهات آسيا وإفريقيا -->
+                                        <option value="china">الصين</option>
+                                        <option value="japan">اليابان</option>
+                                        <option value="south_korea">كوريا الجنوبية (KETA)</option>
+                                        <option value="azerbaijan">أذربيجان</option>
+                                        <option value="tanzania">تنزانيا (جزيرة زنجبار)</option>
+                                        <option value="kenya">كينيا</option>
+                                        <option value="south_africa">جنوب إفريقيا</option>
+                                        <option value="ethiopia">إثيوبيا</option>
                                     </select>
                                     <label class="form-label" for="free-destination">الوجهة المهتم بها *</label>
                                 </div>
@@ -1251,10 +1399,34 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group" style="grid-column: span 2;">
-                                    <input type="email" class="form-input text-right" id="paid-email" placeholder=" "
-                                        required>
-                                    <label class="form-label" for="paid-email">البريد الإلكتروني *</label>
+                                <div class="form-group form-select-wrapper" style="grid-column: span 2;">
+                                    <select class="form-input form-select text-right" id="paid-destination" required>
+                                        <option value="" disabled selected hidden></option>
+                                        <!-- الوجهات الرئيسية -->
+                                        <option value="usa">الولايات المتحدة الأمريكية</option>
+                                        <option value="canada">كندا</option>
+                                        <option value="uk">المملكة المتحدة (بريطانيا)</option>
+                                        <option value="schengen">الدنمارك (دول شنغن)</option>
+                                        <option value="australia">أستراليا</option>
+                                        <!-- دول الخليج والشرق الأوسط -->
+                                        <option value="uae">الإمارات العربية المتحدة (دبي)</option>
+                                        <option value="saudi">المملكة العربية السعودية</option>
+                                        <option value="qatar">دولة قطر</option>
+                                        <option value="bahrain">مملكة البحرين</option>
+                                        <option value="oman">سلطنة عمان</option>
+                                        <option value="jordan">المملكة الأردنية</option>
+                                        <option value="egypt">جمهورية مصر العربية</option>
+                                        <!-- وجهات آسيا وإفريقيا -->
+                                        <option value="china">الصين</option>
+                                        <option value="japan">اليابان</option>
+                                        <option value="south_korea">كوريا الجنوبية (KETA)</option>
+                                        <option value="azerbaijan">أذربيجان</option>
+                                        <option value="tanzania">تنزانيا (جزيرة زنجبار)</option>
+                                        <option value="kenya">كينيا</option>
+                                        <option value="south_africa">جنوب إفريقيا</option>
+                                        <option value="ethiopia">إثيوبيا</option>
+                                    </select>
+                                    <label class="form-label" for="paid-destination">الدولة المهتم بها *</label>
                                 </div>
                             </div>
 
@@ -1304,102 +1476,27 @@
                                 </div>
                             </div>
 
-                            <!-- Bank Transfer Details Panel (Attijariwafa Bank) -->
-                            <div class="bank-info-panel"
-                                style="background: rgba(8, 17, 32, 0.015); border: 1px solid rgba(8, 17, 32, 0.08); border-radius: 20px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.01);">
-                                <div
-                                    style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 12px;">
+                            <!-- Notice Box replacing Bank details and Upload field -->
+                            <div class="express-spec-box"
+                                style="margin-bottom: 30px; background: rgba(212, 175, 55, 0.04); border: 1.5px solid rgba(212, 175, 55, 0.2); border-radius: 16px; padding: 20px; text-align: right;">
+                                <div style="display: flex; gap: 12px; align-items: flex-start;">
                                     <div
-                                        style="width: 42px; height: 42px; border-radius: 50%; background: rgba(212, 175, 55, 0.08); display: flex; align-items: center; justify-content: center; color: var(--accent-gold);">
-                                        <i data-lucide="building-2" style="width:20px;height:20px;"></i>
+                                        style="background: rgba(212, 175, 55, 0.1); color: var(--accent-gold); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">
+                                        <i data-lucide="info"></i>
                                     </div>
-                                    <div style="text-align: right;">
-                                        <h4
-                                            style="font-size: 1.05rem; font-weight: 800; color: var(--primary-dark); margin: 0;">
-                                            الحساب البنكي الرسمي لتحويل رسوم الاستشارة</h4>
+                                    <div>
                                         <p
-                                            style="font-size: 0.78rem; color: var(--text-muted); margin: 0; font-weight: 600;">
-                                            التجاري وفا بنك | Attijariwafa bank</p>
+                                            style="color: var(--primary-dark); font-size: 0.95rem; font-weight: 700; line-height: 1.7; margin: 0;">
+                                            عند طلبك هذه الخدمة سوف تقوم بدفع رسوم الخدمة حسب المدة المختارة، وسوف يتم
+                                            التواصل معك عبر الواتساب لإنجاز الخدمة المطلوبة والإجابة عن استفساراتك خلال
+                                            مدة أقصاها 24 ساعة
+                                        </p>
                                     </div>
-                                </div>
-
-                                <div class="bank-details-grid"
-                                    style="display: grid; grid-template-columns: 1fr; gap: 12px; font-size: 0.88rem; color: var(--text-main); text-align: right;">
-                                    <div
-                                        style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(0,0,0,0.05); padding-bottom: 6px;">
-                                        <span style="color: var(--text-muted); font-weight: 600;">اسم صاحب الحساب
-                                            (Titulaire)</span>
-                                        <strong style="color: var(--primary-dark); font-weight: 700;">GOFORVISA</strong>
-                                    </div>
-                                    <div
-                                        style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(0,0,0,0.05); padding-bottom: 6px;">
-                                        <span style="color: var(--text-muted); font-weight: 600;">البنك (Banque)</span>
-                                        <strong style="color: var(--primary-dark); font-weight: 700;">Attijariwafa
-                                            bank</strong>
-                                    </div>
-                                    <div
-                                        style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(0,0,0,0.05); padding-bottom: 6px; align-items: center;">
-                                        <span style="color: var(--text-muted); font-weight: 600;">رقم الحساب التعريفي
-                                            البنكي (R.I.B)</span>
-                                        <div style="display: flex; align-items: center; gap: 8px;">
-                                            <strong class="latin-num"
-                                                style="color: var(--primary-dark); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px;">007
-                                                780 0002788000001297 80</strong>
-                                            <button type="button"
-                                                onclick="navigator.clipboard.writeText('007780000278800000129780'); alert('تم نسخ رقم الحساب (R.I.B) بنجاح!');"
-                                                style="background: transparent; color: var(--accent-gold); cursor: pointer; display: inline-flex; border: none; outline: none; padding: 2px;"><i
-                                                    data-lucide="copy" style="width: 15px; height: 15px;"></i></button>
-                                        </div>
-                                    </div>
-                                    <div
-                                        style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(0,0,0,0.05); padding-bottom: 6px; align-items: center;">
-                                        <span style="color: var(--text-muted); font-weight: 600;">الآيبان الدولي
-                                            (IBAN)</span>
-                                        <div style="display: flex; align-items: center; gap: 8px;">
-                                            <strong class="latin-num"
-                                                style="color: var(--primary-dark); font-size: 0.92rem; font-weight: 700; letter-spacing: 0.3px;">MA64
-                                                007 780 0002788000001297 80</strong>
-                                            <button type="button"
-                                                onclick="navigator.clipboard.writeText('MA64007780000278800000129780'); alert('تم نسخ رقم الآيبان (IBAN) بنجاح!');"
-                                                style="background: transparent; color: var(--accent-gold); cursor: pointer; display: inline-flex; border: none; outline: none; padding: 2px;"><i
-                                                    data-lucide="copy" style="width: 15px; height: 15px;"></i></button>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; justify-content: space-between; padding-bottom: 2px;">
-                                        <span style="color: var(--text-muted); font-weight: 600;">رمز السويفت (BIC -
-                                            SWIFT)</span>
-                                        <strong class="latin-num"
-                                            style="color: var(--primary-dark); font-weight: 700; letter-spacing: 0.5px;">BCMAMAMC</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Upload Payment Image Field -->
-                            <div class="form-group-custom" style="margin-bottom: 30px;">
-                                <span
-                                    style="font-size: 0.9rem; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 10px; text-align: right;">إرفاق
-                                    صورة إثبات التحويل البنكي (وصل الدفع) *</span>
-                                <div class="file-upload-wrapper" style="position: relative; width: 100%;">
-                                    <label for="payment-file"
-                                        style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 2px dashed rgba(212, 175, 55, 0.25); border-radius: 14px; padding: 24px; background: rgba(212, 175, 55, 0.015); cursor: pointer; transition: var(--transition-smooth); text-align: center; width: 100%;">
-                                        <div
-                                            style="color: var(--accent-gold); display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: rgba(212, 175, 55, 0.08); margin-bottom: 4px;">
-                                            <i data-lucide="upload-cloud" style="width:22px;height:22px;"></i>
-                                        </div>
-                                        <span style="font-size: 0.92rem; font-weight: 700; color: var(--primary-dark);"
-                                            id="file-label-text">اضغط هنا لرفع صورة وصل التحويل البنكي</span>
-                                        <span style="font-size: 0.72rem; color: var(--text-muted);">الصور المدعومة: PNG,
-                                            JPG, JPEG (بحد أقصى 5 ميجابايت)</span>
-                                    </label>
-                                    <input type="file" id="payment-file" name="payment_receipt" accept="image/*"
-                                        required
-                                        style="position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; pointer-events: none;"
-                                        onchange="updateFileName(this)">
                                 </div>
                             </div>
 
                             <button type="submit" class="btn btn-gold btn-glow-pulse form-btn-submit"
-                                style="width: 100%; border-radius: 16px;">تأكيد الدفع وحجز الاستشارة <i
+                                style="width: 100%; border-radius: 16px;">تأكيد وحجز الاستشارة <i
                                     data-lucide="check-circle"></i></button>
                         </form>
                     </div>
@@ -1502,7 +1599,7 @@
                 <div class="footer-col">
                     <h4>الوجهات السياحية</h4>
                     <div class="footer-links">
-                        <a href="#countries" class="footer-link">تأشيرة شنغن الدينمارك السياحية</a>
+                        <a href="#countries" class="footer-link">تأشيرة الدينمارك السياحية</a>
                         <a href="#countries" class="footer-link">تأشيرة كندا السياحية</a>
                         <a href="#countries" class="footer-link">تأشيرة أمريكا السياحية</a>
                         <a href="#countries" class="footer-link">تأشيرة بريطانيا السياحية</a>
