@@ -453,7 +453,7 @@
 
                     const whatsappMessage = `طلب الحصول على رقم حساب التجاري وفا بنك من أجل الدفع\nالطلب: إستشارة حول تأشيرة ${destinationText}\nرقم الطلب: ${reqId}\nالمبلغ: ${amount}\nرقم صاحب الطلب: ${phone}`;
                     
-                    const whatsappUrl = `https://wa.me/212660830970?text=${encodeURIComponent(whatsappMessage)}`;
+                    const whatsappUrl = `https://wa.me/212660773153?text=${encodeURIComponent(whatsappMessage)}`;
 
                     setTimeout(() => {
                         submitBtn.disabled = false;
