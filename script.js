@@ -440,18 +440,18 @@
                     const durationRadio = document.querySelector('input[name="paid-duration"]:checked');
                     const durationVal = durationRadio ? durationRadio.value : '20 دقيقة';
 
-                    let amount = "222MAD";
+                    let amount = "200MAD";
                     if (durationVal.includes("10")) {
-                        amount = "111MAD";
+                        amount = "100MAD";
                     } else if (durationVal.includes("20")) {
-                        amount = "222MAD";
+                        amount = "200MAD";
                     } else if (durationVal.includes("30")) {
-                        amount = "333MAD";
+                        amount = "300MAD";
                     }
 
                     const reqId = Math.floor(Math.random() * 90) + 10;
 
-                    const whatsappMessage = `طلب الحصول على رقم حساب التجاري وفا بنك من أجل الدفع\nالطلب: إستشارة حول الدراسة بـ ${destinationText}\nرقم الطلب: ${reqId}\nالمبلغ: ${amount}\nرقم صاحب الطلب: ${phone}`;
+                    const whatsappMessage = `طلب الحصول على رقم حساب التجاري وفا بنك من أجل الدفع\nالطلب: إستشارة حول تأشيرة ${destinationText}\nرقم الطلب: ${reqId}\nالمبلغ: ${amount}\nرقم صاحب الطلب: ${phone}`;
                     
                     const whatsappUrl = `https://wa.me/212660830970?text=${encodeURIComponent(whatsappMessage)}`;
 
