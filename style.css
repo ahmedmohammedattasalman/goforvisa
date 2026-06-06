@@ -3879,6 +3879,10 @@
             margin-right: -10px; /* Overlap effect */
         }
 
+        .express-flags-row .micro-flag.flag-jo {
+            object-position: left center;
+        }
+
         .express-flags-row .micro-flag:last-child {
             margin-right: 0;
         }
