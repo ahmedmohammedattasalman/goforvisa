@@ -2433,11 +2433,11 @@
         }
 
         /* ==========================================================================
-           ARAMEX PARTNERSHIP & PREMIUM LEGAL INFO CUSTOM STYLING
+           CTM MESSAGERIE PARTNERSHIP & PREMIUM LEGAL INFO CUSTOM STYLING
            ========================================================================== */
 
-        /* 1. Aramex Strategic Partnership Styles */
-        .aramex-brand-header {
+        /* 1. CTM Strategic Partnership Styles */
+        .ctm-brand-header {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2445,7 +2445,7 @@
             margin-bottom: 24px;
         }
 
-        .aramex-logo-glow {
+        .ctm-logo-glow {
             font-size: 1.8rem;
             font-weight: 800;
             display: flex;
@@ -2455,11 +2455,11 @@
             direction: ltr;
         }
 
-        .aramex-handshake-circle {
+        .ctm-handshake-circle {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-blue) 0%, #E1251B 100%);
+            background: linear-gradient(135deg, var(--accent-blue) 0%, #E31B23 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2470,7 +2470,7 @@
             animation: float 4s ease-in-out infinite;
         }
 
-        .aramex-brand-tagline {
+        .ctm-brand-tagline {
             font-size: 1.4rem;
             font-weight: 800;
             color: var(--accent-sky);
@@ -2479,8 +2479,8 @@
             letter-spacing: 0.5px;
         }
 
-        /* 5-Column Grid for Aramex Includes */
-        .aramex-includes-grid {
+        /* 5-Column Grid for CTM Includes */
+        .ctm-includes-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
@@ -2488,24 +2488,24 @@
         }
 
         @media (max-width: 1200px) {
-            .aramex-includes-grid {
+            .ctm-includes-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
         @media (max-width: 768px) {
-            .aramex-includes-grid {
+            .ctm-includes-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 576px) {
-            .aramex-includes-grid {
+            .ctm-includes-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        .aramex-include-card {
+        .ctm-include-card {
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -2523,13 +2523,13 @@
             overflow: hidden;
         }
 
-        .aramex-include-card:hover {
+        .ctm-include-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--glass-shadow-hover);
             border-color: rgba(14, 165, 233, 0.4);
         }
 
-        .aramex-include-badge {
+        .ctm-include-badge {
             width: 54px;
             height: 54px;
             border-radius: 16px;
@@ -2542,11 +2542,11 @@
             transition: var(--transition-smooth);
         }
 
-        .aramex-include-card:hover .aramex-include-badge {
+        .ctm-include-card:hover .ctm-include-badge {
             transform: scale(1.1) rotate(5deg);
         }
 
-        .aramex-include-num {
+        .ctm-include-num {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -2557,21 +2557,21 @@
             font-family: var(--font-latin);
         }
 
-        .aramex-include-card h4 {
+        .ctm-include-card h4 {
             font-size: 1.1rem;
             font-weight: 800;
             color: var(--primary-dark);
             margin-bottom: 4px;
         }
 
-        .aramex-include-card p {
+        .ctm-include-card p {
             font-size: 0.88rem;
             color: var(--text-muted);
             line-height: 1.6;
         }
 
         /* How It Works Horizontal Stepper */
-        .aramex-stepper-title {
+        .ctm-stepper-title {
             text-align: center;
             font-size: 1.8rem;
             font-weight: 800;
@@ -2583,7 +2583,7 @@
             gap: 12px;
         }
 
-        .aramex-stepper-wrapper {
+        .ctm-stepper-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -2592,7 +2592,7 @@
             padding: 0 40px;
         }
 
-        .aramex-stepper-line {
+        .ctm-stepper-line {
             position: absolute;
             top: 25px;
             left: 80px;
@@ -2603,13 +2603,13 @@
         }
 
         @media (max-width: 992px) {
-            .aramex-stepper-wrapper {
+            .ctm-stepper-wrapper {
                 flex-direction: column;
                 gap: 30px;
                 padding: 0 20px;
             }
 
-            .aramex-stepper-line {
+            .ctm-stepper-line {
                 top: 25px;
                 bottom: 25px;
                 right: 45px;
@@ -2620,7 +2620,7 @@
             }
         }
 
-        .aramex-step-node {
+        .ctm-step-node {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2633,7 +2633,7 @@
         }
 
         @media (max-width: 992px) {
-            .aramex-step-node {
+            .ctm-step-node {
                 flex-direction: row;
                 text-align: right;
                 max-width: 100%;
@@ -2642,7 +2642,7 @@
             }
         }
 
-        .aramex-step-icon-circle {
+        .ctm-step-icon-circle {
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -2657,28 +2657,28 @@
             flex-shrink: 0;
         }
 
-        .aramex-step-node:hover .aramex-step-icon-circle {
+        .ctm-step-node:hover .ctm-step-icon-circle {
             background: var(--accent-sky);
             color: white;
             box-shadow: var(--glow-blue);
             transform: scale(1.1);
         }
 
-        .aramex-step-node-text h5 {
+        .ctm-step-node-text h5 {
             font-size: 1rem;
             font-weight: 800;
             color: var(--primary-dark);
             margin-bottom: 4px;
         }
 
-        .aramex-step-node-text p {
+        .ctm-step-node-text p {
             font-size: 0.85rem;
             color: var(--text-muted);
             line-height: 1.5;
         }
 
         /* 5 Trust Footer Benefits Bar */
-        .aramex-benefits-stripe {
+        .ctm-benefits-stripe {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
@@ -2691,19 +2691,19 @@
         }
 
         @media (max-width: 992px) {
-            .aramex-benefits-stripe {
+            .ctm-benefits-stripe {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 576px) {
-            .aramex-benefits-stripe {
+            .ctm-benefits-stripe {
                 grid-template-columns: 1fr;
                 padding: 24px;
             }
         }
 
-        .aramex-benefit-item {
+        .ctm-benefit-item {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2714,7 +2714,7 @@
             position: relative;
         }
 
-        .aramex-benefits-stripe>.aramex-benefit-item:not(:last-child)::after {
+        .ctm-benefits-stripe>.ctm-benefit-item:not(:last-child)::after {
             content: '';
             position: absolute;
             left: -10px;
@@ -2725,12 +2725,12 @@
         }
 
         @media (max-width: 992px) {
-            .aramex-benefits-stripe>.aramex-benefit-item::after {
+            .ctm-benefits-stripe>.ctm-benefit-item::after {
                 display: none !important;
             }
         }
 
-        .aramex-benefit-icon-badge {
+        .ctm-benefit-icon-badge {
             width: 44px;
             height: 44px;
             border-radius: 50%;
@@ -2744,28 +2744,28 @@
             transition: var(--transition-smooth);
         }
 
-        .aramex-benefit-item:hover .aramex-benefit-icon-badge {
+        .ctm-benefit-item:hover .ctm-benefit-icon-badge {
             background: var(--accent-gold);
             color: var(--primary-dark);
             transform: scale(1.1) rotate(10deg);
             box-shadow: var(--glow-gold);
         }
 
-        .aramex-benefit-item h5 {
+        .ctm-benefit-item h5 {
             font-size: 0.95rem;
             font-weight: 800;
             margin-bottom: 2px;
             color: #FFFFFF;
         }
 
-        .aramex-benefit-item p {
+        .ctm-benefit-item p {
             font-size: 0.82rem;
             color: rgba(255, 255, 255, 0.6);
             line-height: 1.4;
         }
 
         /* Large Slogan Strip */
-        .aramex-slogan-strip {
+        .ctm-slogan-strip {
             background: linear-gradient(90deg, #b39027 0%, var(--accent-gold) 50%, #b39027 100%);
             border-radius: 50px;
             padding: 16px 32px;
@@ -2775,7 +2775,7 @@
             animation: float-reverse 5s ease-in-out infinite;
         }
 
-        .aramex-slogan-strip p {
+        .ctm-slogan-strip p {
             color: var(--primary-dark);
             font-size: 1.3rem;
             font-weight: 800;
@@ -2784,7 +2784,7 @@
         }
 
         @media (max-width: 576px) {
-            .aramex-slogan-strip p {
+            .ctm-slogan-strip p {
                 font-size: 1.1rem;
             }
         }
@@ -3410,21 +3410,21 @@
             }
         }
 
-        /* Aramex Strategic Partnership Mobile Layout styling */
+        /* CTM Strategic Partnership Mobile Layout styling */
         @media (max-width: 768px) {
-            .aramex-partnership-section .glass-card {
+            .ctm-partnership-section .glass-card {
                 padding: 24px 16px !important;
                 border-radius: 20px !important;
             }
         }
         @media (max-width: 576px) {
-            .aramex-brand-header {
+            .ctm-brand-header {
                 flex-direction: column !important;
                 gap: 16px !important;
                 text-align: center !important;
             }
             /* rotate handshake icon vertically when layout stacks */
-            .aramex-handshake-circle {
+            .ctm-handshake-circle {
                 transform: rotate(90deg) !important;
                 animation: float-vertical 4s ease-in-out infinite !important;
             }

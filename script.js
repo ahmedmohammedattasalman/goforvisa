@@ -414,7 +414,7 @@
 
                         if (successMsg) {
                             successTitle.textContent = 'تم تسجيل طلب فتح ملفك بنجاح!';
-                            successDesc.innerHTML = 'لقد تم إرسال معلوماتك بنجاح. سيقوم أحد مستشارينا بالتواصل معك عبر الهاتف أو الواتساب <strong>خلال 15 دقيقة</strong> لمراجعة تفاصيل أوراقك والبدء في الإجراءات اللوجستية بالتعاون مع أرامكس.';
+                            successDesc.innerHTML = 'لقد تم إرسال معلوماتك بنجاح. سيقوم أحد مستشارينا بالتواصل معك عبر الهاتف أو الواتساب <strong>خلال 15 دقيقة</strong> لمراجعة تفاصيل أوراقك والبدء في الإجراءات اللوجستية بالتعاون مع CTM Messagerie.';
                             successMsg.style.display = 'block';
                             successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
