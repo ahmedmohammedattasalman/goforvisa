@@ -2379,12 +2379,6 @@
             transition: var(--transition-smooth);
         }
 
-        .footer-legal-bar:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(14, 165, 233, 0.2);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
         .footer-legal-item {
             display: flex;
             align-items: center;
@@ -2405,13 +2399,6 @@
             font-size: 1.1rem;
             flex-shrink: 0;
             transition: var(--transition-smooth);
-        }
-
-        .footer-legal-item:hover .footer-legal-icon {
-            background: var(--accent-gold);
-            color: var(--primary-dark);
-            transform: scale(1.05) rotate(3deg);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
         }
 
         .footer-legal-text {
