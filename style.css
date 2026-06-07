@@ -371,20 +371,48 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--primary-dark);
+            gap: 12px;
+            text-decoration: none;
             direction: ltr;
         }
 
-        .logo-area span {
-            color: var(--accent-sky);
+        .logo-icon {
+            width: 48px;
+            height: 40px;
+            flex-shrink: 0;
+            transition: var(--transition-smooth);
         }
 
-        .logo-area i {
-            color: var(--accent-gold);
-            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+        .logo-area:hover .logo-icon {
+            transform: scale(1.06) rotate(-2deg);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-title {
+            font-size: 1.55rem;
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -0.5px;
+            color: var(--primary-dark);
+            transition: var(--transition-smooth);
+        }
+
+        .logo-highlight {
+            color: #0A84FF;
+        }
+
+        .logo-subtitle {
+            font-size: 0.52rem;
+            font-weight: 800;
+            letter-spacing: 2.2px;
+            color: var(--text-muted);
+            margin-top: 1px;
+            text-transform: uppercase;
         }
 
         .nav-links {
@@ -2135,14 +2163,6 @@
             align-items: center;
             gap: 10px;
             direction: ltr;
-        }
-
-        .footer-logo span {
-            color: var(--accent-sky);
-        }
-
-        .footer-logo i {
-            color: var(--accent-gold);
         }
 
         .footer-desc {
