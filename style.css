@@ -2162,7 +2162,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            direction: rtl;
+            direction: ltr;
+            justify-content: flex-end;
         }
 
         .footer-desc {
