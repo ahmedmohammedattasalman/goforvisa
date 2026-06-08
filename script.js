@@ -279,7 +279,7 @@
             draw() {
                 const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
                 gradient.addColorStop(0, this.color);
-                gradient.addColorStop(1, 'rgba(8, 17, 32, 0)');
+                gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
                 ctx.fillStyle = gradient;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
@@ -295,7 +295,7 @@
         ];
 
         function animateMesh() {
-            ctx.fillStyle = '#081120';
+            ctx.fillStyle = '#FFFFFF';
             ctx.fillRect(0, 0, width, height);
 
             shapes.forEach(shape => {
@@ -621,3 +621,90 @@
                 }, 400);
             }
         };
+
+        // ==========================================================================
+        // 10. VISA RESULTS SLIDER CAROUSEL LOGIC
+        // ==========================================================================
+        const visaTrack = document.getElementById('visa-slider-track');
+        if (visaTrack) {
+            const visaSlides = Array.from(visaTrack.children);
+            const visaNextButton = document.getElementById('visa-slider-next');
+            const visaPrevButton = document.getElementById('visa-slider-prev');
+            const visaDotsNav = document.getElementById('visa-slider-dots');
+            let visaCurrentIndex = 0;
+
+            visaSlides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (i === 0) dot.classList.add('active');
+                visaDotsNav.appendChild(dot);
+            });
+
+            const visaDots = Array.from(visaDotsNav.children);
+
+            function updateVisaSlider() {
+                visaTrack.style.transform = `translateX(${visaCurrentIndex * 100}%)`;
+                visaDots.forEach((dot, index) => {
+                    if (index === visaCurrentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+
+            visaNextButton.addEventListener('click', () => {
+                let nextIndex = visaCurrentIndex - 1;
+                if (nextIndex < 0) nextIndex = visaSlides.length - 1;
+                visaCurrentIndex = nextIndex;
+                updateVisaSlider();
+            });
+
+            visaPrevButton.addEventListener('click', () => {
+                let prevIndex = visaCurrentIndex + 1;
+                if (prevIndex >= visaSlides.length) prevIndex = 0;
+                visaCurrentIndex = prevIndex;
+                updateVisaSlider();
+            });
+
+            visaDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    visaCurrentIndex = index;
+                    updateVisaSlider();
+                });
+            });
+
+            // Swipe gestures for visa results carousel
+            let visaTouchStartX = 0;
+            let visaTouchEndX = 0;
+            const visaTrackContainer = visaTrack.parentElement;
+
+            if (visaTrackContainer) {
+                visaTrackContainer.addEventListener('touchstart', (e) => {
+                    visaTouchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                visaTrackContainer.addEventListener('touchend', (e) => {
+                    visaTouchEndX = e.changedTouches[0].screenX;
+                    handleVisaSwipe();
+                }, { passive: true });
+            }
+
+            function handleVisaSwipe() {
+                const swipeThreshold = 50;
+                if (visaTouchStartX - visaTouchEndX > swipeThreshold) {
+                    // Swipe Left -> Next Slide in RTL
+                    let nextIndex = visaCurrentIndex + 1;
+                    if (nextIndex >= visaSlides.length) nextIndex = 0;
+                    visaCurrentIndex = nextIndex;
+                    updateVisaSlider();
+                } else if (visaTouchEndX - visaTouchStartX > swipeThreshold) {
+                    // Swipe Right -> Prev Slide in RTL
+                    let prevIndex = visaCurrentIndex - 1;
+                    if (prevIndex < 0) prevIndex = visaSlides.length - 1;
+                    visaCurrentIndex = prevIndex;
+                    updateVisaSlider();
+                }
+            }
+        }
+

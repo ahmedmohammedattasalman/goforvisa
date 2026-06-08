@@ -629,7 +629,7 @@
         .hero-section {
             min-height: 100vh;
             position: relative;
-            background-color: var(--primary-dark);
+            background-color: #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -698,8 +698,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
             background-size: 50px 50px;
             z-index: -1;
         }
@@ -716,7 +716,7 @@
         }
 
         .hero-content {
-            color: white;
+            color: var(--text-main);
             text-align: center;
             padding-left: 0;
             width: 100%;
@@ -726,15 +726,15 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(14, 165, 233, 0.08);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.15);
             border-radius: 50px;
             padding: 8px 18px;
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--accent-sky);
+            color: var(--accent-blue);
             margin-bottom: 24px;
             animation: float 4s ease-in-out infinite;
         }
@@ -754,7 +754,7 @@
 
         .hero-content p {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--text-muted);
             font-weight: 400;
             max-width: 580px;
             margin: 0 auto 40px auto;
@@ -3300,7 +3300,7 @@
         /* PREMIUM CUSTOM AUDIO PLAYER STYLES */
         .premium-audio-player {
             margin-top: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 0;
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
@@ -4023,3 +4023,110 @@
             border-top: 1px solid var(--border-color);
         }
 
+               /* ==========================================================================
+           NEW VISA RESULTS / ACCEPTED VISAS SECTION STYLING (Slider Carousel)
+           ========================================================================== */
+        .visa-result-card {
+            padding: 0 !important;
+            overflow: hidden;
+            background: #FFFFFF !important;
+            border-radius: 28px !important;
+            border: 1px solid var(--border-color) !important;
+            box-shadow: 0 20px 40px rgba(8, 17, 32, 0.05) !important;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: var(--transition-smooth);
+        }
+
+        .visa-result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(8, 17, 32, 0.08) !important;
+            border-color: rgba(14, 165, 233, 0.2) !important;
+        }
+
+        .visa-slider-image-wrapper {
+            width: 100% !important;
+            height: 280px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #F8FAFC !important;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .visa-slider-image-wrapper img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            transition: transform 0.5s ease;
+        }
+
+        .visa-slider-image-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .visa-result-content {
+            padding: 30px !important;
+            direction: rtl !important;
+            text-align: right !important;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .visa-result-content .rating-stars {
+            color: var(--accent-gold);
+            display: flex;
+            justify-content: flex-start;
+            gap: 6px;
+        }
+
+        .visa-result-content h3.client-name-green {
+            color: #10B981 !important;
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            text-align: right !important;
+        }
+
+        .visa-result-content p.testimonial-text-desc {
+            color: var(--text-main) !important;
+            font-size: 1.05rem !important;
+            line-height: 1.75 !important;
+            font-weight: 500 !important;
+            margin: 0 !important;
+            text-align: right !important;
+        }
+
+        /* Specific visibility overrides for slider controls on white background */
+        #visa-results .slider-nav-btn {
+            background: rgba(8, 17, 32, 0.05) !important;
+            border: 1px solid rgba(8, 17, 32, 0.1) !important;
+            color: var(--primary-dark) !important;
+        }
+
+        #visa-results .slider-nav-btn:hover {
+            background: var(--accent-sky) !important;
+            border-color: transparent !important;
+            color: white !important;
+            box-shadow: var(--glow-blue) !important;
+        }
+
+        #visa-results .slider-dot {
+            background: rgba(8, 17, 32, 0.15) !important;
+        }
+
+        #visa-results .slider-dot.active {
+            background: var(--accent-sky) !important;
+        }
+
+        @media (max-width: 576px) {
+            .visa-slider-image-wrapper {
+                height: 200px !important;
+            }
+            .visa-result-content {
+                padding: 20px !important;
+            }
+        }
