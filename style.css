@@ -4052,7 +4052,6 @@
             padding: 0 !important;
             background: #F8FAFC !important;
             overflow: hidden;
-            cursor: pointer;
             position: relative;
         }
 
@@ -4060,11 +4059,6 @@
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
-            transition: transform 0.5s ease;
-        }
-
-        .visa-slider-image-wrapper:hover img {
-            transform: scale(1.03);
         }
 
         .visa-result-content {
