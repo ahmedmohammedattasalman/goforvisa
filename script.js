@@ -486,6 +486,7 @@
             const progressContainer = player.querySelector('.audio-progress-container');
             const currentTimeEl = player.querySelector('.audio-current-time');
             const durationEl = player.querySelector('.audio-duration');
+            const waveform = player.querySelector('.audio-waveform');
             
             // Format time in mm:ss
             const formatTime = (secs) => {
@@ -493,6 +494,19 @@
                 const seconds = Math.floor(secs % 60);
                 return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
             };
+
+            // Generate waveform bars dynamically
+            if (waveform) {
+                const barCount = 38; // number of bars in the waveform
+                const seedHeights = [30, 45, 20, 60, 80, 25, 35, 70, 90, 40, 30, 50, 80, 20, 35, 60, 85, 30, 45, 70, 25, 35, 55, 90, 40, 25, 35, 65, 95, 30, 45, 20, 55, 80, 30, 45, 60, 25];
+                for (let i = 0; i < barCount; i++) {
+                    const bar = document.createElement('div');
+                    bar.classList.add('wave-bar');
+                    const height = seedHeights[i % seedHeights.length];
+                    bar.style.height = `${height}%`;
+                    waveform.appendChild(bar);
+                }
+            }
             
             // Toggle play/pause
             playBtn.addEventListener('click', () => {
@@ -520,7 +534,20 @@
             // Update progress & timer
             audio.addEventListener('timeupdate', () => {
                 const percent = (audio.currentTime / audio.duration) * 100;
-                progressBar.style.width = `${percent}%`;
+                if (progressBar) {
+                    progressBar.style.width = `${percent}%`;
+                }
+                if (waveform) {
+                    const bars = waveform.querySelectorAll('.wave-bar');
+                    const activeCount = Math.floor((audio.currentTime / audio.duration) * bars.length);
+                    bars.forEach((bar, index) => {
+                        if (index < activeCount) {
+                            bar.classList.add('active');
+                        } else {
+                            bar.classList.remove('active');
+                        }
+                    });
+                }
                 currentTimeEl.textContent = formatTime(audio.currentTime);
             });
             
@@ -542,7 +569,13 @@
             
             // Reset player when finished
             audio.addEventListener('ended', () => {
-                progressBar.style.width = '0%';
+                if (progressBar) {
+                    progressBar.style.width = '0%';
+                }
+                if (waveform) {
+                    const bars = waveform.querySelectorAll('.wave-bar');
+                    bars.forEach(bar => bar.classList.remove('active'));
+                }
                 currentTimeEl.textContent = '0:00';
                 playBtn.innerHTML = '<i data-lucide="play" style="width: 20px; height: 20px; fill: white; margin-right: -2px;"></i>';
                 lucide.createIcons();
