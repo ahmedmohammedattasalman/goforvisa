@@ -85,6 +85,17 @@
             });
         });
 
+        // Footer links category activation
+        document.querySelectorAll('.footer-links .footer-link[data-filter]').forEach(link => {
+            link.addEventListener('click', () => {
+                const filter = link.getAttribute('data-filter');
+                const tabBtn = document.querySelector(`.tab-btn[data-filter="${filter}"]`);
+                if (tabBtn) {
+                    tabBtn.click();
+                }
+            });
+        });
+
         /* ==========================================================================
            5. TESTIMONIALS SLIDER CAROUSEL TRACK LOGIC
            ========================================================================== */
