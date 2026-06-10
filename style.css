@@ -4047,10 +4047,10 @@
 
         .visa-slider-image-wrapper {
             width: 100% !important;
-            height: 280px !important;
+            height: 380px !important;
             margin: 0 !important;
             padding: 0 !important;
-            background: #F8FAFC !important;
+            background: #FFFFFF !important;
             overflow: hidden;
             position: relative;
         }
@@ -4058,7 +4058,7 @@
         .visa-slider-image-wrapper img {
             width: 100% !important;
             height: 100% !important;
-            object-fit: cover !important;
+            object-fit: contain !important;
         }
 
         .visa-result-content {
@@ -4077,8 +4077,8 @@
             gap: 6px;
         }
 
-        .visa-result-content h3.client-name-green {
-            color: #10B981 !important;
+        .visa-result-content h3.client-name {
+            color: var(--primary-dark) !important;
             font-size: 1.35rem !important;
             font-weight: 700 !important;
             margin: 0 !important;
@@ -4118,7 +4118,7 @@
 
         @media (max-width: 576px) {
             .visa-slider-image-wrapper {
-                height: 200px !important;
+                height: 280px !important;
             }
             .visa-result-content {
                 padding: 20px !important;

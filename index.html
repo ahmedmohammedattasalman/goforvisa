@@ -127,10 +127,13 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-gold btn-glow-pulse">املاء الإستمارة الآن <i
+                        <a href="#contact"
+                            onclick="selectContactTab('free'); document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                            class="btn btn-gold btn-glow-pulse">املاء استمارة فتح ملف التأشيرة <i
                                 data-lucide="clipboard-check"></i></a>
-                        <a href="https://wa.me/212660773153" target="_blank" class="btn btn-whatsapp"><i
-                                class="lucide-message-square"></i> تواصل عبر الواتساب</a>
+                        <a href="#contact"
+                            onclick="selectContactTab('paid'); document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
+                            class="btn btn-primary">استشارة مدفوعة <i data-lucide="calendar-check"></i></a>
                     </div>
 
                 </div>
@@ -995,7 +998,8 @@
     <!-- ==========================================================================
        VISA RESULTS / ACCEPTED VISAS SECTION (Slider Carousel)
        ========================================================================== -->
-    <section class="visa-results-section section-padding" id="visa-results" style="background-color: #FFFFFF; position: relative;">
+    <section class="visa-results-section section-padding" id="visa-results"
+        style="background-color: #FFFFFF; position: relative;">
         <div class="container">
             <!-- Section Header -->
             <div class="section-header">
@@ -1024,8 +1028,14 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name-green">محمد - الدار البيضاء</h3>
-                                    <p class="testimonial-text-desc">أنا محمد ، عندي سجل تجاري، وقررت نقدم الطلب ديال الفيزا أنا ومراتي وبنتي الصغيرة. صراحة ما كنتش متفائل بزاف حيث ترفضات ليا من قبل، ولكن مع هاد الفريق، الأمور مشات سلسة. جمعو ليا الأوراق، خداو ليا الرونديفو، وكلشي كان عن بعد. والحمد لله خرجات لينا الفيزا مدة 30 يوم كاملين. كنشكرهم بزاف والله يعمرها دار</p>
+                                    <h3 class="client-name">الأستاذ محمد - أسفي (محامي)</h3>
+                                    <p class="testimonial-text-desc">"بصفتي محامياً، أدرك جيداً أهمية الدقة والالتزام
+                                        بالقوانين والشروط المقعدة عند إعداد ملفات التأشيرات، خاصة لدول مثل الدنمارك. أود
+                                        أن أشكر الطاقم الاحترافي لـ GOFORVISA على التعامل الراقي والخبرة العالية التي
+                                        أظهروها في إدارة ملفي وملف عائلتي. بفضل توجيهاتهم الدقيقة وتنظيمهم المحكم لكل
+                                        وثيقة من الألف إلى الياء، تمكنا بحمد الله من الحصول على الفيزا بكل سلاسة وفي وقت
+                                        وجيز. خدمات متميزة تستحق كل الثناء، وأنصح بشدة كل من يبحث عن الاحترافية
+                                        والمصداقية بالتعامل معهم."</p>
                                 </div>
                             </div>
                         </div>
@@ -1044,8 +1054,14 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name-green">زكرياء - الرباط</h3>
-                                    <p class="testimonial-text-desc">أنا زكرياء من الدارالبيضاء عندي سجل تجاري، وبغيت نمشي ندوز شوية ديال الوقت دانمارك. تواصلت مع هاد الخدمة وخدمت مع واحد المستشار ديالكم، وحضرت الملف ديالي بكل دقة، والحمد لله تقبلات ليا الفيزا.</p>
+                                    <h3 class="client-name">الأستاذ محمد - أسفي (محامي)</h3>
+                                    <p class="testimonial-text-desc">"بصفتي محامياً، أدرك تماماً أن قبول ملفات الفيزا
+                                        لدول الشنغن يعتمد بالدرجة الأولى على الدقة القانونية والترتيب المثالي للوثائق.
+                                        تجربتي مع طاقم GOFORVISA كانت استثنائية بكل المقاييس؛ حيث أشرفوا على ملفي وملف
+                                        عائلتي من الألف إلى الياء بمهنية عالية. والنتيجة بفضل الله كانت نجاحاً مزدوجاً
+                                        ومتتالياً بالحصول على تأشيرة الدنمارك وأيضاً تأشيرة فرنسا! التزامهم، احترافيتهم،
+                                        ومصداقيتهم تجعلهم الخيار الأول بدون منازع. شكراً جزيلاً لكم على هذا العمل
+                                        المتميز وصناعة الفارق دائماً."</p>
                                 </div>
                             </div>
                         </div>
@@ -1054,7 +1070,7 @@
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
                                 <div class="visa-slider-image-wrapper">
-                                    <img src="assets/visa-result/3.jpeg" alt="تأشيرة فرنسا المقبولة لعملائنا">
+                                    <img src="assets/visa-result/3.jpeg" alt="تأشيرة الدنمارك المقبولة لعملائنا">
                                 </div>
                                 <div class="visa-result-content">
                                     <div class="rating-stars">
@@ -1064,8 +1080,12 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name-green">حمزة - وجدة</h3>
-                                    <p class="testimonial-text-desc">أنا حمزة من وجدة، كنت باغي ندفع الفيزا لفرنسا سياحة، خدمت مع هاد الفريق لي وجد ليا كاع الوراق من الالف الى الياء وحجز ليا الموعد وسهل عليا بزاف ديال الامور والحمد لله تقبل الطلب ديالي</p>
+                                    <h3 class="client-name">الأخ زكرياء - الدار البيضاء (موظف استقبال في فندق)</h3>
+                                    <p class="testimonial-text-desc">"بحكم عملي في الفندقة بالدار البيضاء، أدرك تماماً
+                                        معنى الخدمة الاحترافية. أتوجه بالشكر الجزيل للأخ يوسف وطاقم منصة GOFORVISA على
+                                        مواكبتهم المتميزة والاحترافية العالية في إعداد ملفي، والحمد لله بفضل توجيهاتهم
+                                        الدقيقة تمكنت من الحصول على تأشيرة شينغن لدولة الدنمارك بكل سلاسة. أنصح بشدة
+                                        بالتعامل معهم لمن يبحث عن الأمان والمصداقية."</p>
                                 </div>
                             </div>
                         </div>
@@ -1074,7 +1094,7 @@
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
                                 <div class="visa-slider-image-wrapper">
-                                    <img src="assets/visa-result/4.jpeg" alt="تأشيرة إسبانيا المقبولة لعملائنا">
+                                    <img src="assets/visa-result/4.jpeg" alt="تأشيرة الدنمارك المقبولة لعملائنا">
                                 </div>
                                 <div class="visa-result-content">
                                     <div class="rating-stars">
@@ -1084,8 +1104,108 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name-green">فاطمة - العيون</h3>
-                                    <p class="testimonial-text-desc">الحمد لله خديت فيزا لمدة 90 يوم متعددة الدخول. كنت كنقلب على شي حد يعاوني فالموضوع حتى لقيت هاد الخدمة وفعلاً المستشار دار معايا خدمتو كاملة من الأول حتى الآخر بلا ما نتحرك من بلاصتي. كيتبع معاك خطوة بخطوة، وكيشرح ليك كلشي. الأوراق تجمعو، والرونديفو تاخذ، ودارو ليا كلشي عن بعد. وصلو وراق ديال عبر ستيام بحكم انني من مدينة بعدك العيون وفي الآخر، جات الفيزا بحال ما بغيت. شكراً ليكم بزاف</p>
+                                    <h3 class="client-name">السيد عبد الرزاق - الدار البيضاء (صاحب شركة)</h3>
+                                    <p class="testimonial-text-desc">"بصفتي صاحب مقاولة، أقدّر كثيراً احترافية الالتزام
+                                        بالمواعيد والتدبير الدقيق للملفات. أتوجه بجزيل الشكر للأخ يوسف ولفريق منصة
+                                        GOFORVISA على مواكبتهم المتميزة في إعداد ملف الفيزا السياحية لدولة الدنمارك لي
+                                        ولزوجتي. بفضل توجيهاتهم وخبرتهم العالية، حصلنا على التأشيرة بكل سلاسة وفي وقت
+                                        وجيز. أنصح بشدة كل من يبحث عن المصداقية والاحترافية بالتعامل معهم."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-glass-card visa-result-card">
+                                <div class="visa-slider-image-wrapper">
+                                    <img src="assets/visa-result/5.jpeg" alt="تأشيرة أمريكا المقبولة لعملائنا">
+                                </div>
+                                <div class="visa-result-content">
+                                    <div class="rating-stars">
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                    </div>
+                                    <h3 class="client-name">السيد محمد - الدار البيضاء (صاحب شركة)</h3>
+                                    <p class="testimonial-text-desc">"إجراءات الفيزا الأمريكية معروفة بدقتها وصعوبتها،
+                                        لكن مع الأخ يوسف وفريق GOFORVISA الأمر كان مختلفاً تماماً. بفضل خبرتهم
+                                        وتوجيهاتهم الذكية في ترتيب الملف وتحضير المقابلة، تمكنت بفضل الله من الحصول على
+                                        تأشيرة سياحة للولايات المتحدة الأمريكية لمدة 10 سنوات بكل أريحية. خدمة محترفة
+                                        وسريعة تستحق كل الثناء!"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-glass-card visa-result-card">
+                                <div class="visa-slider-image-wrapper">
+                                    <img src="assets/visa-result/6.jpeg" alt="تأشيرة بريطانيا المقبولة لعملائنا">
+                                </div>
+                                <div class="visa-result-content">
+                                    <div class="rating-stars">
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                    </div>
+                                    <h3 class="client-name">الأستاذة مريم - المحمدية (أستاذة في التعليم الثانوي)</h3>
+                                    <p class="testimonial-text-desc">"كمربية أجيال، أقدّر كثيراً الوضوح، الأمانة
+                                        والاتقان في العمل. تجربتي مع الأخ يوسف وطاقم GOFORVISA كانت نموذجاً للاحترافية؛
+                                        حيث حظيت بمواكبة دقيقة وتوجيهات سديدة مكنتني من الحصول على تأشيرة المملكة
+                                        المتحدة (بريطانيا) لمدة 6 أشهر متعددة الدخول بكل يسر وسهولة. شكراً لكم على
+                                        مصداقيتكم وعملكم المتميز."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 7 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-glass-card visa-result-card">
+                                <div class="visa-slider-image-wrapper">
+                                    <img src="assets/visa-result/7.jpeg" alt="تأشيرة بريطانيا المقبولة لعملائنا">
+                                </div>
+                                <div class="visa-result-content">
+                                    <div class="rating-stars">
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                    </div>
+                                    <h3 class="client-name">السيد الحسن - مراكش (متقاعد)</h3>
+                                    <p class="testimonial-text-desc">"تجربتي مع الأخ يوسف وطاقم GOFORVISA كانت ناجحة بكل
+                                        المقاييس. بفضل كفاءتهم واطلاعهم الدائم على آخر التحديثات، واكبوني خطوة بخطوة في
+                                        التقديم على تأشيرة المملكة المتحدة الإلكترونية بالنظام الجديد (ETA)، والحمد لله
+                                        حصلت على فيزا 6 أشهر متعددة الدخول بكل سرعة وبدون تعقيد. أنصح بشدة بالتعامل معهم
+                                        لمن يبحث عن خبرة حقيقية ومواكبة احترافية."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 8 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-glass-card visa-result-card">
+                                <div class="visa-slider-image-wrapper">
+                                    <img src="assets/visa-result/8.jpeg" alt="تأشيرة كندا المقبولة لعملائنا">
+                                </div>
+                                <div class="visa-result-content">
+                                    <div class="rating-stars">
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                        <i class="lucide-star" style="fill: currentColor;"></i>
+                                    </div>
+                                    <h3 class="client-name">السيد محمد - الدار البيضاء (مقاول)</h3>
+                                    <p class="testimonial-text-desc">"كمقاول، الوقت والسرعة هما أساس نجاح أي خطوة.
+                                        تجربتي مع الأخ يوسف وطاقم منصة GOFORVISA كانت استثنائية بكل المقاييس؛ حيث أبانوا
+                                        عن احترافية كبيرة واطلاع دقيق بالإجراءات الجديدة، مما مكنني من الحصول على
+                                        التأشيرة الإلكترونية لكندا (AVE) في وقت قياسي ودون أي تعقيدات. أنصح بشدة
+                                        بالاعتماد عليهم لمن يبحث عن الكفاءة والسرعة."</p>
                                 </div>
                             </div>
                         </div>
@@ -1370,9 +1490,42 @@
                 <div class="contact-form-wrapper" data-reveal="right">
                     <div class="section-header" style="text-align: right; margin-bottom: 30px; margin-right: 0;">
                         <span class="tag">تواصل معنا الآن</span>
-                        <h2>ابدأ أول خطوة نحو تأشيرتك </h2>
-                        <p>املاء الاستمارة بالمعلومات المطلوبة وسيقوم مستشارنا بالتواصل معك خلال 24 ساعة لتقديم خطة عمل
-                            متكاملة.</p>
+                        <h2>أختر الخدمة المناسبة لك</h2>
+                        <div class="contact-info-desc"
+                            style="text-align: right; margin-top: 15px; display: flex; flex-direction: column; gap: 15px; line-height: 1.7; font-size: 0.95rem; color: var(--text-muted);">
+                            <div>
+                                <strong
+                                    style="color: var(--primary-dark); display: block; margin-bottom: 4px; font-size: 1.05rem;"><i
+                                        data-lucide="folder-plus"
+                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-sky);"></i>
+                                    فتح ملف تقديم</strong>
+                                <span>قم بتعبئة الاستمارة بالمعلومات الأساسية واختيار البلد المستهدف، وسيتولى فريق
+                                    GoForVisa دراسة ملفك والتواصل معك عبر واتساب لتقديم خطة عمل واضحة وقائمة الوثائق
+                                    المطلوبة حسب حالتك.</span>
+                            </div>
+
+                            <div>
+                                <strong
+                                    style="color: var(--primary-dark); display: block; margin-bottom: 4px; font-size: 1.05rem;"><i
+                                        data-lucide="calendar-check"
+                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-gold);"></i>
+                                    استشارة خاصة مدفوعة</strong>
+                                <span>احجز جلسة مع خبير تأشيرات لتقييم ملفك والإجابة عن استفساراتك. بعد اختيار الخدمة،
+                                    سيتم توجيهك إلى واتساب لإتمام الدفع وتحديد موعد الاستشارة.</span>
+                            </div>
+
+                            <div
+                                style="background: rgba(14, 165, 233, 0.03); border: 1px dashed rgba(14, 165, 233, 0.2); border-radius: 12px; padding: 12px 16px; margin-top: 5px;">
+                                <strong
+                                    style="color: var(--primary-dark); display: block; margin-bottom: 4px; font-size: 1rem;"><i
+                                        data-lucide="help-circle"
+                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-sky);"></i>
+                                    لا تعرف أي خدمة تختار؟</strong>
+                                <span style="font-size: 0.9rem;">إذا كنت جاهزاً لبدء إجراءات التأشيرة، اختر فتح ملف
+                                    تقديم. أما إذا كنت ترغب في تقييم وضعيتك والحصول على توجيه مهني قبل البدء، فاختر
+                                    استشارة خاصة مدفوعة.</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Dynamic Segmented Tab Control -->
@@ -1675,7 +1828,8 @@
                                 <div class="contact-info-icon"><i data-lucide="mail"></i></div>
                                 <div class="contact-info-text">
                                     <h4>البريد الإلكتروني</h4>
-                                    <p class="latin-num"><a href="mailto:contact@goforvisa.ma" style="color: inherit;">contact@goforvisa.ma</a></p>
+                                    <p class="latin-num"><a href="mailto:contact@goforvisa.ma"
+                                            style="color: inherit;">contact@goforvisa.ma</a></p>
                                 </div>
                             </div>
 
@@ -1763,9 +1917,11 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
-                    <div class="footer-contact-email" style="margin-top: 20px; display: flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
+                    <div class="footer-contact-email"
+                        style="margin-top: 20px; display: flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
                         <i data-lucide="mail" style="width: 16px; height: 16px; color: var(--accent-sky);"></i>
-                        <a href="mailto:contact@goforvisa.ma" class="latin-num" style="transition: var(--transition-fast);">contact@goforvisa.ma</a>
+                        <a href="mailto:contact@goforvisa.ma" class="latin-num"
+                            style="transition: var(--transition-fast);">contact@goforvisa.ma</a>
                     </div>
                 </div>
 
@@ -1777,7 +1933,8 @@
                         <a href="#countries" data-filter="america" class="footer-link">تأشيرة أمريكا السياحية</a>
                         <a href="#countries" data-filter="commonwealth" class="footer-link">تأشيرة بريطانيا السياحية</a>
                         <a href="#countries" data-filter="commonwealth" class="footer-link">تأشيرة استراليا السياحية</a>
-                        <a href="#countries" data-filter="express" class="footer-link">التأشيرات الإلكترونية والباقات</a>
+                        <a href="#countries" data-filter="express" class="footer-link">التأشيرات الإلكترونية
+                            والباقات</a>
                     </div>
                 </div>
 
