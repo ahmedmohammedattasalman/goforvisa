@@ -2370,6 +2370,26 @@
             background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
         }
 
+        .social-btn.youtube {
+            --glow-color: rgba(255, 0, 0, 0.25);
+            --shadow-color: rgba(255, 0, 0, 0.4);
+            --hover-border-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .social-btn.youtube:hover {
+            background: #FF0000;
+        }
+
+        .social-btn.tiktok {
+            --glow-color: rgba(0, 242, 254, 0.25);
+            --shadow-color: rgba(254, 9, 121, 0.4);
+            --hover-border-color: rgba(0, 242, 254, 0.5);
+        }
+
+        .social-btn.tiktok:hover {
+            background: #000000;
+        }
+
         /* Premium Footer Legal Info Bar styling */
         .footer-legal-bar {
             display: grid;
