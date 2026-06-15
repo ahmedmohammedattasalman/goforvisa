@@ -3879,6 +3879,11 @@
             border-bottom: 2px solid rgba(16, 185, 129, 0.25);
         }
 
+        .header-gradient-schengen {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%) !important;
+            border-bottom: 2px solid rgba(14, 165, 233, 0.3);
+        }
+
         .express-glow {
             position: absolute;
             width: 120px;
@@ -3896,6 +3901,10 @@
 
         .header-gradient-3 .express-glow {
             background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+        }
+
+        .header-gradient-schengen .express-glow {
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%);
         }
 
         .express-flags-row {

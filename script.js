@@ -484,6 +484,33 @@
                     }, 1500);
                 });
             }
+
+            // Toggle CNSS container based on job selection
+            const freeJobSelect = document.getElementById('free-job');
+            const cnssContainer = document.getElementById('cnss-container');
+            if (freeJobSelect && cnssContainer) {
+                const cnssInputs = document.querySelectorAll('input[name="free-cnss"]');
+                
+                function toggleCNSS() {
+                    if (freeJobSelect.value === 'private') {
+                        cnssContainer.style.display = 'block';
+                        cnssInputs.forEach(input => {
+                            input.disabled = false;
+                            input.required = true;
+                        });
+                    } else {
+                        cnssContainer.style.display = 'none';
+                        cnssInputs.forEach(input => {
+                            input.disabled = true;
+                            input.required = false;
+                        });
+                    }
+                }
+                
+                freeJobSelect.addEventListener('change', toggleCNSS);
+                // Run initially to set correct state
+                toggleCNSS();
+            }
         });
 
         /* ==========================================================================
