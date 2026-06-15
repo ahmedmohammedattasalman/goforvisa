@@ -418,6 +418,47 @@
                     submitBtn.innerHTML = 'جاري تسجيل ملفك... <i data-lucide="loader-2" class="animate-spin"></i>';
                     lucide.createIcons();
 
+                    // Read inputs
+                    const name = document.getElementById('free-name').value;
+                    const phone = document.getElementById('free-phone').value;
+                    const destSelect = document.getElementById('free-destination');
+                    const destinationText = destSelect.options[destSelect.selectedIndex].text;
+                    const city = document.getElementById('free-city').value;
+                    
+                    const jobSelect = document.getElementById('free-job');
+                    const jobText = jobSelect.options[jobSelect.selectedIndex].text;
+                    
+                    let cnssVal = "غير مطلوب (غير موظف قطاع خاص)";
+                    if (jobSelect.value === 'private') {
+                        const cnssRadio = document.querySelector('input[name="free-cnss"]:checked');
+                        cnssVal = cnssRadio ? cnssRadio.value : "لا";
+                    }
+                    
+                    const rejectRadio = document.querySelector('input[name="free-reject"]:checked');
+                    const rejectVal = rejectRadio ? rejectRadio.value : "لا";
+
+                    const payload = {
+                        form_type: "فتح ملف تقديم",
+                        name: name,
+                        phone: phone,
+                        destination: destinationText,
+                        city: city,
+                        job: jobText,
+                        cnss_coverage: cnssVal,
+                        previous_refusal: rejectVal,
+                        submitted_at: new Date().toISOString()
+                    };
+
+                    // Send payload to n8n webhook
+                    fetch('https://n8n.goforvisa.ma/webhook/goforvisa', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    })
+                    .catch(err => console.error('Webhook Error:', err));
+
                     setTimeout(() => {
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = originalText;
@@ -465,6 +506,27 @@
                     const whatsappMessage = `طلب الحصول على رقم حساب التجاري وفا بنك من أجل الدفع\nالطلب: إستشارة حول تأشيرة ${destinationText}\nرقم الطلب: ${reqId}\nالمبلغ: ${amount}\nرقم صاحب الطلب: ${phone}`;
                     
                     const whatsappUrl = `https://wa.me/212660773153?text=${encodeURIComponent(whatsappMessage)}`;
+
+                    const payload = {
+                        form_type: "استشارة خاصة مدفوعة",
+                        name: name,
+                        phone: phone,
+                        destination: destinationText,
+                        duration: durationVal,
+                        amount: amount,
+                        request_id: reqId,
+                        submitted_at: new Date().toISOString()
+                    };
+
+                    // Send payload to n8n webhook
+                    fetch('https://n8n.goforvisa.ma/webhook/goforvisa', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    })
+                    .catch(err => console.error('Webhook Error:', err));
 
                     setTimeout(() => {
                         submitBtn.disabled = false;
