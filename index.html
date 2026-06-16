@@ -178,7 +178,7 @@
 
             <div class="country-tabs">
                 <button class="tab-btn active" data-filter="all">عرض الكل</button>
-                <button class="tab-btn" data-filter="schengen">دول شنغن والأوروبية</button>
+                <button class="tab-btn" data-filter="schengen">دول شنغن الأوروبية</button>
                 <button class="tab-btn" data-filter="america">أمريكا الشمالية</button>
                 <button class="tab-btn" data-filter="commonwealth">دول الكومنولث</button>
                 <button class="tab-btn" data-filter="express">التأشيرات الإلكترونية والباقات</button>
@@ -278,28 +278,33 @@
                         <div class="express-glow"></div>
                         <div class="express-flags-row">
                             <img src="https://flagcdn.com/w80/fr.png" alt="فرنسا" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/de.png" alt="ألمانيا" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/be.png" alt="بلجيكا" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/it.png" alt="إيطاليا" class="micro-flag">
                             <img src="https://flagcdn.com/w80/nl.png" alt="هولندا" class="micro-flag">
                             <img src="https://flagcdn.com/w80/at.png" alt="النمسا" class="micro-flag">
                             <img src="https://flagcdn.com/w80/fi.png" alt="فنلندا" class="micro-flag">
                             <img src="https://flagcdn.com/w80/hr.png" alt="كرواتيا" class="micro-flag">
-                            <img src="https://flagcdn.com/w80/be.png" alt="بلجيكا" class="micro-flag">
                             <img src="https://flagcdn.com/w80/is.png" alt="آيسلندا" class="micro-flag">
                             <img src="https://flagcdn.com/w80/mt.png" alt="مالطا" class="micro-flag">
-                            <img src="https://flagcdn.com/w80/dk.png" alt="الدنمارك" class="micro-flag">
                             <img src="https://flagcdn.com/w80/se.png" alt="السويد" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/dk.png" alt="الدنمارك" class="micro-flag">
+                            <img src="https://flagcdn.com/w80/no.png" alt="النرويج" class="micro-flag">
                         </div>
                         <span class="country-name-badge">تأشيرة دول شنغن الأوروبية</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">دول شنغن والأوروبية</span>
+                        <span class="country-tag">دول شنغن الأوروبية</span>
                         <div class="express-details">
                             <div class="express-sub-section">
                                 <strong><i data-lucide="map" class="express-icon"></i> الدول المشمولة بالخدمة:</strong>
-                                <p>فرنسا، هولندا، النمسا، فنلندا، كرواتيا، بلجيكا، آيسلندا، مالطا، السويد، والدنمارك.</p>
+                                <p>فرنسا، ألمانيا، بلجيكا، إيطاليا، هولندا، النمسا، فنلندا، كرواتيا، آيسلندا، مالطا،
+                                    السويد، الدنمارك، والنرويج.</p>
                             </div>
                             <div class="express-sub-section">
                                 <strong><i data-lucide="check-circle" class="express-icon"></i> خدماتنا تشمل:</strong>
-                                <p>مراجعة كاملة وتجهيز وتدقيق ملف التأشيرة السياحية لجميع دول شنغن ليتوافق تماماً مع متطلبات القنصليات الأوروبية والأنظمة المعتمدة حديثاً.</p>
+                                <p>مراجعة كاملة وتجهيز وتدقيق ملف التأشيرة السياحية لجميع دول شنغن ليتوافق تماماً مع
+                                    متطلبات القنصليات الأوروبية والأنظمة المعتمدة حديثاً.</p>
                             </div>
                             <div class="express-spec-box">
                                 <div class="spec-item"><i data-lucide="shield-check"></i> متطلبات ميسرة بالكامل</div>
@@ -307,7 +312,8 @@
                             </div>
                         </div>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i> 5-10 أيام على حسب توفر المواعيد
+                            </div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
                                 class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
@@ -845,8 +851,7 @@
 
                                 <!-- Custom Premium Audio Player -->
                                 <div class="premium-audio-player">
-                                    <audio class="testimonial-audio" src="voice/AUDIO 1.mp3"
-                                        preload="metadata"></audio>
+                                    <audio class="testimonial-audio" src="voice/AUDIO 1.mp3" preload="metadata"></audio>
                                     <button class="audio-play-btn" type="button">
                                         <i data-lucide="play"
                                             style="width: 20px; height: 20px; fill: white; margin-right: -2px;"></i>
@@ -1601,16 +1606,19 @@
                                         <option value="usa">الولايات المتحدة الأمريكية</option>
                                         <option value="canada">كندا</option>
                                         <option value="uk">المملكة المتحدة (بريطانيا)</option>
-                                        <option value="schengen">الدنمارك (دول شنغن)</option>
                                         <option value="schengen_france">فرنسا (دول شنغن)</option>
+                                        <option value="schengen_germany">ألمانيا (دول شنغن)</option>
+                                        <option value="schengen_belgium">بلجيكا (دول شنغن)</option>
+                                        <option value="schengen_italy">إيطاليا (دول شنغن)</option>
                                         <option value="schengen_netherlands">هولندا (دول شنغن)</option>
                                         <option value="schengen_austria">النمسا (دول شنغن)</option>
                                         <option value="schengen_finland">فنلندا (دول شنغن)</option>
                                         <option value="schengen_croatia">كرواتيا (دول شنغن)</option>
-                                        <option value="schengen_belgium">بلجيكا (دول شنغن)</option>
                                         <option value="schengen_iceland">آيسلندا (دول شنغن)</option>
                                         <option value="schengen_malta">مالطا (دول شنغن)</option>
                                         <option value="schengen_sweden">السويد (دول شنغن)</option>
+                                        <option value="schengen">الدنمارك (دول شنغن)</option>
+                                        <option value="schengen_norway">النرويج (دول شنغن)</option>
                                         <option value="australia">أستراليا</option>
                                         <!-- دول الخليج والشرق الأوسط -->
                                         <option value="uae">الإمارات العربية المتحدة (دبي)</option>
@@ -1729,16 +1737,19 @@
                                         <option value="usa">الولايات المتحدة الأمريكية</option>
                                         <option value="canada">كندا</option>
                                         <option value="uk">المملكة المتحدة (بريطانيا)</option>
-                                        <option value="schengen">الدنمارك (دول شنغن)</option>
                                         <option value="schengen_france">فرنسا (دول شنغن)</option>
+                                        <option value="schengen_germany">ألمانيا (دول شنغن)</option>
+                                        <option value="schengen_belgium">بلجيكا (دول شنغن)</option>
+                                        <option value="schengen_italy">إيطاليا (دول شنغن)</option>
                                         <option value="schengen_netherlands">هولندا (دول شنغن)</option>
                                         <option value="schengen_austria">النمسا (دول شنغن)</option>
                                         <option value="schengen_finland">فنلندا (دول شنغن)</option>
                                         <option value="schengen_croatia">كرواتيا (دول شنغن)</option>
-                                        <option value="schengen_belgium">بلجيكا (دول شنغن)</option>
                                         <option value="schengen_iceland">آيسلندا (دول شنغن)</option>
                                         <option value="schengen_malta">مالطا (دول شنغن)</option>
                                         <option value="schengen_sweden">السويد (دول شنغن)</option>
+                                        <option value="schengen">الدنمارك (دول شنغن)</option>
+                                        <option value="schengen_norway">النرويج (دول شنغن)</option>
                                         <option value="australia">أستراليا</option>
                                         <!-- دول الخليج والشرق الأوسط -->
                                         <option value="uae">الإمارات العربية المتحدة (دبي)</option>
@@ -1946,13 +1957,13 @@
                             <i class="fab fa-instagram"></i>
                         </a>
 
-                        <a href="https://youtube.com/@goforvisa-d6u?si=cNm6TBgN0ASMnFDy"
-                            target="_blank" class="social-btn youtube">
+                        <a href="https://youtube.com/@goforvisa-d6u?si=cNm6TBgN0ASMnFDy" target="_blank"
+                            class="social-btn youtube">
                             <i class="fab fa-youtube"></i>
                         </a>
 
-                        <a href="https://www.tiktok.com/@goforvisa?_r=1&_t=ZN-97A98RRnY18"
-                            target="_blank" class="social-btn tiktok">
+                        <a href="https://www.tiktok.com/@goforvisa?_r=1&_t=ZN-97A98RRnY18" target="_blank"
+                            class="social-btn tiktok">
                             <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
