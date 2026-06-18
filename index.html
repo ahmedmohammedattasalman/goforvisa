@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>GoForVisa | بوابتك الأولى لتأشيرة السياحة والقبول المضمون</title>
-
+    <title data-i18n="meta.title">GoForVisa | بوابتك الأولى لتأشيرة السياحة والقبول المضمون</title>
     <!-- Meta SEO Tags -->
-    <meta name="description"
-        content="GoForVisa هي شريكك الموثوق لتجهيز ملف تأشيرتك السياحية بدقة متناهية. نرفع فرص قبولك أمام القنصليات بخدمات إعداد وتدقيق ملفات الفيزا السياحية تحت إشراف مستشارين خبراء بالتعاون مع شريكنا اللوجستي سي تي إم (CTM Messagerie).">
+    <meta name="description" data-i18n-content="meta.desc" content="GoForVisa هي شريكك الموثوق لتجهيز ملف تأشيرتك السياحية بدقة متناهية. نرفع فرص قبولك أمام القنصليات بخدمات إعداد وتدقيق ملفات الفيزا السياحية تحت إشراف مستشارين خبراء بالتعاون مع شريكنا اللوجستي سي تي إم (CTM Messagerie).">
     <meta name="keywords"
         content="تأشيرة سياحية، فيزا سياحة، فيزا شنغن، فيزا أمريكا، فيزا كندا، فيزا بريطانيا، سي تي إم، CTM Messagerie، GoForVisa">
     <meta property="og:title" content="GoForVisa | بوابتك الأولى للفرص العالمية والقبول المضمون">
@@ -16,25 +13,19 @@
         content="نجهّز ملف تأشيرتك بدقة متناهية ونرفع فرص قبولك بالتعاون الاستراتيجي مع سي تي إم (CTM Messagerie) للشحن الآمن.">
     <meta property="og:image" content="https://goforvisa.ma/wp-content/uploads/2026/05/Pro-LandingPage-23.jpg">
     <meta property="og:url" content="https://goforvisa.ma/">
-
     <!-- Google Fonts: Cairo for Arabic & Plus Jakarta Sans for numbers/Latin -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-
     <!-- Lucide Icons (Modern visual vector icons) -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <!-- FontAwesome Icons for official social media brand icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <!-- ==========================================================================
        GLASSMORPHISM NAVIGATION HEADER
        ========================================================================== -->
@@ -72,20 +63,45 @@
                         <span class="logo-subtitle">VISA • TRAVEL • SUCCESS</span>
                     </div>
                 </a>
-
                 <ul class="nav-links" id="nav-menu">
-                    <li><a href="#" class="nav-link active-link">الرئيسية</a></li>
-                    <li><a href="#countries" class="nav-link">وجهاتنا</a></li>
-                    <li><a href="#process" class="nav-link">خطواتنا</a></li>
-                    <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
-                    <li><a href="#faq" class="nav-link">الأسئلة الشائعة</a></li>
+                    <li><a href="#" class="nav-link active-link"><span><span><span><span><span data-i18n="nav.home"><span data-i18n="footer.links.home">الرئيسية</span></span></span></span></span></span></a></li>
+                    <li><a href="#countries" class="nav-link" data-i18n="nav.destinations">وجهاتنا</a></li>
+                    <li><a href="#process" class="nav-link" data-i18n="nav.process">خطواتنا</a></li>
+                    <li><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">آراء العملاء</a></li>
+                    <li><a href="#faq" class="nav-link"><span><span><span><span><span data-i18n="nav.faq"><span data-i18n="footer.links.faq">الأسئلة الشائعة</span></span></span></span></span></span></a></li>
                 </ul>
-
                 <div class="nav-actions">
                     <button
                         onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                        class="btn btn-primary btn-glow-pulse d-none-mobile">احجز
+                        class="btn btn-primary btn-glow-pulse d-none-mobile" data-i18n="nav.book_consultation">احجز
                         استشارة</button>
+                    <!-- Language Selector Toggle -->
+                    <div class="lang-selector">
+                        <button class="lang-toggle-btn" id="lang-toggle" aria-haspopup="true" aria-expanded="false">
+                            <span class="lang-label">ع</span>
+                            <i data-lucide="globe" class="lang-globe-icon"></i>
+                        </button>
+                        <div class="lang-dropdown" id="lang-dropdown">
+                            <a href="#" class="lang-option active" data-lang="ar">
+                                <span class="lang-check-container">
+                                    <span class="lang-check-circle"><i data-lucide="check"></i></span>
+                                </span>
+                                <span class="lang-name">العربية</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="fr">
+                                <span class="lang-check-container">
+                                    <span class="lang-check-circle"><i data-lucide="check"></i></span>
+                                </span>
+                                <span class="lang-name">Français</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="en">
+                                <span class="lang-check-container">
+                                    <span class="lang-check-circle"><i data-lucide="check"></i></span>
+                                </span>
+                                <span class="lang-name">English</span>
+                            </a>
+                        </div>
+                    </div>
                     <div class="hamburger" id="menu-toggle">
                         <span></span>
                         <span></span>
@@ -95,95 +111,79 @@
             </nav>
         </div>
     </header>
-
     <!-- ==========================================================================
        HERO SECTION
        ========================================================================== -->
     <section class="hero-section">
         <canvas id="mesh-canvas"></canvas>
-
         <div class="hero-bg-glows">
             <div class="glow-shape glow-1"></div>
             <div class="glow-shape glow-2"></div>
             <div class="glow-shape glow-3"></div>
         </div>
-
         <div class="hero-grid-overlay"></div>
-
         <div class="container">
             <div class="hero-flex-container">
                 <div class="hero-content" data-reveal="blur">
                     <div class="hero-badge">
-                        <i data-lucide="award"></i>
-                        رفع فرص القبول بتنظيم ملف احترافي
-                    </div>
-                    <h1>
-                        نجهّز ملف تأشيرتك بدقة<br>
-                        <span class="gradient-text">ونزيد فرص القبول</span>
-                    </h1>
-                    <p>
-                        لأننا نعمل بمنهجية واضحة تشمل تقييم وضعك، إعداد قائمة وثائق مخصصة، مراجعة دقيقة متعددة، وترتيب
-                        ملفك وفق متطلبات القنصليات مع دعم شخصي متواصل حتى يوم الإيداع.
-                    </p>
-
+                        <i data-lucide="award"></i><span data-i18n="hero.badge">رفع فرص القبول بتنظيم ملف احترافي</span></div>
+                    <h1 data-i18n="hero.title">نجهّز ملف تأشيرتك بدقة<br>
+                        <span class="gradient-text">ونزيد فرص القبول</span></h1>
+                    <p data-i18n="hero.desc">لأننا نعمل بمنهجية واضحة تشمل تقييم وضعك، إعداد قائمة وثائق مخصصة، مراجعة دقيقة متعددة، وترتيب
+                        ملفك وفق متطلبات القنصليات مع دعم شخصي متواصل حتى يوم الإيداع.</p>
                     <div class="hero-buttons">
                         <a href="#contact"
                             onclick="selectContactTab('free'); document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                            class="btn btn-gold btn-glow-pulse">املاء استمارة فتح ملف التأشيرة <i
+                            class="btn btn-gold btn-glow-pulse"><span data-i18n="hero.cta_free">املاء استمارة فتح ملف التأشيرة</span><i
                                 data-lucide="clipboard-check"></i></a>
                         <a href="#contact"
                             onclick="selectContactTab('paid'); document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                            class="btn btn-primary">استشارة مدفوعة <i data-lucide="calendar-check"></i></a>
+                            class="btn btn-primary"><span data-i18n="hero.cta_paid">استشارة مدفوعة</span><i data-lucide="calendar-check"></i></a>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ==========================================================================
        TRUST MARQUEE BAR
        ========================================================================== -->
     <section class="trust-section">
         <div class="marquee-wrapper">
             <div class="marquee-track">
-                <div class="marquee-item"><i data-lucide="shield-check"></i> قنصلية كندا المعتمدة</div>
-                <div class="marquee-item"><i data-lucide="globe"></i> تأشيرات دول الكومنولث</div>
-                <div class="marquee-item"><i data-lucide="plane-takeoff"></i> دول الاتحاد الأوروبي شنغن</div>
-                <div class="marquee-item"><i data-lucide="file-text"></i> خدمات الترجمة المعتمدة</div>
-                <div class="marquee-item"><i data-lucide="badge-check"></i> مواعيد قنصلية سريعة</div>
-                <div class="marquee-item"><i data-lucide="check-circle"></i> مطابقة بنسبة 100%</div>
+                <div class="marquee-item"><i data-lucide="shield-check"></i><span data-i18n="trust.canada">قنصلية كندا المعتمدة</span></div>
+                <div class="marquee-item"><i data-lucide="globe"></i><span data-i18n="trust.commonwealth">تأشيرات دول الكومنولث</span></div>
+                <div class="marquee-item"><i data-lucide="plane-takeoff"></i><span data-i18n="trust.schengen">دول الاتحاد الأوروبي شنغن</span></div>
+                <div class="marquee-item"><i data-lucide="file-text"></i><span data-i18n="trust.translation">خدمات الترجمة المعتمدة</span></div>
+                <div class="marquee-item"><i data-lucide="badge-check"></i><span data-i18n="trust.appointments">مواعيد قنصلية سريعة</span></div>
+                <div class="marquee-item"><i data-lucide="check-circle"></i><span data-i18n="trust.matching">مطابقة بنسبة 100%</span></div>
                 <!-- Set 2 -->
-                <div class="marquee-item"><i data-lucide="shield-check"></i> قنصلية كندا المعتمدة</div>
-                <div class="marquee-item"><i data-lucide="globe"></i> تأشيرات دول الكومنولث</div>
-                <div class="marquee-item"><i data-lucide="plane-takeoff"></i> دول الاتحاد الأوروبي شنغن</div>
-                <div class="marquee-item"><i data-lucide="file-text"></i> خدمات الترجمة المعتمدة</div>
-                <div class="marquee-item"><i data-lucide="badge-check"></i> مواعيد قنصلية سريعة</div>
-                <div class="marquee-item"><i data-lucide="check-circle"></i> مطابقة بنسبة 100%</div>
+                <div class="marquee-item"><i data-lucide="shield-check"></i><span data-i18n="trust.canada">قنصلية كندا المعتمدة</span></div>
+                <div class="marquee-item"><i data-lucide="globe"></i><span data-i18n="trust.commonwealth">تأشيرات دول الكومنولث</span></div>
+                <div class="marquee-item"><i data-lucide="plane-takeoff"></i><span data-i18n="trust.schengen">دول الاتحاد الأوروبي شنغن</span></div>
+                <div class="marquee-item"><i data-lucide="file-text"></i><span data-i18n="trust.translation">خدمات الترجمة المعتمدة</span></div>
+                <div class="marquee-item"><i data-lucide="badge-check"></i><span data-i18n="trust.appointments">مواعيد قنصلية سريعة</span></div>
+                <div class="marquee-item"><i data-lucide="check-circle"></i><span data-i18n="trust.matching">مطابقة بنسبة 100%</span></div>
             </div>
         </div>
     </section>
-
     <!-- ==========================================================================
        COUNTRY DESTINATIONS SHOWCASE
        ========================================================================== -->
     <section class="countries-section section-padding" id="countries">
         <div class="container">
             <div class="section-header">
-                <span class="tag">وجهاتنا المتميزة</span>
-                <h2>تجهيز ملف التأشيرة السياحية وفق متطلبات كل وجهة</h2>
-                <p>نقدم لك خدمات متكاملة لتجهيز ملف تأشيرتك السياحية وفق المتطلبات الرسمية والتعليمات الدقيقة لكل دولة
+                <span class="tag" data-i18n="destinations.tag">وجهاتنا المتميزة</span>
+                <h2 data-i18n="destinations.title">تجهيز ملف التأشيرة السياحية وفق متطلبات كل وجهة</h2>
+                <p data-i18n="destinations.desc">نقدم لك خدمات متكاملة لتجهيز ملف تأشيرتك السياحية وفق المتطلبات الرسمية والتعليمات الدقيقة لكل دولة
                     لرفع نسبة قبولك.</p>
             </div>
-
             <div class="country-tabs">
-                <button class="tab-btn active" data-filter="all">عرض الكل</button>
-                <button class="tab-btn" data-filter="schengen">دول شنغن الأوروبية</button>
-                <button class="tab-btn" data-filter="america">أمريكا الشمالية</button>
-                <button class="tab-btn" data-filter="commonwealth">دول الكومنولث</button>
-                <button class="tab-btn" data-filter="express">التأشيرات الإلكترونية والباقات</button>
+                <button class="tab-btn active" data-filter="all" data-i18n="destinations.filter_all">عرض الكل</button>
+                <button class="tab-btn" data-filter="schengen"><span><span><span><span><span data-i18n="destinations.filter_schengen"><span data-i18n="dest.schengen.tag">دول شنغن الأوروبية</span></span></span></span></span></span></button>
+                <button class="tab-btn" data-filter="america" data-i18n="destinations.filter_america">أمريكا الشمالية</button>
+                <button class="tab-btn" data-filter="commonwealth" data-i18n="destinations.filter_commonwealth">دول الكومنولث</button>
+                <button class="tab-btn" data-filter="express"><span><span><span><span><span data-i18n="destinations.filter_express"><span data-i18n="footer.dest.evisa">التأشيرات الإلكترونية والباقات</span></span></span></span></span></span></button>
             </div>
-
             <div class="grid-3" id="country-grid">
                 <div class="country-card" data-category="america" data-reveal="blur">
                     <div class="country-img-wrapper">
@@ -192,21 +192,20 @@
                         <div class="country-flag-badge">
                             <img src="https://flagcdn.com/w160/us.png" alt="العلم الأمريكي">
                         </div>
-                        <span class="country-name-badge">الولايات المتحدة</span>
+                        <span class="country-name-badge" data-i18n="dest.usa.title">الولايات المتحدة</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>نقوم بترتيب مستنداتك وترجمة الوثائق للإنجليزية وتعبئة نموذج DS-160 الخاص بالتأشيرة السياحية
+                        <span class="country-tag"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.tag"><span data-i18n="dest.uk.tag"><span data-i18n="dest.canada.tag"><span data-i18n="dest.australia.tag">تأشيرة سياحة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+                        <p data-i18n="dest.usa.desc">نقوم بترتيب مستنداتك وترجمة الوثائق للإنجليزية وتعبئة نموذج DS-160 الخاص بالتأشيرة السياحية
                             بدقة، كما نحضر معك أسئلة المقابلة لرفع نسبة القبول أمام القنصل الأمريكي.</p>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.time"><span data-i18n="dest.uk.time"><span data-i18n="dest.canada.time"><span data-i18n="dest.australia.time"><span data-i18n="dest.asia_africa.time">مدة التجهيز: 3-5 أيام</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
-
                 <div class="country-card stagger-delay-1" data-category="commonwealth" data-reveal="blur">
                     <div class="country-img-wrapper">
                         <img src="assets/uk.png" alt="المملكة المتحدة">
@@ -214,21 +213,20 @@
                         <div class="country-flag-badge">
                             <img src="https://flagcdn.com/w160/gb.png" alt="العلم البريطاني">
                         </div>
-                        <span class="country-name-badge">المملكة المتحدة</span>
+                        <span class="country-name-badge" data-i18n="dest.uk.title">المملكة المتحدة</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>ننسق ملف تأشيرة السياحة والزيارة للمملكة المتحدة حسب متطلبات UKVI الدقيقة، مع تدقيق كشوف
+                        <span class="country-tag"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.tag"><span data-i18n="dest.uk.tag"><span data-i18n="dest.canada.tag"><span data-i18n="dest.australia.tag">تأشيرة سياحة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+                        <p data-i18n="dest.uk.desc">ننسق ملف تأشيرة السياحة والزيارة للمملكة المتحدة حسب متطلبات UKVI الدقيقة، مع تدقيق كشوف
                             الحساب البنكي وصياغة خطابات إثبات الغرض السياحي بدقة وترتيب المستندات باحترافية.</p>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.time"><span data-i18n="dest.uk.time"><span data-i18n="dest.canada.time"><span data-i18n="dest.australia.time"><span data-i18n="dest.asia_africa.time">مدة التجهيز: 3-5 أيام</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
-
                 <div class="country-card stagger-delay-2" data-category="america" data-reveal="blur">
                     <div class="country-img-wrapper">
                         <img src="assets/canada.png" alt="كندا">
@@ -236,21 +234,20 @@
                         <div class="country-flag-badge">
                             <img src="https://flagcdn.com/w160/ca.png" alt="العلم الكندي">
                         </div>
-                        <span class="country-name-badge">كندا</span>
+                        <span class="country-name-badge" data-i18n="dest.canada.title">كندا</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>نجهز ملف تأشيرة السياحة والزيارة لكندا، بما في ذلك إعداد نماذج IRCC الرسمية وصياغة خطابات
+                        <span class="country-tag"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.tag"><span data-i18n="dest.uk.tag"><span data-i18n="dest.canada.tag"><span data-i18n="dest.australia.tag">تأشيرة سياحة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+                        <p data-i18n="dest.canada.desc">نجهز ملف تأشيرة السياحة والزيارة لكندا، بما في ذلك إعداد نماذج IRCC الرسمية وصياغة خطابات
                             مبررات السفر وترتيب الوثائق المالية وتراجمها المعتمدة بدقة متناهية.</p>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.time"><span data-i18n="dest.uk.time"><span data-i18n="dest.canada.time"><span data-i18n="dest.australia.time"><span data-i18n="dest.asia_africa.time">مدة التجهيز: 3-5 أيام</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
-
                 <div class="country-card stagger-delay-3" data-category="commonwealth" data-reveal="blur">
                     <div class="country-img-wrapper">
                         <img src="assets/australia.png" alt="أستراليا">
@@ -258,21 +255,20 @@
                         <div class="country-flag-badge">
                             <img src="https://flagcdn.com/w160/au.png" alt="العلم الأسترالي">
                         </div>
-                        <span class="country-name-badge">أستراليا</span>
+                        <span class="country-name-badge" data-i18n="dest.australia.title">أستراليا</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">تأشيرة سياحة</span>
-                        <p>نعد طلب تأشيرة السياحة الأسترالية بدقة عبر بوابة ImmiAccount، مع تنسيق كشوفات الحساب وإثباتات
+                        <span class="country-tag"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.tag"><span data-i18n="dest.uk.tag"><span data-i18n="dest.canada.tag"><span data-i18n="dest.australia.tag">تأشيرة سياحة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+                        <p data-i18n="dest.australia.desc">نعد طلب تأشيرة السياحة الأسترالية بدقة عبر بوابة ImmiAccount، مع تنسيق كشوفات الحساب وإثباتات
                             الدخل والترجمات الضرورية للغة الإنجليزية لضمان قبول الطلب.</p>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.time"><span data-i18n="dest.uk.time"><span data-i18n="dest.canada.time"><span data-i18n="dest.australia.time"><span data-i18n="dest.asia_africa.time">مدة التجهيز: 3-5 أيام</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
-
                 <div class="country-card express-card stagger-delay-4" data-category="schengen" data-reveal="blur">
                     <div class="country-img-wrapper express-header header-gradient-schengen">
                         <div class="express-glow"></div>
@@ -291,36 +287,34 @@
                             <img src="https://flagcdn.com/w80/dk.png" alt="الدنمارك" class="micro-flag">
                             <img src="https://flagcdn.com/w80/no.png" alt="النرويج" class="micro-flag">
                         </div>
-                        <span class="country-name-badge">تأشيرة دول شنغن الأوروبية</span>
+                        <span class="country-name-badge" data-i18n="dest.schengen.title">تأشيرة دول شنغن الأوروبية</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">دول شنغن الأوروبية</span>
+                        <span class="country-tag"><span><span><span><span><span data-i18n="destinations.filter_schengen"><span data-i18n="dest.schengen.tag">دول شنغن الأوروبية</span></span></span></span></span></span></span>
                         <div class="express-details">
                             <div class="express-sub-section">
-                                <strong><i data-lucide="map" class="express-icon"></i> الدول المشمولة بالخدمة:</strong>
-                                <p>فرنسا، ألمانيا، بلجيكا، إيطاليا، هولندا، النمسا، فنلندا، كرواتيا، آيسلندا، مالطا،
+                                <strong><i data-lucide="map" class="express-icon"></i><span><span><span><span><span><span data-i18n="dest.schengen.countries_label"><span data-i18n="dest.gulf.countries_label">الدول المشمولة بالخدمة:</span></span></span></span></span></span></span></strong>
+                                <p data-i18n="dest.schengen.countries_list">فرنسا، ألمانيا، بلجيكا، إيطاليا، هولندا، النمسا، فنلندا، كرواتيا، آيسلندا، مالطا،
                                     السويد، الدنمارك، والنرويج.</p>
                             </div>
                             <div class="express-sub-section">
-                                <strong><i data-lucide="check-circle" class="express-icon"></i> خدماتنا تشمل:</strong>
-                                <p>مراجعة كاملة وتجهيز وتدقيق ملف التأشيرة السياحية لجميع دول شنغن ليتوافق تماماً مع
+                                <strong><i data-lucide="check-circle" class="express-icon"></i><span><span><span><span><span><span data-i18n="dest.schengen.services_label"><span data-i18n="dest.gulf.services_label">خدماتنا تشمل:</span></span></span></span></span></span></span></strong>
+                                <p data-i18n="dest.schengen.services_desc">مراجعة كاملة وتجهيز وتدقيق ملف التأشيرة السياحية لجميع دول شنغن ليتوافق تماماً مع
                                     متطلبات القنصليات الأوروبية والأنظمة المعتمدة حديثاً.</p>
                             </div>
                             <div class="express-spec-box">
-                                <div class="spec-item"><i data-lucide="shield-check"></i> متطلبات ميسرة بالكامل</div>
-                                <div class="spec-item"><i data-lucide="zap"></i> معالجة سريعة ومرنة</div>
+                                <div class="spec-item"><i data-lucide="shield-check"></i><span><span><span><span><span><span data-i18n="dest.schengen.spec1"><span data-i18n="dest.gulf.spec1">متطلبات ميسرة بالكامل</span></span></span></span></span></span></span></div>
+                                <div class="spec-item"><i data-lucide="zap"></i><span><span><span><span><span><span data-i18n="dest.schengen.spec2"><span data-i18n="dest.gulf.spec2">معالجة سريعة ومرنة</span></span></span></span></span></span></span></div>
                             </div>
                         </div>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> 5-10 أيام على حسب توفر المواعيد
-                            </div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span><span><span><span><span><span data-i18n="dest.schengen.time"><span data-i18n="faq.a9">5-10 أيام على حسب توفر المواعيد</span></span></span></span></span></span></span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
-
                 <!-- 1. التأشيرات الإلكترونية الفورية والباقات المشتركة -->
                 <div class="country-card express-card" data-category="express" data-reveal="blur">
                     <div class="country-img-wrapper express-header header-gradient-1">
@@ -332,41 +326,39 @@
                             <img src="https://flagcdn.com/w80/om.png" alt="عمان" class="micro-flag">
                             <img src="https://flagcdn.com/w80/bh.png" alt="البحرين" class="micro-flag">
                         </div>
-                        <span class="country-name-badge">التأشيرات الإلكترونية والباقات المشتركة</span>
+                        <span class="country-name-badge" data-i18n="dest.evisa.title">التأشيرات الإلكترونية والباقات المشتركة</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">تأشيرة إلكترونية فورية (e-Visa)</span>
+                        <span class="country-tag" data-i18n="dest.evisa.tag">تأشيرة إلكترونية فورية (e-Visa)</span>
                         <div class="express-details">
                             <div class="express-sub-section">
-                                <strong><i data-lucide="zap" class="express-icon"></i> التأشيرة الفورية
-                                    (e-Visa):</strong>
-                                <p>دبي (شهر/شهرين)، قطر (منصة هيا)، عمان والبحرين (غير المكفولة)، الأردن، أذربيجان،
+                                <strong><i data-lucide="zap" class="express-icon"></i><span data-i18n="dest.evisa.sec1_label">التأشيرة الفورية
+                                    (e-Visa):</span></strong>
+                                <p data-i18n="dest.evisa.sec1_desc">دبي (شهر/شهرين)، قطر (منصة هيا)، عمان والبحرين (غير المكفولة)، الأردن، أذربيجان،
                                     تنزانيا (زنجبار)، وكينيا.</p>
                             </div>
                             <div class="express-sub-section">
-                                <strong><i data-lucide="globe" class="express-icon"></i> الباقة الخليجية (The Gulf
-                                    Pass):</strong>
-                                <p>باقة موحدة تشمل (قطر + البحرين + عُمان).</p>
+                                <strong><i data-lucide="globe" class="express-icon"></i><span data-i18n="dest.evisa.sec2_label">الباقة الخليجية (The Gulf
+                                    Pass):</span></strong>
+                                <p data-i18n="dest.evisa.sec2_desc">باقة موحدة تشمل (قطر + البحرين + عُمان).</p>
                             </div>
                             <div class="express-sub-section">
-                                <strong><i data-lucide="package" class="express-icon"></i> باقات سياحية خاصة:</strong>
-                                <p>باقة دبي ومصر المشتركة لقضاء عطلة مميزة.</p>
+                                <strong><i data-lucide="package" class="express-icon"></i><span data-i18n="dest.evisa.sec3_label">باقات سياحية خاصة:</span></strong>
+                                <p data-i18n="dest.evisa.sec3_desc">باقة دبي ومصر المشتركة لقضاء عطلة مميزة.</p>
                             </div>
                             <div class="express-spec-box">
-                                <div class="spec-item"><i data-lucide="file-check"></i> صورة الجواز فقط أو ملف بسيط جداً
-                                </div>
-                                <div class="spec-item"><i data-lucide="clock"></i> الإصدار خلال 24 إلى 72 ساعة</div>
+                                <div class="spec-item"><i data-lucide="file-check"></i><span data-i18n="dest.evisa.spec1">صورة الجواز فقط أو ملف بسيط جداً</span></div>
+                                <div class="spec-item"><i data-lucide="clock"></i><span data-i18n="dest.evisa.spec2">الإصدار خلال 24 إلى 72 ساعة</span></div>
                             </div>
                         </div>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> معالجة فائقة السرعة</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span data-i18n="dest.evisa.time">معالجة فائقة السرعة</span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
-
                 <!-- 2. دول الخليج العربي والشرق الأوسط -->
                 <div class="country-card express-card" data-category="express" data-reveal="blur">
                     <div class="country-img-wrapper express-header header-gradient-2">
@@ -379,35 +371,35 @@
                             <img src="https://flagcdn.com/w80/bh.png" alt="البحرين" class="micro-flag">
                             <img src="https://flagcdn.com/w80/jo.png" alt="الأردن" class="micro-flag flag-jo">
                         </div>
-                        <span class="country-name-badge">تأشيرة دول الخليج العربي</span>
+                        <span class="country-name-badge" data-i18n="dest.gulf.title">تأشيرة دول الخليج العربي</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">الخليج والشرق الأوسط</span>
+                        <span class="country-tag" data-i18n="dest.gulf.tag">الخليج والشرق الأوسط</span>
                         <div class="express-details">
                             <div class="express-sub-section">
-                                <strong><i data-lucide="map" class="express-icon"></i> الدول المشمولة بالخدمة:</strong>
-                                <p>الإمارات العربية المتحدة، المملكة العربية السعودية، دولة قطر، مملكة البحرين، سلطنة
+                                <strong><i data-lucide="map" class="express-icon"></i><span><span><span><span><span><span data-i18n="dest.schengen.countries_label"><span data-i18n="dest.gulf.countries_label">الدول المشمولة بالخدمة:</span></span></span></span></span></span></span></strong>
+                                <strong><i data-lucide="map" class="express-icon"></i><span><span><span><span><span data-i18n="dest.schengen.countries_label"><span data-i18n="dest.gulf.countries_label">الدول المشمولة بالخدمة:</span></span></span></span></span></span></strong>
+                                <p data-i18n="dest.gulf.countries_list">الإمارات العربية المتحدة، المملكة العربية السعودية، دولة قطر، مملكة البحرين، سلطنة
                                     عُمان، والمملكة الأردنية الهاشمية.</p>
                             </div>
                             <div class="express-sub-section">
-                                <strong><i data-lucide="check-circle" class="express-icon"></i> خدماتنا تشمل:</strong>
-                                <p>مراجعة كاملة وتجهيز وتدقيق النماذج الرسمية وتأمين متطلبات السفر لهذه الدول لضمان قبول
+                                <strong><i data-lucide="check-circle" class="express-icon"></i><span><span><span><span><span data-i18n="dest.schengen.services_label"><span data-i18n="dest.gulf.services_label">خدماتنا تشمل:</span></span></span></span></span></span></strong>
+                                <p data-i18n="dest.gulf.services_desc">مراجعة كاملة وتجهيز وتدقيق النماذج الرسمية وتأمين متطلبات السفر لهذه الدول لضمان قبول
                                     مضمون وسريع.</p>
                             </div>
                             <div class="express-spec-box">
-                                <div class="spec-item"><i data-lucide="shield-check"></i> متطلبات ميسرة بالكامل</div>
-                                <div class="spec-item"><i data-lucide="zap"></i> معالجة سريعة ومرنة</div>
+                                <div class="spec-item"><i data-lucide="shield-check"></i><span><span><span><span><span data-i18n="dest.schengen.spec1"><span data-i18n="dest.gulf.spec1">متطلبات ميسرة بالكامل</span></span></span></span></span></span></div>
+                                <div class="spec-item"><i data-lucide="zap"></i><span><span><span><span><span data-i18n="dest.schengen.spec2"><span data-i18n="dest.gulf.spec2">معالجة سريعة ومرنة</span></span></span></span></span></span></div>
                             </div>
                         </div>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 2-3 أيام</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span data-i18n="dest.gulf.time">مدة التجهيز: 2-3 أيام</span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
-
                 <!-- 3. آسيا وإفريقيا وسياحة الطبيعة -->
                 <div class="country-card express-card" data-category="express" data-reveal="blur">
                     <div class="country-img-wrapper express-header header-gradient-3">
@@ -419,92 +411,83 @@
                             <img src="https://flagcdn.com/w80/eg.png" alt="مصر" class="micro-flag">
                             <img src="https://flagcdn.com/w80/tz.png" alt="تنزانيا" class="micro-flag">
                         </div>
-                        <span class="country-name-badge">تأشيرات آسيا وإفريقيا</span>
+                        <span class="country-name-badge" data-i18n="dest.asia_africa.title">تأشيرات آسيا وإفريقيا</span>
                     </div>
                     <div class="country-body">
-                        <span class="country-tag">آسيا وإفريقيا وسياحة الطبيعة</span>
+                        <span class="country-tag" data-i18n="dest.asia_africa.tag">آسيا وإفريقيا وسياحة الطبيعة</span>
                         <div class="express-details">
                             <div class="express-sub-section">
-                                <strong><i data-lucide="compass" class="express-icon"></i> وجهات آسيا المميزة:</strong>
-                                <p><strong>الصين</strong> (تأشيرة سياحية وتأشيرة أعمال لأصحاب الشركات والتجار)،
-                                    <strong>اليابان</strong>، و<strong>كوريا الجنوبية</strong> (تصريح السفر KETA).
-                                </p>
+                                <strong><i data-lucide="compass" class="express-icon"></i><span data-i18n="dest.asia_africa.sec1_label">وجهات آسيا المميزة:</span></strong>
+                                <p data-i18n="dest.asia_africa.sec1_desc">الصين (تأشيرة سياحية وتأشيرة أعمال لأصحاب الشركات والتجار)، اليابان، وكوريا الجنوبية (تصريح السفر KETA).</p>
                             </div>
                             <div class="express-sub-section">
-                                <strong><i data-lucide="trees" class="express-icon"></i> إفريقيا وسياحة
-                                    الطبيعة:</strong>
-                                <p>جمهورية مصر العربية، تنزانيا (جزيرة زنجبار)، كينيا، جنوب إفريقيا، وإثيوبيا.</p>
+                                <strong><i data-lucide="trees" class="express-icon"></i><span data-i18n="dest.asia_africa.sec2_label">إفريقيا وسياحة
+                                    الطبيعة:</span></strong>
+                                <p data-i18n="dest.asia_africa.sec2_desc">جمهورية مصر العربية، تنزانيا (جزيرة زنجبار)، كينيا، جنوب إفريقيا، وإثيوبيا.</p>
                             </div>
                             <div class="express-spec-box">
-                                <div class="spec-item"><i data-lucide="file-text"></i> تجهيز النماذج والخطابات المالية
-                                </div>
-                                <div class="spec-item"><i data-lucide="languages"></i> تراجم معتمدة للوثائق</div>
+                                <div class="spec-item"><i data-lucide="file-text"></i><span data-i18n="dest.asia_africa.spec1">تجهيز النماذج والخطابات المالية</span></div>
+                                <div class="spec-item"><i data-lucide="languages"></i><span data-i18n="dest.asia_africa.spec2">تراجم معتمدة للوثائق</span></div>
                             </div>
                         </div>
                         <div class="country-meta">
-                            <div class="country-meta-item"><i data-lucide="clock"></i> مدة التجهيز: 3-5 أيام</div>
+                            <div class="country-meta-item"><i data-lucide="clock"></i><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.time"><span data-i18n="dest.uk.time"><span data-i18n="dest.canada.time"><span data-i18n="dest.australia.time"><span data-i18n="dest.asia_africa.time">مدة التجهيز: 3-5 أيام</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
                             <a href="javascript:void(0)"
                                 onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false;"
-                                class="btn-country-cta">اطلب الخدمة <i data-lucide="chevron-left"></i></a>
+                                class="btn-country-cta"><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span data-i18n="dest.usa.cta"><span data-i18n="dest.uk.cta"><span data-i18n="dest.canada.cta"><span data-i18n="dest.australia.cta"><span data-i18n="dest.schengen.cta"><span data-i18n="dest.evisa.cta"><span data-i18n="dest.gulf.cta"><span data-i18n="dest.asia_africa.cta">اطلب الخدمة</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i data-lucide="chevron-left"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ==========================================================================
        IMMIGRATION PROCESS SECTION
        ========================================================================== -->
     <section class="process-section section-padding" id="process">
         <div class="container">
             <div class="section-header">
-                <span class="tag">منهجية العمل الفعالة</span>
-                <h2>خطوات تجهيز ملفك بدقة متناهية</h2>
-                <p>نعمل بمنهجية واضحة ومسار محدد نرافقك فيه خطوة بخطوة حتى تسليم ملفك جاهزاً تماماً.</p>
+                <span class="tag" data-i18n="process.tag">منهجية العمل الفعالة</span>
+                <h2 data-i18n="process.title">خطوات تجهيز ملفك بدقة متناهية</h2>
+                <p data-i18n="process.desc">نعمل بمنهجية واضحة ومسار محدد نرافقك فيه خطوة بخطوة حتى تسليم ملفك جاهزاً تماماً.</p>
             </div>
-
             <div class="process-timeline-container">
                 <div class="timeline-line">
                     <div class="timeline-progress" id="scroll-progress"></div>
                 </div>
-
                 <!-- Step 1 -->
                 <div class="timeline-step" data-reveal="right">
                     <div class="step-indicator">1</div>
                     <div class="glass-card step-card">
-                        <span class="step-tag">المرحلة الأولى</span>
-                        <h3>التقييم والدراسة الشاملة</h3>
-                        <p>نراجع وضعك الشخصي، المهني، والمالي بشكل معمق، ثم نطلب البيانات بدقة لنحدد المسار الأكثر
+                        <span class="step-tag" data-i18n="process.step1.tag">المرحلة الأولى</span>
+                        <h3 data-i18n="process.step1.title">التقييم والدراسة الشاملة</h3>
+                        <p data-i18n="process.step1.desc">نراجع وضعك الشخصي، المهني، والمالي بشكل معمق، ثم نطلب البيانات بدقة لنحدد المسار الأكثر
                             نجاحاً ونوع التأشيرة الأنسب لحالتك مع تقديم قائمة وثائق مخصصة تناسب أهدافك.</p>
                     </div>
                 </div>
-
                 <!-- Step 2 -->
                 <div class="timeline-step" data-reveal="left">
                     <div class="step-indicator">2</div>
                     <div class="glass-card step-card">
-                        <span class="step-tag">المرحلة الثانية</span>
-                        <h3>التجهيز والتطوير والامتثال</h3>
-                        <p>نقوم بترتيب مستنداتك وتنسيقها، إعداد النماذج والقوالب بدقة، تنسيق التراجم المعتمدة للوثائق،
+                        <span class="step-tag" data-i18n="process.step2.tag">المرحلة الثانية</span>
+                        <h3 data-i18n="process.step2.title">التجهيز والتطوير والامتثال</h3>
+                        <p data-i18n="process.step2.desc">نقوم بترتيب مستنداتك وتنسيقها، إعداد النماذج والقوالب بدقة، تنسيق التراجم المعتمدة للوثائق،
                             وننفذ مراجعة مزدوجة ودقيقة لضمان المطابقة الكاملة مع متطلبات الجهات القنصلية.</p>
                     </div>
                 </div>
-
                 <!-- Step 3 -->
                 <div class="timeline-step" data-reveal="right">
                     <div class="step-indicator">3</div>
                     <div class="glass-card step-card">
-                        <span class="step-tag">المرحلة الثالثة</span>
-                        <h3>التسليم والمحاكاة والمرافقة</h3>
-                        <p>نسلمك ملفك النهائي مرتباً مع تقديم شرح شفهي وكتبي مفصل لخطوات الإيداع والتقديم، إلى جانب
+                        <span class="step-tag" data-i18n="process.step3.tag">المرحلة الثالثة</span>
+                        <h3 data-i18n="process.step3.title">التسليم والمحاكاة والمرافقة</h3>
+                        <p data-i18n="process.step3.desc">نسلمك ملفك النهائي مرتباً مع تقديم شرح شفهي وكتبي مفصل لخطوات الإيداع والتقديم، إلى جانب
                             إجراء محاكاة للمقابلة الشخصية وتدريبك على إجابات الأسئلة المتوقعة بنجاح وثقة.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ==========================================================================
        CTM MESSAGERIE STRATEGIC PARTNERSHIP SECTION
        ========================================================================== -->
@@ -516,18 +499,14 @@
         <div
             style="position: absolute; bottom: -100px; right: -100px; width: 450px; height: 450px; background: radial-gradient(circle, rgba(227, 27, 35, 0.04) 0%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: 1;">
         </div>
-
         <div class="container" style="position: relative; z-index: 2;">
-
             <!-- Section Header -->
             <div class="section-header">
                 <span class="tag"
-                    style="color: #0054A6; background: rgba(0, 84, 166, 0.08); border-color: rgba(0, 84, 166, 0.15);">شراكة
+                    style="color: #0054A6; background: rgba(0, 84, 166, 0.08); border-color: rgba(0, 84, 166, 0.15);" data-i18n="ctm.tag">شراكة
                     استراتيجية لوجستية</span>
-                <h2>شراكة استراتيجية حصرية لتسهيل معاملاتكم</h2>
-
+                <h2 data-i18n="ctm.title">شراكة استراتيجية حصرية لتسهيل معاملاتكم</h2>
             </div>
-
             <!-- Co-Branding Card component -->
             <div class="glass-card" data-reveal="blur"
                 style="padding: 40px; margin-bottom: 50px; background: linear-gradient(135deg, var(--primary-dark) 0%, #152642 100%); border: 1px solid rgba(255,255,255,0.08); border-radius: 28px; box-shadow: 0 20px 50px rgba(8, 17, 32, 0.25);">
@@ -568,12 +547,10 @@
                                 TRAVEL • SUCCESS</span>
                         </div>
                     </div>
-
                     <!-- Handshake Circle -->
                     <div class="ctm-handshake-circle">
                         <i data-lucide="handshake"></i>
                     </div>
-
                     <!-- CTM Messagerie Logo -->
                     <div
                         style="background: #FFFFFF; padding: 8px 20px; border-radius: 12px; display: flex; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
@@ -595,22 +572,17 @@
                         </svg>
                     </div>
                 </div>
-
-                <h3 class="ctm-brand-tagline">شراكة استراتيجية لتسهيل إجراءات التأشيرات</h3>
+                <h3 class="ctm-brand-tagline" data-i18n="ctm.card_tagline">شراكة استراتيجية لتسهيل إجراءات التأشيرات</h3>
                 <p
-                    style="color: rgba(255, 255, 255, 0.8); text-align: center; font-size: 1.1rem; max-width: 750px; margin: 18px auto 0 auto; line-height: 1.8;">
-                    نستلم ملفاتكم وأوراقكم، نقوم بتجهيزها وإعدادها باحترافية ثم نرسلها إليكم عبر CTM Messagerie لتتوجهوا
+                    style="color: rgba(255, 255, 255, 0.8); text-align: center; font-size: 1.1rem; max-width: 750px; margin: 18px auto 0 auto; line-height: 1.8;" data-i18n="ctm.card_desc">نستلم ملفاتكم وأوراقكم، نقوم بتجهيزها وإعدادها باحترافية ثم نرسلها إليكم عبر CTM Messagerie لتتوجهوا
                     بها إلى
-                    القنصلية.
-                </p>
+                    القنصلية.</p>
             </div>
-
             <!-- "خدمتنا تشمل" Title and Grid -->
             <div class="ctm-stepper-title" data-reveal="right" style="margin-top: 40px; margin-bottom: 25px;">
                 <i data-lucide="award" style="color: var(--accent-gold); width: 26px; height: 26px;"></i>
-                <span>خدمتنا اللوجستية تشمل:</span>
+                <span data-i18n="ctm.includes_title">خدمتنا اللوجستية تشمل:</span>
             </div>
-
             <div class="ctm-includes-grid">
                 <!-- Card 1 -->
                 <div class="ctm-include-card" data-reveal="blur">
@@ -619,10 +591,9 @@
                         style="background: rgba(37, 99, 235, 0.1); color: var(--accent-blue); border: 1px solid rgba(37, 99, 235, 0.2);">
                         <i data-lucide="box"></i>
                     </div>
-                    <h4>استلام الملفات</h4>
-                    <p>استلام جميع الوثائق والأوراق منكم من أي مدينة بالمغرب.</p>
+                    <h4 data-i18n="ctm.inc1.title">استلام الملفات</h4>
+                    <p data-i18n="ctm.inc1.desc">استلام جميع الوثائق والأوراق منكم من أي مدينة بالمغرب.</p>
                 </div>
-
                 <!-- Card 2 -->
                 <div class="ctm-include-card" data-reveal="blur" style="transition-delay: 0.1s;">
                     <span class="ctm-include-num">02</span>
@@ -630,10 +601,9 @@
                         style="background: rgba(212, 175, 55, 0.1); color: var(--accent-gold); border: 1px solid rgba(212, 175, 55, 0.2);">
                         <i data-lucide="check-square"></i>
                     </div>
-                    <h4>مراجعة الوثائق</h4>
-                    <p>مراجعة الملفات والتأكد من اكتمال جميع الوثائق المطلوبة.</p>
+                    <h4 data-i18n="ctm.inc2_new.title">مراجعة الوثائق</h4>
+                    <p data-i18n="ctm.inc2_new.desc">مراجعة الملفات والتأكد من اكتمال جميع الوثائق المطلوبة.</p>
                 </div>
-
                 <!-- Card 3 -->
                 <div class="ctm-include-card" data-reveal="blur" style="transition-delay: 0.2s;">
                     <span class="ctm-include-num">03</span>
@@ -641,10 +611,9 @@
                         style="background: rgba(14, 165, 233, 0.1); color: var(--accent-sky); border: 1px solid rgba(14, 165, 233, 0.2);">
                         <i data-lucide="folder-kanban"></i>
                     </div>
-                    <h4>تجهيز وإعداد الملف</h4>
-                    <p>تنظيم وترتيب ملف التأشيرة بشكل احترافي وفق متطلبات القنصلية.</p>
+                    <h4 data-i18n="ctm.inc3_new.title">تجهيز وإعداد الملف</h4>
+                    <p data-i18n="ctm.inc3_new.desc">تنظيم وترتيب ملف التأشيرة بشكل احترافي وفق متطلبات القنصلية.</p>
                 </div>
-
                 <!-- Card 4 -->
                 <div class="ctm-include-card" data-reveal="blur" style="transition-delay: 0.3s;">
                     <span class="ctm-include-num">04</span>
@@ -652,10 +621,9 @@
                         style="background: rgba(227, 27, 35, 0.1); color: #E31B23; border: 1px solid rgba(227, 27, 35, 0.2);">
                         <i data-lucide="truck"></i>
                     </div>
-                    <h4>الإرسال عبر CTM Messagerie</h4>
-                    <p>إرسال ملفكم إليكم بسرعة وأمان إلى العنوان أو الجهة المعنية.</p>
+                    <h4 data-i18n="ctm.inc4_new.title">الإرسال عبر CTM Messagerie</h4>
+                    <p data-i18n="ctm.inc4_new.desc">إرسال ملفكم إليكم بسرعة وأمان إلى العنوان أو الجهة المعنية.</p>
                 </div>
-
                 <!-- Card 5 -->
                 <div class="ctm-include-card" data-reveal="blur" style="transition-delay: 0.4s;">
                     <span class="ctm-include-num">05</span>
@@ -663,44 +631,39 @@
                         style="background: rgba(37, 211, 102, 0.1); color: #25D366; border: 1px solid rgba(37, 211, 102, 0.2);">
                         <i data-lucide="smartphone"></i>
                     </div>
-                    <h4>تتبع الشحنة</h4>
-                    <p>تتبع الشحنة خطوة بخطوة حتى تصل إليكم بأمان وفي الوقت المحدد.</p>
+                    <h4 data-i18n="ctm.inc5_new.title">تتبع الشحنة</h4>
+                    <p data-i18n="ctm.inc5_new.desc">تتبع الشحنة خطوة بخطوة حتى تصل إليكم بأمان وفي الوقت المحدد.</p>
                 </div>
             </div>
-
             <!-- "كيف تعمل خدمتنا؟" Title and Stepper -->
             <div class="ctm-stepper-title" data-reveal="left" style="margin-top: 60px;">
                 <i data-lucide="settings" style="color: var(--accent-blue); width: 26px; height: 26px;"></i>
-                <span>كيف تعمل خدمتنا عن بعد دون عناء تنقل؟ (مسار العمل)</span>
+                <span data-i18n="ctm.stepper_title">كيف تعمل خدمتنا عن بعد دون عناء تنقل؟ (مسار العمل)</span>
             </div>
-
             <div class="glass-card" data-reveal="blur"
                 style="padding: 40px 20px; border-radius: 24px; background: rgba(255, 255, 255, 0.7); box-shadow: var(--glass-shadow);">
                 <div class="ctm-stepper-wrapper">
                     <div class="ctm-stepper-line"></div>
-
                     <!-- Step 1 -->
                     <div class="ctm-step-node">
                         <div class="ctm-step-icon-circle">
                             <i data-lucide="message-square"></i>
                         </div>
                         <div class="ctm-step-node-text">
-                            <h5>1. تواصل معنا</h5>
-                            <p>لحجز الخدمة وتحديد الدولة المهتم بها</p>
+                            <h5 data-i18n="ctm.step1.title">1. تواصل معنا</h5>
+                            <p data-i18n="ctm.step1.desc">لحجز الخدمة وتحديد الدولة المهتم بها</p>
                         </div>
                     </div>
-
                     <!-- Step 2 -->
                     <div class="ctm-step-node">
                         <div class="ctm-step-icon-circle">
                             <i data-lucide="folder-down"></i>
                         </div>
                         <div class="ctm-step-node-text">
-                            <h5>2. استلام الأوراق</h5>
-                            <p>نستلم الأوراق منكم.</p>
+                            <h5 data-i18n="ctm.step2.title">2. استلام الأوراق</h5>
+                            <p data-i18n="ctm.step2.desc">نستلم الأوراق منكم.</p>
                         </div>
                     </div>
-
                     <!-- Step 3 -->
                     <div class="ctm-step-node">
                         <div class="ctm-step-icon-circle"
@@ -708,33 +671,30 @@
                             <i data-lucide="check-square"></i>
                         </div>
                         <div class="ctm-step-node-text">
-                            <h5>3. مراجعة الوثائق</h5>
-                            <p>نقوم بمراجعة جميع الوثائق والتأكد من مطابقتها للمتطلبات.</p>
+                            <h5 data-i18n="ctm.step3.title">3. مراجعة الوثائق</h5>
+                            <p data-i18n="ctm.step3.desc">نقوم بمراجعة جميع الوثائق والتأكد من مطابقتها للمتطلبات.</p>
                         </div>
                     </div>
-
                     <!-- Step 4 -->
                     <div class="ctm-step-node">
                         <div class="ctm-step-icon-circle">
                             <i data-lucide="file-signature"></i>
                         </div>
                         <div class="ctm-step-node-text">
-                            <h5>4. تجهيز وإعداد الملف</h5>
-                            <p>نقوم بإعداد ملف التأشيرة بشكل احترافي وكامل.</p>
+                            <h5 data-i18n="ctm.step4.title">4. تجهيز وإعداد الملف</h5>
+                            <p data-i18n="ctm.step4.desc">نقوم بإعداد ملف التأشيرة بشكل احترافي وكامل.</p>
                         </div>
                     </div>
-
                     <!-- Step 5 -->
                     <div class="ctm-step-node">
                         <div class="ctm-step-icon-circle" style="border-color: #E31B23; color: #E31B23;">
                             <i data-lucide="truck"></i>
                         </div>
                         <div class="ctm-step-node-text">
-                            <h5>5. إرسال الملف عبر CTM Messagerie</h5>
-                            <p>نرسل الملف إليكم بسرعة وأمان.</p>
+                            <h5 data-i18n="ctm.step5.title">5. إرسال الملف عبر CTM Messagerie</h5>
+                            <p data-i18n="ctm.step5.desc">نرسل الملف إليكم بسرعة وأمان.</p>
                         </div>
                     </div>
-
                     <!-- Step 6 -->
                     <div class="ctm-step-node">
                         <div class="ctm-step-icon-circle"
@@ -742,15 +702,13 @@
                             <i data-lucide="landmark"></i>
                         </div>
                         <div class="ctm-step-node-text">
-                            <h5>6. التوجه إلى القنصلية</h5>
-                            <p>تتوجهون إلى مركز التأشيرات أو القنصلية لإتمام الإجراءات المطلوبة</p>
+                            <h5 data-i18n="ctm.step6.title">6. التوجه إلى القنصلية</h5>
+                            <p data-i18n="ctm.step6.desc">تتوجهون إلى مركز التأشيرات أو القنصلية لإتمام الإجراءات المطلوبة</p>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Important Notice Box -->
-
             <!-- <div data-reveal="blur" style="margin-top: 35px; background: rgba(211, 47, 47, 0.04); border: 1.5px solid rgba(211, 47, 47, 0.2); border-radius: 20px; padding: 30px; display: flex; gap: 20px; align-items: flex-start; box-shadow: var(--glass-shadow);">
                 <div style="background: rgba(211, 47, 47, 0.1); color: #D32F2F; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.5rem;"><i data-lucide="alert-triangle"></i></div>
                 <div>
@@ -760,7 +718,6 @@
                     </p>
                 </div>
             </div> -->
-
             <!-- Trust Footer Benefits Stripe -->
             <div class="ctm-benefits-stripe" data-reveal="blur">
                 <!-- Benefit 1 -->
@@ -768,56 +725,48 @@
                     <div class="ctm-benefit-icon-badge">
                         <i data-lucide="shield-check"></i>
                     </div>
-                    <h5>سرية تامة</h5>
-                    <p>سرية تامة وحماية كاملة لملفاتكم.</p>
+                    <h5 data-i18n="ctm.benefit1.title">سرية تامة</h5>
+                    <p data-i18n="ctm.benefit1.desc">سرية تامة وحماية كاملة لملفاتكم.</p>
                 </div>
-
                 <!-- Benefit 2 -->
                 <div class="ctm-benefit-item">
                     <div class="ctm-benefit-icon-badge">
                         <i data-lucide="zap"></i>
                     </div>
-                    <h5>سرعة في الاستلام</h5>
-                    <p>سرعة في الاستلام والإرسال والتسليم.</p>
+                    <h5 data-i18n="ctm.benefit2.title">سرية في الاستلام</h5>
+                    <p data-i18n="ctm.benefit2.desc">سرعة في الاستلام والإرسال والتسليم.</p>
                 </div>
-
                 <!-- Benefit 3 -->
                 <div class="ctm-benefit-item">
                     <div class="ctm-benefit-icon-badge">
                         <i data-lucide="user-check"></i>
                     </div>
-                    <h5>فريق محترف</h5>
-                    <p>فريق محترف لمرافقتكم خطوة بخطوة.</p>
+                    <h5 data-i18n="ctm.benefit3.title">فريق محترف</h5>
+                    <p data-i18n="ctm.benefit3.desc">فريق محترف لمرافقتكم خطوة بخطوة.</p>
                 </div>
-
                 <!-- Benefit 4 -->
                 <div class="ctm-benefit-item">
                     <div class="ctm-benefit-icon-badge">
                         <i data-lucide="award"></i>
                     </div>
-                    <h5>خدمة موثوقة</h5>
-                    <p>خدمة موثوقة بمعايير عالية الجودة.</p>
+                    <h5 data-i18n="ctm.benefit4.title">خدمة موثوقة</h5>
+                    <p data-i18n="ctm.benefit4.desc">خدمة موثوقة بمعايير عالية الجودة.</p>
                 </div>
-
                 <!-- Benefit 5 -->
                 <div class="ctm-benefit-item">
                     <div class="ctm-benefit-icon-badge">
                         <i data-lucide="globe-2"></i>
                     </div>
-                    <h5>تغطية شاملة</h5>
-                    <p>تغطية جميع مدن المغرب.</p>
+                    <h5><span><span><span><span><span data-i18n="ctm.benefit5.title"><span data-i18n="ctm.why.point5_title">تغطية شاملة</span></span></span></span></span></span></h5>
+                    <p><span><span><span><span><span data-i18n="ctm.benefit5.desc"><span data-i18n="ctm.why.point5_desc">تغطية جميع مدن المغرب.</span></span></span></span></span></span></p>
                 </div>
             </div>
-
             <!-- Slogan stripe -->
             <div class="ctm-slogan-strip" data-reveal="blur">
-                <p>نجهز ملفك باحترافية ... لتتوجه أنت بثقة</p>
+                <p data-i18n="ctm.slogan">نجهز ملفك باحترافية ... لتتوجه أنت بثقة</p>
             </div>
-
         </div>
     </section>
-
-
     <!-- ==========================================================================
        TESTIMONIALS SECTION
        ========================================================================== -->
@@ -825,17 +774,15 @@
         <div class="testimonials-bg-glow"></div>
         <div class="container">
             <div class="section-header">
-                <span class="tag" style="background:rgba(255,255,255,0.05); color:var(--accent-sky);">شهادات حقيقية
+                <span class="tag" style="background:rgba(255,255,255,0.05); color:var(--accent-sky);" data-i18n="testimonials.tag">شهادات حقيقية
                     ونجاحات موثقة</span>
-                <h2 style="color: white;">اسمع تجارب عملائنا الحقيقية</h2>
-                <p style="color: rgba(255,255,255,0.6);">تسجيلات صوتية حقيقية لعملائنا يشاركون فيها تجربتهم الكاملة
+                <h2 style="color: white;" data-i18n="testimonials.title">اسمع تجارب عملائنا الحقيقية</h2>
+                <p style="color: rgba(255,255,255,0.6);" data-i18n="testimonials.desc">تسجيلات صوتية حقيقية لعملائنا يشاركون فيها تجربتهم الكاملة
                     ورحلة نجاحهم في الحصول على التأشيرة معنا.</p>
             </div>
-
             <div class="testimonials-slider-wrapper" data-reveal="blur">
                 <button class="slider-nav-btn prev" id="slider-prev"><i data-lucide="chevron-right"></i></button>
                 <button class="slider-nav-btn next" id="slider-next"><i data-lucide="chevron-left"></i></button>
-
                 <div class="testimonials-track-container">
                     <div class="testimonials-track" id="slider-track">
                         <!-- Slide 1 (Canada) -->
@@ -848,7 +795,6 @@
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                 </div>
-
                                 <!-- Custom Premium Audio Player -->
                                 <div class="premium-audio-player">
                                     <audio class="testimonial-audio" src="voice/AUDIO 1.mp3" preload="metadata"></audio>
@@ -867,11 +813,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
-
                         <!-- Slide 2 (France) -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-with-audio-card">
@@ -882,7 +825,6 @@
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                 </div>
-
                                 <!-- Custom Premium Audio Player -->
                                 <div class="premium-audio-player">
                                     <audio class="testimonial-audio" src="voice/AUDIO 2.m4a.mp4"
@@ -902,11 +844,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
-
                         <!-- Slide 3 (Spain) -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-with-audio-card">
@@ -917,7 +856,6 @@
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                 </div>
-
                                 <!-- Custom Premium Audio Player -->
                                 <div class="premium-audio-player">
                                     <audio class="testimonial-audio" src="voice/AUDIO 3.MP3.mpeg"
@@ -937,11 +875,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
-
                         <!-- Slide 4 (UK) -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-with-audio-card">
@@ -952,7 +887,6 @@
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                 </div>
-
                                 <!-- Custom Premium Audio Player -->
                                 <div class="premium-audio-player">
                                     <audio class="testimonial-audio" src="voice/AUDIO 4.m4a.mp4"
@@ -972,11 +906,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
-
                         <!-- Slide 5 (USA) -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-with-audio-card">
@@ -987,7 +918,6 @@
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                     <i class="lucide-star" style="fill: currentColor;"></i>
                                 </div>
-
                                 <!-- Custom Premium Audio Player -->
                                 <div class="premium-audio-player">
                                     <audio class="testimonial-audio" src="voice/AUDIO 5.MP3.mpeg"
@@ -1007,19 +937,14 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="slider-dots" id="slider-dots"></div>
             </div>
         </div>
-
     </section>
-
     <!-- ==========================================================================
        VISA RESULTS / ACCEPTED VISAS SECTION (Slider Carousel)
        ========================================================================== -->
@@ -1028,15 +953,13 @@
         <div class="container">
             <!-- Section Header -->
             <div class="section-header">
-                <span class="tag">تأشيرات عملائنا</span>
-                <h2>تأشيرات مقبولة لعملائنا الكرام</h2>
-                <p>الحمد لله، نجاحات متتالية وتأشيرات صادرة لعملائنا بفضل العمل الاحترافي والدقيق.</p>
+                <span class="tag" data-i18n="results.tag">تأشيرات عملائنا</span>
+                <h2 data-i18n="results.title">تأشيرات مقبولة لعملائنا الكرام</h2>
+                <p data-i18n="results.desc">الحمد لله، نجاحات متتالية وتأشيرات صادرة لعملائنا بفضل العمل الاحترافي والدقيق.</p>
             </div>
-
             <div class="testimonials-slider-wrapper" data-reveal="blur">
                 <button class="slider-nav-btn prev" id="visa-slider-prev"><i data-lucide="chevron-right"></i></button>
                 <button class="slider-nav-btn next" id="visa-slider-next"><i data-lucide="chevron-left"></i></button>
-
                 <div class="testimonials-track-container">
                     <div class="testimonials-track" id="visa-slider-track">
                         <!-- Slide 1 -->
@@ -1053,8 +976,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">الأستاذ محمد - أسفي (محامي)</h3>
-                                    <p class="testimonial-text-desc">"بصفتي محامياً، أدرك جيداً أهمية الدقة والالتزام
+                                    <h3 class="client-name"><span><span><span><span><span data-i18n="results.slide1.client"><span data-i18n="results.slide2.client">الأستاذ محمد - أسفي (محامي)</span></span></span></span></span></span></h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide1.text">"بصفتي محامياً، أدرك جيداً أهمية الدقة والالتزام
                                         بالقوانين والشروط المقعدة عند إعداد ملفات التأشيرات، خاصة لدول مثل الدنمارك. أود
                                         أن أشكر الطاقم الاحترافي لـ GOFORVISA على التعامل الراقي والخبرة العالية التي
                                         أظهروها في إدارة ملفي وملف عائلتي. بفضل توجيهاتهم الدقيقة وتنظيمهم المحكم لكل
@@ -1064,7 +987,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Slide 2 -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
@@ -1079,8 +1001,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">الأستاذ محمد - أسفي (محامي)</h3>
-                                    <p class="testimonial-text-desc">"بصفتي محامياً، أدرك تماماً أن قبول ملفات الفيزا
+                                    <h3 class="client-name"><span><span><span><span><span data-i18n="results.slide1.client"><span data-i18n="results.slide2.client">الأستاذ محمد - أسفي (محامي)</span></span></span></span></span></span></h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide2.text">"بصفتي محامياً، أدرك تماماً أن قبول ملفات الفيزا
                                         لدول الشنغن يعتمد بالدرجة الأولى على الدقة القانونية والترتيب المثالي للوثائق.
                                         تجربتي مع طاقم GOFORVISA كانت استثنائية بكل المقاييس؛ حيث أشرفوا على ملفي وملف
                                         عائلتي من الألف إلى الياء بمهنية عالية. والنتيجة بفضل الله كانت نجاحاً مزدوجاً
@@ -1090,7 +1012,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Slide 3 -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
@@ -1105,8 +1026,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">الأخ زكرياء - الدار البيضاء (موظف استقبال في فندق)</h3>
-                                    <p class="testimonial-text-desc">"بحكم عملي في الفندقة بالدار البيضاء، أدرك تماماً
+                                    <h3 class="client-name" data-i18n="results.slide3.client">الأخ زكرياء - الدار البيضاء (موظف استقبال في فندق)</h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide3.text">"بحكم عملي في الفندقة بالدار البيضاء، أدرك تماماً
                                         معنى الخدمة الاحترافية. أتوجه بالشكر الجزيل للأخ يوسف وطاقم منصة GOFORVISA على
                                         مواكبتهم المتميزة والاحترافية العالية في إعداد ملفي، والحمد لله بفضل توجيهاتهم
                                         الدقيقة تمكنت من الحصول على تأشيرة شينغن لدولة الدنمارك بكل سلاسة. أنصح بشدة
@@ -1114,7 +1035,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Slide 4 -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
@@ -1129,8 +1049,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">السيد عبد الرزاق - الدار البيضاء (صاحب شركة)</h3>
-                                    <p class="testimonial-text-desc">"بصفتي صاحب مقاولة، أقدّر كثيراً احترافية الالتزام
+                                    <h3 class="client-name" data-i18n="results.slide4.client">السيد عبد الرزاق - الدار البيضاء (صاحب شركة)</h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide4.text">"بصفتي صاحب مقاولة، أقدّر كثيراً احترافية الالتزام
                                         بالمواعيد والتدبير الدقيق للملفات. أتوجه بجزيل الشكر للأخ يوسف ولفريق منصة
                                         GOFORVISA على مواكبتهم المتميزة في إعداد ملف الفيزا السياحية لدولة الدنمارك لي
                                         ولزوجتي. بفضل توجيهاتهم وخبرتهم العالية، حصلنا على التأشيرة بكل سلاسة وفي وقت
@@ -1138,7 +1058,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Slide 5 -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
@@ -1153,8 +1072,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">السيد محمد - الدار البيضاء (صاحب شركة)</h3>
-                                    <p class="testimonial-text-desc">"إجراءات الفيزا الأمريكية معروفة بدقتها وصعوبتها،
+                                    <h3 class="client-name" data-i18n="results.slide5.client">السيد محمد - الدار البيضاء (صاحب شركة)</h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide5.text">"إجراءات الفيزا الأمريكية معروفة بدقتها وصعوبتها،
                                         لكن مع الأخ يوسف وفريق GOFORVISA الأمر كان مختلفاً تماماً. بفضل خبرتهم
                                         وتوجيهاتهم الذكية في ترتيب الملف وتحضير المقابلة، تمكنت بفضل الله من الحصول على
                                         تأشيرة سياحة للولايات المتحدة الأمريكية لمدة 10 سنوات بكل أريحية. خدمة محترفة
@@ -1162,7 +1081,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Slide 6 -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
@@ -1177,8 +1095,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">الأستاذة مريم - المحمدية (أستاذة في التعليم الثانوي)</h3>
-                                    <p class="testimonial-text-desc">"كمربية أجيال، أقدّر كثيراً الوضوح، الأمانة
+                                    <h3 class="client-name" data-i18n="results.slide6.client">الأستاذة مريم - المحمدية (أستاذة في التعليم الثانوي)</h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide6.text">"كمربية أجيال، أقدّر كثيراً الوضوح، الأمانة
                                         والاتقان في العمل. تجربتي مع الأخ يوسف وطاقم GOFORVISA كانت نموذجاً للاحترافية؛
                                         حيث حظيت بمواكبة دقيقة وتوجيهات سديدة مكنتني من الحصول على تأشيرة المملكة
                                         المتحدة (بريطانيا) لمدة 6 أشهر متعددة الدخول بكل يسر وسهولة. شكراً لكم على
@@ -1186,7 +1104,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Slide 7 -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
@@ -1201,8 +1118,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">السيد الحسن - مراكش (متقاعد)</h3>
-                                    <p class="testimonial-text-desc">"تجربتي مع الأخ يوسف وطاقم GOFORVISA كانت ناجحة بكل
+                                    <h3 class="client-name" data-i18n="results.slide7.client">السيد الحسن - مراكش (متقاعد)</h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide7.text">"تجربتي مع الأخ يوسف وطاقم GOFORVISA كانت ناجحة بكل
                                         المقاييس. بفضل كفاءتهم واطلاعهم الدائم على آخر التحديثات، واكبوني خطوة بخطوة في
                                         التقديم على تأشيرة المملكة المتحدة الإلكترونية بالنظام الجديد (ETA)، والحمد لله
                                         حصلت على فيزا 6 أشهر متعددة الدخول بكل سرعة وبدون تعقيد. أنصح بشدة بالتعامل معهم
@@ -1210,7 +1127,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Slide 8 -->
                         <div class="testimonial-slide">
                             <div class="testimonial-glass-card visa-result-card">
@@ -1225,8 +1141,8 @@
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                         <i class="lucide-star" style="fill: currentColor;"></i>
                                     </div>
-                                    <h3 class="client-name">السيد محمد - الدار البيضاء (مقاول)</h3>
-                                    <p class="testimonial-text-desc">"كمقاول، الوقت والسرعة هما أساس نجاح أي خطوة.
+                                    <h3 class="client-name" data-i18n="results.slide8.client">السيد محمد - الدار البيضاء (مقاول)</h3>
+                                    <p class="testimonial-text-desc" data-i18n="results.slide8.text">"كمقاول، الوقت والسرعة هما أساس نجاح أي خطوة.
                                         تجربتي مع الأخ يوسف وطاقم منصة GOFORVISA كانت استثنائية بكل المقاييس؛ حيث أبانوا
                                         عن احترافية كبيرة واطلاع دقيق بالإجراءات الجديدة، مما مكنني من الحصول على
                                         التأشيرة الإلكترونية لكندا (AVE) في وقت قياسي ودون أي تعقيدات. أنصح بشدة
@@ -1236,213 +1152,162 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="slider-dots" id="visa-slider-dots"></div>
-
             </div>
         </div>
     </section>
-
     <!-- ==========================================================================
        FAQ ACCORDION SECTION WITH SEARCH FUNCTION
        ========================================================================== -->
     <section class="faq-section section-padding" id="faq">
         <div class="container">
             <div class="section-header">
-                <span class="tag">الأسئلة المتكررة</span>
-                <h2>تساؤلات شائعة حول التقديم والتجهيز</h2>
-                <p>كل ما تحتاج لمعرفته حول خدمات إعداد الملفات، الضمانات، المواعيد والإجراءات.</p>
+                <span class="tag" data-i18n="faq.tag">الأسئلة المتكررة</span>
+                <h2 data-i18n="faq.title">تساؤلات شائعة حول التقديم والتجهيز</h2>
+                <p data-i18n="faq.desc">كل ما تحتاج لمعرفته حول خدمات إعداد الملفات، الضمانات، المواعيد والإجراءات.</p>
             </div>
-
             <div class="faq-list" id="faq-accordion">
                 <!-- Q1 -->
                 <div class="faq-item active" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">1. ما هي الخدمات التي تقدمها GOFORVISA؟</span>
+                        <span class="faq-question" data-i18n="faq.q1">1. ما هي الخدمات التي تقدمها GOFORVISA؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content" style="height: auto;">
-                        <div class="faq-body">
-                            نقدم خدمات الاستشارة، إعداد وتجهيز ملفات التأشيرات، حجز المواعيد، التأمين على السفر، حجوزات
-                            الفنادق والطيران، ومرافقة العملاء خلال مختلف مراحل طلب التأشيرة.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a1">نقدم خدمات الاستشارة، إعداد وتجهيز ملفات التأشيرات، حجز المواعيد، التأمين على السفر، حجوزات
+                            الفنادق والطيران، ومرافقة العملاء خلال مختلف مراحل طلب التأشيرة.</div>
                     </div>
                 </div>
-
                 <!-- Q2 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">2. هل تقدمون خدمات التأشيرة لجميع الدول؟</span>
+                        <span class="faq-question" data-i18n="faq.q2">2. هل تقدمون خدمات التأشيرة لجميع الدول؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            نقدم خدمات التأشيرات لعدد كبير من الدول والوجهات حول العالم، حسب متطلبات كل سفارة أو مركز
-                            تأشيرات.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a2">نقدم خدمات التأشيرات لعدد كبير من الدول والوجهات حول العالم، حسب متطلبات كل سفارة أو مركز
+                            تأشيرات.</div>
                     </div>
                 </div>
-
                 <!-- Q3 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">3. هل تقدمون خدمات التأشيرة إلى الدنمارك، المملكة المتحدة، الولايات
+                        <span class="faq-question" data-i18n="faq.q3">3. هل تقدمون خدمات التأشيرة إلى الدنمارك، المملكة المتحدة، الولايات
                             المتحدة الأمريكية، كندا وأستراليا؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            نعم، نوفر خدمات الاستشارة وتجهيز الملفات لهذه الوجهات وغيرها:
-                            <div
+                        <div class="faq-body"><span data-i18n="faq.a3">نعم، نوفر خدمات الاستشارة وتجهيز الملفات لهذه الوجهات وغيرها:</span><div
                                 style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
                                 <div
-                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);">
-                                    <span style="font-size: 1.5rem; line-height: 1;">🇩🇰</span> الدنمارك
-                                </div>
+                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);" data-i18n="faq.a3.denmark">🇩🇰 الدنمارك</div>
                                 <div
-                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);">
-                                    <span style="font-size: 1.5rem; line-height: 1;">🇬🇧</span> المملكة المتحدة
-                                </div>
+                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);" data-i18n="faq.a3.uk">🇬🇧 المملكة المتحدة</div>
                                 <div
-                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);">
-                                    <span style="font-size: 1.5rem; line-height: 1;">🇺🇸</span> الولايات المتحدة
-                                    الأمريكية
-                                </div>
+                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);" data-i18n="faq.a3.usa">🇺🇸 الولايات المتحدة الأمريكية</div>
                                 <div
-                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);">
-                                    <span style="font-size: 1.5rem; line-height: 1;">🇨🇦</span> كندا
-                                </div>
+                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);" data-i18n="faq.a3.canada">🇨🇦 كندا</div>
                                 <div
-                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);">
-                                    <span style="font-size: 1.5rem; line-height: 1;">🇦🇺</span> أستراليا
-                                </div>
+                                    style="display: flex; align-items: center; gap: 12px; background: var(--surface-light); padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border-color); font-weight: 600; color: var(--primary-dark);" data-i18n="faq.a3.australia">🇦🇺 أستراليا</div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Q4 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">4. هل تضمنون الحصول على التأشيرة؟</span>
+                        <span class="faq-question" data-i18n="faq.q4">4. هل تضمنون الحصول على التأشيرة؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            لا يمكن لأي جهة ضمان الحصول على التأشيرة، لأن القرار النهائي يعود إلى السفارة أو القنصلية
-                            المختصة.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a4">لا يمكن لأي جهة ضمان الحصول على التأشيرة، لأن القرار النهائي يعود إلى السفارة أو القنصلية
+                            المختصة.</div>
                     </div>
                 </div>
-
                 <!-- Q5 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">5. هل يمكنكم تجهيز الملف كاملاً؟</span>
+                        <span class="faq-question" data-i18n="faq.q5">5. هل يمكنكم تجهيز الملف كاملاً؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            نعم، نقوم بمراجعة وتجهيز الملف والتأكد من استيفائه لجميع المتطلبات قبل التقديم.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a5">نعم، نقوم بمراجعة وتجهيز الملف والتأكد من استيفائه لجميع المتطلبات قبل التقديم.</div>
                     </div>
                 </div>
-
                 <!-- Q6 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">6. هل تقومون بحجز المواعيد؟</span>
+                        <span class="faq-question" data-i18n="faq.q6">6. هل تقومون بحجز المواعيد؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            نعم، نقوم بحجز المواعيد حسب التوفر لدى مراكز التأشيرات والسفارات.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a6">نعم، نقوم بحجز المواعيد حسب التوفر لدى مراكز التأشيرات والسفارات.</div>
                     </div>
                 </div>
-
                 <!-- Q7 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">7. هل يجب الحضور شخصيًا إلى مركز التأشيرات؟</span>
+                        <span class="faq-question" data-i18n="faq.q7">7. هل يجب الحضور شخصيًا إلى مركز التأشيرات؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            في معظم الحالات نعم، خاصة عند الحاجة إلى البصمات البيومترية أو المقابلة الشخصية.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a7">في معظم الحالات نعم، خاصة عند الحاجة إلى البصمات البيومترية أو المقابلة الشخصية.</div>
                     </div>
                 </div>
-
                 <!-- Q8 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">8. هل يمكن إرسال واستلام الوثائق عن طريق شركة شحن؟</span>
+                        <span class="faq-question" data-i18n="faq.q8">8. هل يمكن إرسال واستلام الوثائق عن طريق شركة شحن؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            نعم، نوفر خدمة استلام وإرسال الوثائق والملفات عبر شركائنا في خدمات التوصيل.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a8">نعم، نوفر خدمة استلام وإرسال الوثائق والملفات عبر شركائنا في خدمات التوصيل.</div>
                     </div>
                 </div>
-
                 <!-- Q9 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">9. كم تستغرق مدة معالجة طلب التأشيرة؟</span>
+                        <span class="faq-question" data-i18n="faq.q9">9. كم تستغرق مدة معالجة طلب التأشيرة؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            من تلات ايام إلى خمس ايام كحد أقصى.
-                        </div>
+                        <div class="faq-body"><span><span><span><span data-i18n="dest.schengen.time"><span data-i18n="faq.a9">5-10 أيام على حسب توفر المواعيد</span></span></span></span></span></div>
                     </div>
                 </div>
-
                 <!-- Q10 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">10. هل يمكن متابعة حالة الملف؟</span>
+                        <span class="faq-question" data-i18n="faq.q10">10. هل يمكن متابعة حالة الملف؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            نعم، يمكنكم التواصل معنا في أي وقت للحصول على آخر المستجدات المتعلقة بملفكم.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a10">نعم، يمكنكم التواصل معنا في أي وقت للحصول على آخر المستجدات المتعلقة بملفكم.</div>
                     </div>
                 </div>
-
                 <!-- Q11 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">11. ماذا يحدث إذا تم رفض التأشيرة؟</span>
+                        <span class="faq-question" data-i18n="faq.q11">11. ماذا يحدث إذا تم رفض التأشيرة؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            نقوم بدراسة أسباب الرفض وتقديم التوجيه المناسب لإعادة التقديم عند الإمكان.
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a11">نقوم بدراسة أسباب الرفض وتقديم التوجيه المناسب لإعادة التقديم عند الإمكان.</div>
                     </div>
                 </div>
-
                 <!-- Q12 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">12. ما هي طرق الدفع المتاحة؟</span>
+                        <span class="faq-question" data-i18n="faq.q12">12. ما هي طرق الدفع المتاحة؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
-                        <div class="faq-body">
-                            يمكن الدفع نقدا في المكتب او عبر التحويل البنكي او عبر وسائل دفع الإلكترونية المتاحة
-                        </div>
+                        <div class="faq-body" data-i18n="faq.a12">يمكن الدفع نقدا في المكتب او عبر التحويل البنكي او عبر وسائل دفع الإلكترونية المتاحة</div>
                     </div>
                 </div>
-
                 <!-- Q13 -->
                 <div class="faq-item" data-reveal="blur">
                     <div class="faq-header">
-                        <span class="faq-question">13. كيف يمكن التواصل معكم؟</span>
+                        <span class="faq-question" data-i18n="faq.q13">13. كيف يمكن التواصل معكم؟</span>
                         <div class="faq-toggle-icon"><i data-lucide="chevron-down"></i></div>
                     </div>
                     <div class="faq-content">
@@ -1458,8 +1323,7 @@
                                     </div>
                                     <div>
                                         <h4
-                                            style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;">
-                                            المقر الرئيسي للشركة</h4>
+                                            style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;"><span><span><span><span><span data-i18n="faq.a13.hq"><span data-i18n="footer.legal.hq">المقر الرئيسي للشركة</span></span></span></span></span></span></h4>
                                         <p
                                             style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
                                             Angle Rue Al Araaret<br>
@@ -1477,8 +1341,7 @@
                                     </div>
                                     <div>
                                         <h4
-                                            style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;">
-                                            الهاتف</h4>
+                                            style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;" data-i18n="faq.a13.phone">الهاتف</h4>
                                         <a href="tel:+212660773153"
                                             style="font-size: 1.05rem; font-weight: 600; color: var(--accent-blue); direction: ltr; display: inline-block;">+212
                                             660 77 31 53</a>
@@ -1492,8 +1355,7 @@
                                     </div>
                                     <div>
                                         <h4
-                                            style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;">
-                                            الموقع الإلكتروني</h4>
+                                            style="font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px;" data-i18n="faq.a13.website">الموقع الإلكتروني</h4>
                                         <a href="https://www.goforvisa.ma" target="_blank" rel="noopener noreferrer"
                                             style="font-size: 1rem; font-weight: 600; color: var(--accent-blue);">www.goforvisa.ma</a>
                                     </div>
@@ -1505,7 +1367,6 @@
             </div>
         </div>
     </section>
-
     <!-- ==========================================================================
        CONTACT SECTION
        ========================================================================== -->
@@ -1513,60 +1374,55 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-form-wrapper" data-reveal="right">
-                    <div class="section-header" style="text-align: right; margin-bottom: 30px; margin-right: 0;">
-                        <span class="tag">تواصل معنا الآن</span>
-                        <h2>أختر الخدمة المناسبة لك</h2>
-                        <div class="contact-info-desc"
-                            style="text-align: right; margin-top: 15px; display: flex; flex-direction: column; gap: 15px; line-height: 1.7; font-size: 0.95rem; color: var(--text-muted);">
+                    <div class="section-header" style="text-align: center; margin-bottom: 30px; margin-right: auto; margin-left: auto;">
+                        <span class="tag" data-i18n="contact.tag">تواصل معنا الآن</span>
+                        <div class="contact-info-box">
+                            <h2 data-i18n="contact.title" style="margin-top: 0; margin-bottom: 24px;">أختر الخدمة المناسبة لك</h2>
+                            <div class="contact-info-desc"
+                                style="text-align: right; display: flex; flex-direction: column; gap: 15px; line-height: 1.7; font-size: 0.95rem; color: var(--text-muted);">
                             <div>
                                 <strong
                                     style="color: var(--primary-dark); display: block; margin-bottom: 4px; font-size: 1.05rem;"><i
                                         data-lucide="folder-plus"
-                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-sky);"></i>
-                                    فتح ملف تقديم</strong>
-                                <span>قم بتعبئة الاستمارة بالمعلومات الأساسية واختيار البلد المستهدف، وسيتولى فريق
+                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-sky);"></i><span><span><span><span><span><span data-i18n="contact.desc1.title"><span data-i18n="contact.tab_free">فتح ملف تقديم</span></span></span></span></span></span></span></strong>
+                                <span data-i18n="contact.desc1.text">قم بتعبئة الاستمارة بالمعلومات الأساسية واختيار البلد المستهدف، وسيتولى فريق
                                     GoForVisa دراسة ملفك والتواصل معك عبر واتساب لتقديم خطة عمل واضحة وقائمة الوثائق
                                     المطلوبة حسب حالتك.</span>
                             </div>
-
                             <div>
                                 <strong
                                     style="color: var(--primary-dark); display: block; margin-bottom: 4px; font-size: 1.05rem;"><i
                                         data-lucide="calendar-check"
-                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-gold);"></i>
-                                    استشارة خاصة مدفوعة</strong>
-                                <span>احجز جلسة مع خبير تأشيرات لتقييم ملفك والإجابة عن استفساراتك. بعد اختيار الخدمة،
+                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-gold);"></i><span><span><span><span><span><span data-i18n="contact.desc2.title"><span data-i18n="contact.tab_paid">استشارة خاصة مدفوعة</span></span></span></span></span></span></span></strong>
+                                <span data-i18n="contact.desc2.text">احجز جلسة مع خبير تأشيرات لتقييم ملفك والإجابة عن استفساراتك. بعد اختيار الخدمة،
                                     سيتم توجيهك إلى واتساب لإتمام الدفع وتحديد موعد الاستشارة.</span>
                             </div>
-
                             <div
                                 style="background: rgba(14, 165, 233, 0.03); border: 1px dashed rgba(14, 165, 233, 0.2); border-radius: 12px; padding: 12px 16px; margin-top: 5px;">
                                 <strong
                                     style="color: var(--primary-dark); display: block; margin-bottom: 4px; font-size: 1rem;"><i
                                         data-lucide="help-circle"
-                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-sky);"></i>
-                                    لا تعرف أي خدمة تختار؟</strong>
-                                <span style="font-size: 0.9rem;">إذا كنت جاهزاً لبدء إجراءات التأشيرة، اختر فتح ملف
+                                        style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 6px; color: var(--accent-sky);"></i><span data-i18n="contact.desc3.title">لا تعرف أي خدمة تختار؟</span></strong>
+                                <span style="font-size: 0.9rem;" data-i18n="contact.desc3.text">إذا كنت جاهزاً لبدء إجراءات التأشيرة، اختر فتح ملف
                                     تقديم. أما إذا كنت ترغب في تقييم وضعيتك والحصول على توجيه مهني قبل البدء، فاختر
                                     استشارة خاصة مدفوعة.</span>
                             </div>
                         </div>
                     </div>
-
+                    </div>
                     <!-- Dynamic Segmented Tab Control -->
                     <div class="contact-tabs-container">
                         <button type="button" class="contact-tab-btn active" id="tab-btn-free"
                             onclick="selectContactTab('free')">
                             <i data-lucide="folder-plus"></i>
-                            <span>فتح ملف تقديم</span>
+                            <span><span><span><span><span><span data-i18n="contact.desc1.title"><span data-i18n="contact.tab_free">فتح ملف تقديم</span></span></span></span></span></span></span>
                         </button>
                         <button type="button" class="contact-tab-btn" id="tab-btn-paid"
                             onclick="selectContactTab('paid')">
                             <i data-lucide="calendar-check"></i>
-                            <span>استشارة خاصة مدفوعة</span>
+                            <span><span><span><span><span><span data-i18n="contact.desc2.title"><span data-i18n="contact.tab_paid">استشارة خاصة مدفوعة</span></span></span></span></span></span></span>
                         </button>
                     </div>
-
                     <!-- Success Message -->
                     <div class="form-success-message" id="form-success"
                         style="display: none; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: 20px; padding: 40px; margin-bottom: 30px;">
@@ -1581,211 +1437,204 @@
                                 id="success-desc">لقد تم تسجيل معلوماتك بنجاح.</p>
                         </div>
                     </div>
-
                     <!-- Form Content 1: Register File (Pro-Free) -->
                     <div class="contact-form-content active" id="contact-form-free-container">
                         <form id="free-assessment-form">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" class="form-input text-right" id="free-name" placeholder=" "
+                                    <div class="form-input-wrapper">
+                                        <input type="text" class="form-input text-right" id="free-name" placeholder=" "
                                         required>
-                                    <label class="form-label" for="free-name">الاسم الكامل *</label>
+                                        <label class="form-label" for="free-name" data-i18n="form.name">الاسم الكامل *</label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-input text-right" id="free-phone" placeholder=" "
+                                    <div class="form-input-wrapper">
+                                        <input type="tel" class="form-input text-right" id="free-phone" placeholder=" "
                                         required>
-                                    <label class="form-label" for="free-phone">رقم الهاتف (الواتساب) *</label>
+                                        <label class="form-label" for="free-phone" data-i18n="form.phone">رقم الهاتف (الواتساب) *</label>
+                                    </div>
+                                    <span class="form-field-note" data-i18n="form.phone_note">ملاحظة: تأكد من كتابة رقم واتساب صحيح، لأن جميع مراحل التواصل والمتابعة ستتم عبر هذا الرقم</span>
                                 </div>
                             </div>
-
                             <div class="form-row">
                                 <div class="form-group form-select-wrapper">
                                     <select class="form-input form-select" id="free-destination" required>
                                         <option value="" disabled selected hidden></option>
                                         <!-- الوجهات الرئيسية -->
-                                        <option value="usa">الولايات المتحدة الأمريكية</option>
-                                        <option value="canada">كندا</option>
-                                        <option value="uk">المملكة المتحدة (بريطانيا)</option>
-                                        <option value="schengen_france">فرنسا (دول شنغن)</option>
-                                        <option value="schengen_germany">ألمانيا (دول شنغن)</option>
-                                        <option value="schengen_belgium">بلجيكا (دول شنغن)</option>
-                                        <option value="schengen_italy">إيطاليا (دول شنغن)</option>
-                                        <option value="schengen_netherlands">هولندا (دول شنغن)</option>
-                                        <option value="schengen_austria">النمسا (دول شنغن)</option>
-                                        <option value="schengen_finland">فنلندا (دول شنغن)</option>
-                                        <option value="schengen_croatia">كرواتيا (دول شنغن)</option>
-                                        <option value="schengen_iceland">آيسلندا (دول شنغن)</option>
-                                        <option value="schengen_malta">مالطا (دول شنغن)</option>
-                                        <option value="schengen_sweden">السويد (دول شنغن)</option>
-                                        <option value="schengen">الدنمارك (دول شنغن)</option>
-                                        <option value="schengen_norway">النرويج (دول شنغن)</option>
-                                        <option value="australia">أستراليا</option>
+                                        <option value="usa" data-i18n="form.dest.usa">الولايات المتحدة الأمريكية</option>
+                                        <option value="canada" data-i18n="form.dest.canada">كندا</option>
+                                        <option value="uk" data-i18n="form.dest.uk">المملكة المتحدة (بريطانيا)</option>
+                                        <option value="schengen_france" data-i18n="form.dest.schengen_france">فرنسا (دول شنغن)</option>
+                                        <option value="schengen_germany" data-i18n="form.dest.schengen_germany">ألمانيا (دول شنغن)</option>
+                                        <option value="schengen_belgium" data-i18n="form.dest.schengen_belgium">بلجيكا (دول شنغن)</option>
+                                        <option value="schengen_italy" data-i18n="form.dest.schengen_italy">إيطاليا (دول شنغن)</option>
+                                        <option value="schengen_netherlands" data-i18n="form.dest.schengen_netherlands">هولندا (دول شنغن)</option>
+                                        <option value="schengen_austria" data-i18n="form.dest.schengen_austria">النمسا (دول شنغن)</option>
+                                        <option value="schengen_finland" data-i18n="form.dest.schengen_finland">فنلندا (دول شنغن)</option>
+                                        <option value="schengen_croatia" data-i18n="form.dest.schengen_croatia">كرواتيا (دول شنغن)</option>
+                                        <option value="schengen_iceland" data-i18n="form.dest.schengen_iceland">آيسلندا (دول شنغن)</option>
+                                        <option value="schengen_malta" data-i18n="form.dest.schengen_malta">مالطا (دول شنغن)</option>
+                                        <option value="schengen_sweden" data-i18n="form.dest.schengen_sweden">السويد (دول شنغن)</option>
+                                        <option value="schengen" data-i18n="form.dest.schengen">الدنمارك (دول شنغن)</option>
+                                        <option value="schengen_norway" data-i18n="form.dest.schengen_norway">النرويج (دول شنغن)</option>
+                                        <option value="australia" data-i18n="form.dest.australia">أستراليا</option>
                                         <!-- دول الخليج والشرق الأوسط -->
-                                        <option value="uae">الإمارات العربية المتحدة (دبي)</option>
-                                        <option value="saudi">المملكة العربية السعودية</option>
-                                        <option value="qatar">دولة قطر</option>
-                                        <option value="bahrain">مملكة البحرين</option>
-                                        <option value="oman">سلطنة عمان</option>
-                                        <option value="jordan">المملكة الأردنية</option>
-                                        <option value="egypt">جمهورية مصر العربية</option>
+                                        <option value="uae" data-i18n="form.dest.uae">الإمارات العربية المتحدة (دبي)</option>
+                                        <option value="saudi" data-i18n="form.dest.saudi">المملكة العربية السعودية</option>
+                                        <option value="qatar" data-i18n="form.dest.qatar">دولة قطر</option>
+                                        <option value="bahrain" data-i18n="form.dest.bahrain">مملكة البحرين</option>
+                                        <option value="oman" data-i18n="form.dest.oman">سلطنة عمان</option>
+                                        <option value="jordan" data-i18n="form.dest.jordan">المملكة الأردنية</option>
+                                        <option value="egypt" data-i18n="form.dest.egypt">جمهورية مصر العربية</option>
                                         <!-- وجهات آسيا وإفريقيا -->
-                                        <option value="china">الصين</option>
-                                        <option value="japan">اليابان</option>
-                                        <option value="south_korea">كوريا الجنوبية (KETA)</option>
-                                        <option value="azerbaijan">أذربيجان</option>
-                                        <option value="tanzania">تنزانيا (جزيرة زنجبار)</option>
-                                        <option value="kenya">كينيا</option>
-                                        <option value="south_africa">جنوب إفريقيا</option>
-                                        <option value="ethiopia">إثيوبيا</option>
+                                        <option value="china" data-i18n="form.dest.china">الصين</option>
+                                        <option value="japan" data-i18n="form.dest.japan">اليابان</option>
+                                        <option value="south_korea" data-i18n="form.dest.south_korea">كوريا الجنوبية (KETA)</option>
+                                        <option value="azerbaijan" data-i18n="form.dest.azerbaijan">أذربيجان</option>
+                                        <option value="tanzania" data-i18n="form.dest.tanzania">تنزانيا (جزيرة زنجبار)</option>
+                                        <option value="kenya" data-i18n="form.dest.kenya">كينيا</option>
+                                        <option value="south_africa" data-i18n="form.dest.south_africa">جنوب إفريقيا</option>
+                                        <option value="ethiopia" data-i18n="form.dest.ethiopia">إثيوبيا</option>
                                     </select>
-                                    <label class="form-label" for="free-destination">الوجهة المهتم بها *</label>
+                                    <label class="form-label" for="free-destination" data-i18n="form.destination_free">الوجهة المهتم بها *</label>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-input text-right" id="free-city" placeholder=" "
+                                    <div class="form-input-wrapper">
+                                        <input type="text" class="form-input text-right" id="free-city" placeholder=" "
                                         required>
-                                    <label class="form-label" for="free-city">المدينة *</label>
+                                        <label class="form-label" for="free-city" data-i18n="form.city">المدينة *</label>
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="form-row">
                                 <div class="form-group form-select-wrapper" style="grid-column: span 2;">
                                     <select class="form-input form-select" id="free-job" required>
                                         <option value="" disabled selected hidden></option>
-                                        <option value="private">موظف قطاع خاص (Salarié du secteur privé)</option>
-                                        <option value="public">موظف قطاع عام (Fonctionnaire)</option>
-                                        <option value="merchant">تاجر / صاحب عمل (Commerçant / Gérant)</option>
-                                        <option value="student">طالب (Étudiant)</option>
-                                        <option value="retired">متقاعد (Retraité)</option>
-                                        <option value="freelance">مهنة حرة / مستقل (Profession libérale)</option>
+                                        <option value="private" data-i18n="form.job.private">موظف قطاع خاص (Salarié du secteur privé)</option>
+                                        <option value="public" data-i18n="form.job.public">موظف قطاع عام (Fonctionnaire)</option>
+                                        <option value="merchant" data-i18n="form.job.merchant">تاجر / صاحب عمل (Commerçant / Gérant)</option>
+                                        <option value="student" data-i18n="form.job.student">طالب (Étudiant)</option>
+                                        <option value="retired" data-i18n="form.job.retired">متقاعد (Retraité)</option>
+                                        <option value="freelance" data-i18n="form.job.freelance">مهنة حرة / مستقل (Profession libérale)</option>
                                     </select>
-                                    <label class="form-label" for="free-job">طبيعة العمل الحالي *</label>
+                                    <label class="form-label" for="free-job" data-i18n="form.job">طبيعة العمل الحالي *</label>
                                 </div>
                             </div>
-
                             <div class="form-row" style="margin-bottom: 30px;">
                                 <div class="form-group-custom" id="cnss-container" style="flex: 1;">
                                     <span
-                                        style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 8px; text-align: right;">هل
+                                        style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 8px; text-align: right;" data-i18n="form.cnss_question">هل
                                         تتوفر على تغطية الضمان الاجتماعي (CNSS)؟ *</span>
                                     <div class="toggle-group"
                                         style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
                                         <div class="radio-card selected" onclick="selectRadio(this, 'free-cnss-yes')"
-                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;">
-                                            نعم
-                                            <input type="radio" name="free-cnss" id="free-cnss-yes" value="نعم" checked
+                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;"><span><span><span><span><span><span data-i18n="form.cnss.yes"><span data-i18n="form.reject.yes">نعم</span></span></span></span></span></span></span><input type="radio" name="free-cnss" id="free-cnss-yes" value="نعم" checked
                                                 required style="position: absolute; opacity: 0; cursor: pointer;">
                                         </div>
                                         <div class="radio-card" onclick="selectRadio(this, 'free-cnss-no')"
-                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;">
-                                            لا
-                                            <input type="radio" name="free-cnss" id="free-cnss-no" value="لا" required
+                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;"><span><span><span><span><span><span data-i18n="form.cnss.no"><span data-i18n="form.reject.no">لا</span></span></span></span></span></span></span><input type="radio" name="free-cnss" id="free-cnss-no" value="لا" required
                                                 style="position: absolute; opacity: 0; cursor: pointer;">
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="form-group-custom" style="flex: 1;">
                                     <span
-                                        style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 8px; text-align: right;">هل
+                                        style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 8px; text-align: right;" data-i18n="form.reject_question">هل
                                         تم رفض تأشيرتك من قبل؟ *</span>
                                     <div class="toggle-group"
                                         style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
                                         <div class="radio-card" onclick="selectRadio(this, 'free-reject-yes')"
-                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;">
-                                            نعم
-                                            <input type="radio" name="free-reject" id="free-reject-yes" value="نعم"
+                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;"><span><span><span><span><span><span data-i18n="form.cnss.yes"><span data-i18n="form.reject.yes">نعم</span></span></span></span></span></span></span><input type="radio" name="free-reject" id="free-reject-yes" value="نعم"
                                                 required style="position: absolute; opacity: 0; cursor: pointer;">
                                         </div>
                                         <div class="radio-card selected" onclick="selectRadio(this, 'free-reject-no')"
-                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;">
-                                            لا
-                                            <input type="radio" name="free-reject" id="free-reject-no" value="لا"
+                                            style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative;"><span><span><span><span><span><span data-i18n="form.cnss.no"><span data-i18n="form.reject.no">لا</span></span></span></span></span></span></span><input type="radio" name="free-reject" id="free-reject-no" value="لا"
                                                 checked required
                                                 style="position: absolute; opacity: 0; cursor: pointer;">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                             <button type="submit" class="btn btn-accent btn-glow-pulse form-btn-submit"
-                                style="width: 100%; border-radius: 16px;">إرسال طلب فتح الملف وتجهيز التأشيرة <i
+                                style="width: 100%; border-radius: 16px;"><span data-i18n="form.submit_free">إرسال طلب فتح الملف وتجهيز التأشيرة</span><i
                                     data-lucide="arrow-left-right"></i></button>
                         </form>
                     </div>
-
                     <!-- Form Content 2: Paid Consultation (Pro-Payment) -->
                     <div class="contact-form-content" id="contact-form-paid-container">
                         <form id="paid-consultation-form" enctype="multipart/form-data">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" class="form-input text-right" id="paid-name" placeholder=" "
+                                    <div class="form-input-wrapper">
+                                        <input type="text" class="form-input text-right" id="paid-name" placeholder=" "
                                         required>
-                                    <label class="form-label" for="paid-name">الاسم الكامل *</label>
+                                        <label class="form-label" for="paid-name" data-i18n="form.name">الاسم الكامل *</label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-input text-right" id="paid-phone" placeholder=" "
+                                    <div class="form-input-wrapper">
+                                        <input type="tel" class="form-input text-right" id="paid-phone" placeholder=" "
                                         required>
-                                    <label class="form-label" for="paid-phone">رقم الهاتف (الواتساب) *</label>
+                                        <label class="form-label" for="paid-phone" data-i18n="form.phone">رقم الهاتف (الواتساب) *</label>
+                                    </div>
+                                    <span class="form-field-note" data-i18n="form.phone_note">ملاحظة: تأكد من كتابة رقم واتساب صحيح، لأن جميع مراحل التواصل والمتابعة ستتم عبر هذا الرقم</span>
                                 </div>
                             </div>
-
                             <div class="form-row">
                                 <div class="form-group form-select-wrapper" style="grid-column: span 2;">
                                     <select class="form-input form-select text-right" id="paid-destination" required>
                                         <option value="" disabled selected hidden></option>
                                         <!-- الوجهات الرئيسية -->
-                                        <option value="usa">الولايات المتحدة الأمريكية</option>
-                                        <option value="canada">كندا</option>
-                                        <option value="uk">المملكة المتحدة (بريطانيا)</option>
-                                        <option value="schengen_france">فرنسا (دول شنغن)</option>
-                                        <option value="schengen_germany">ألمانيا (دول شنغن)</option>
-                                        <option value="schengen_belgium">بلجيكا (دول شنغن)</option>
-                                        <option value="schengen_italy">إيطاليا (دول شنغن)</option>
-                                        <option value="schengen_netherlands">هولندا (دول شنغن)</option>
-                                        <option value="schengen_austria">النمسا (دول شنغن)</option>
-                                        <option value="schengen_finland">فنلندا (دول شنغن)</option>
-                                        <option value="schengen_croatia">كرواتيا (دول شنغن)</option>
-                                        <option value="schengen_iceland">آيسلندا (دول شنغن)</option>
-                                        <option value="schengen_malta">مالطا (دول شنغن)</option>
-                                        <option value="schengen_sweden">السويد (دول شنغن)</option>
-                                        <option value="schengen">الدنمارك (دول شنغن)</option>
-                                        <option value="schengen_norway">النرويج (دول شنغن)</option>
-                                        <option value="australia">أستراليا</option>
+                                        <option value="usa" data-i18n="form.dest.usa">الولايات المتحدة الأمريكية</option>
+                                        <option value="canada" data-i18n="form.dest.canada">كندا</option>
+                                        <option value="uk" data-i18n="form.dest.uk">المملكة المتحدة (بريطانيا)</option>
+                                        <option value="schengen_france" data-i18n="form.dest.schengen_france">فرنسا (دول شنغن)</option>
+                                        <option value="schengen_germany" data-i18n="form.dest.schengen_germany">ألمانيا (دول شنغن)</option>
+                                        <option value="schengen_belgium" data-i18n="form.dest.schengen_belgium">بلجيكا (دول شنغن)</option>
+                                        <option value="schengen_italy" data-i18n="form.dest.schengen_italy">إيطاليا (دول شنغن)</option>
+                                        <option value="schengen_netherlands" data-i18n="form.dest.schengen_netherlands">هولندا (دول شنغن)</option>
+                                        <option value="schengen_austria" data-i18n="form.dest.schengen_austria">النمسا (دول شنغن)</option>
+                                        <option value="schengen_finland" data-i18n="form.dest.schengen_finland">فنلندا (دول شنغن)</option>
+                                        <option value="schengen_croatia" data-i18n="form.dest.schengen_croatia">كرواتيا (دول شنغن)</option>
+                                        <option value="schengen_iceland" data-i18n="form.dest.schengen_iceland">آيسلندا (دول شنغن)</option>
+                                        <option value="schengen_malta" data-i18n="form.dest.schengen_malta">مالطا (دول شنغن)</option>
+                                        <option value="schengen_sweden" data-i18n="form.dest.schengen_sweden">السويد (دول شنغن)</option>
+                                        <option value="schengen" data-i18n="form.dest.schengen">الدنمارك (دول شنغن)</option>
+                                        <option value="schengen_norway" data-i18n="form.dest.schengen_norway">النرويج (دول شنغن)</option>
+                                        <option value="australia" data-i18n="form.dest.australia">أستراليا</option>
                                         <!-- دول الخليج والشرق الأوسط -->
-                                        <option value="uae">الإمارات العربية المتحدة (دبي)</option>
-                                        <option value="saudi">المملكة العربية السعودية</option>
-                                        <option value="qatar">دولة قطر</option>
-                                        <option value="bahrain">مملكة البحرين</option>
-                                        <option value="oman">سلطنة عمان</option>
-                                        <option value="jordan">المملكة الأردنية</option>
-                                        <option value="egypt">جمهورية مصر العربية</option>
+                                        <option value="uae" data-i18n="form.dest.uae">الإمارات العربية المتحدة (دبي)</option>
+                                        <option value="saudi" data-i18n="form.dest.saudi">المملكة العربية السعودية</option>
+                                        <option value="qatar" data-i18n="form.dest.qatar">دولة قطر</option>
+                                        <option value="bahrain" data-i18n="form.dest.bahrain">مملكة البحرين</option>
+                                        <option value="oman" data-i18n="form.dest.oman">سلطنة عمان</option>
+                                        <option value="jordan" data-i18n="form.dest.jordan">المملكة الأردنية</option>
+                                        <option value="egypt" data-i18n="form.dest.egypt">جمهورية مصر العربية</option>
                                         <!-- وجهات آسيا وإفريقيا -->
-                                        <option value="china">الصين</option>
-                                        <option value="japan">اليابان</option>
-                                        <option value="south_korea">كوريا الجنوبية (KETA)</option>
-                                        <option value="azerbaijan">أذربيجان</option>
-                                        <option value="tanzania">تنزانيا (جزيرة زنجبار)</option>
-                                        <option value="kenya">كينيا</option>
-                                        <option value="south_africa">جنوب إفريقيا</option>
-                                        <option value="ethiopia">إثيوبيا</option>
+                                        <option value="china" data-i18n="form.dest.china">الصين</option>
+                                        <option value="japan" data-i18n="form.dest.japan">اليابان</option>
+                                        <option value="south_korea" data-i18n="form.dest.south_korea">كوريا الجنوبية (KETA)</option>
+                                        <option value="azerbaijan" data-i18n="form.dest.azerbaijan">أذربيجان</option>
+                                        <option value="tanzania" data-i18n="form.dest.tanzania">تنزانيا (جزيرة زنجبار)</option>
+                                        <option value="kenya" data-i18n="form.dest.kenya">كينيا</option>
+                                        <option value="south_africa" data-i18n="form.dest.south_africa">جنوب إفريقيا</option>
+                                        <option value="ethiopia" data-i18n="form.dest.ethiopia">إثيوبيا</option>
                                     </select>
-                                    <label class="form-label" for="paid-destination">الدولة المهتم بها *</label>
+                                    <label class="form-label" for="paid-destination" data-i18n="form.destination_paid">الدولة المهتم بها *</label>
                                 </div>
                             </div>
-
                             <div class="form-group-custom" style="margin-bottom: 30px;">
                                 <span
-                                    style="font-size: 0.9rem; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 12px; text-align: center;">اختر
+                                    style="font-size: 0.9rem; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 12px; text-align: center;" data-i18n="form.duration_title">اختر
                                     مدة الاستشارة المطلوبة والرسوم الخاصة بها *</span>
                                 <div class="duration-group"
                                     style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
                                     <div class="radio-card gold-select" onclick="selectRadio(this, 'duration-10')"
                                         style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 10px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
-                                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary-dark);">
-                                            10 دقائق</div>
-                                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--accent-gold);">
-                                            100 درهم</div>
-                                        <div style="font-size: 0.72rem; opacity: 0.7; color: var(--text-muted);">استشارة
+                                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary-dark);" data-i18n="form.duration.10m">10 دقائق</div>
+                                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--accent-gold);" data-i18n="form.duration.10m.fee">100 درهم</div>
+                                        <div style="font-size: 0.72rem; opacity: 0.7; color: var(--text-muted);" data-i18n="form.duration.10m.desc">استشارة
                                             سريعة</div>
                                         <input type="radio" name="paid-duration" id="duration-10"
                                             value="10 دقائق (100 درهم)" required
@@ -1794,11 +1643,9 @@
                                     <div class="radio-card gold-select selected"
                                         onclick="selectRadio(this, 'duration-20')"
                                         style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 10px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
-                                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary-dark);">
-                                            20 دقيقة</div>
-                                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--accent-gold);">
-                                            200 درهم</div>
-                                        <div style="font-size: 0.72rem; opacity: 0.7; color: var(--text-muted);">استشارة
+                                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary-dark);" data-i18n="form.duration.20m">20 دقيقة</div>
+                                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--accent-gold);" data-i18n="form.duration.20m.fee">200 درهم</div>
+                                        <div style="font-size: 0.72rem; opacity: 0.7; color: var(--text-muted);" data-i18n="form.duration.20m.desc">استشارة
                                             متوسطة</div>
                                         <input type="radio" name="paid-duration" id="duration-20"
                                             value="20 دقيقة (200 درهم)" checked required
@@ -1806,11 +1653,9 @@
                                     </div>
                                     <div class="radio-card gold-select" onclick="selectRadio(this, 'duration-30')"
                                         style="background: var(--surface-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 10px; text-align: center; cursor: pointer; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: var(--transition-fast); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
-                                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary-dark);">
-                                            30 دقيقة</div>
-                                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--accent-gold);">
-                                            300 درهم</div>
-                                        <div style="font-size: 0.72rem; opacity: 0.7; color: var(--text-muted);">جلسة
+                                        <div style="font-size: 1.15rem; font-weight: 800; color: var(--primary-dark);" data-i18n="form.duration.30m">30 دقيقة</div>
+                                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--accent-gold);" data-i18n="form.duration.30m.fee">300 درهم</div>
+                                        <div style="font-size: 0.72rem; opacity: 0.7; color: var(--text-muted);" data-i18n="form.duration.30m.desc">جلسة
                                             متكاملة</div>
                                         <input type="radio" name="paid-duration" id="duration-30"
                                             value="30 دقيقة (300 درهم)" required
@@ -1818,7 +1663,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Notice Box replacing Bank details and Upload field -->
                             <div class="express-spec-box"
                                 style="margin-bottom: 30px; background: rgba(212, 175, 55, 0.04); border: 1.5px solid rgba(212, 175, 55, 0.2); border-radius: 16px; padding: 20px; text-align: right;">
@@ -1829,44 +1673,32 @@
                                     </div>
                                     <div>
                                         <p
-                                            style="color: var(--primary-dark); font-size: 0.95rem; font-weight: 700; line-height: 1.7; margin: 0;">
-                                            عند طلبك هذه الخدمة سوف تقوم بدفع رسوم الخدمة حسب المدة المختارة، وسوف يتم
+                                            style="color: var(--primary-dark); font-size: 0.95rem; font-weight: 700; line-height: 1.7; margin: 0;" data-i18n="form.paid_notice">عند طلبك هذه الخدمة سوف تقوم بدفع رسوم الخدمة حسب المدة المختارة، وسوف يتم
                                             التواصل معك عبر الواتساب لإنجاز الخدمة المطلوبة والإجابة عن استفساراتك خلال
-                                            مدة أقصاها 24 ساعة
-                                        </p>
+                                            مدة أقصاها 24 ساعة</p>
                                     </div>
                                 </div>
                             </div>
-
                             <button type="submit" class="btn btn-gold btn-glow-pulse form-btn-submit"
-                                style="width: 100%; border-radius: 16px;">تأكيد وحجز الاستشارة <i
+                                style="width: 100%; border-radius: 16px;"><span data-i18n="form.submit_paid">تأكيد وحجز الاستشارة</span><i
                                     data-lucide="check-circle"></i></button>
                         </form>
                     </div>
                 </div>
-
-
-
-
-
-
                 <div class="contact-info-wrapper" data-reveal="left">
                     <div class="contact-info-panel">
-
-
                         <div class="contact-info-list">
                             <div class="contact-info-item">
                                 <div class="contact-info-icon"><i data-lucide="phone-call"></i></div>
                                 <div class="contact-info-text">
-                                    <h4>اتصل بنا مباشرة</h4>
+                                    <h4 data-i18n="contact.info.title">اتصل بنا مباشرة</h4>
                                     <p class="latin-num">+212 660-773153</p>
                                 </div>
                             </div>
-
                             <div class="contact-info-item">
                                 <div class="contact-info-icon"><i data-lucide="map-pin"></i></div>
                                 <div class="contact-info-text">
-                                    <h4>موقع مكتبنا الرئيسي</h4>
+                                    <h4 data-i18n="contact.info.address">موقع مكتبنا الرئيسي</h4>
                                     <p>Angle Rue Al Araaret, Bd Lalla Yacout, 7ème Étage Appart 20, Casablanca, Maroc
                                     </p>
                                 </div>
@@ -1874,30 +1706,24 @@
                             <div class="contact-info-item">
                                 <div class="contact-info-icon"><i data-lucide="mail"></i></div>
                                 <div class="contact-info-text">
-                                    <h4>البريد الإلكتروني</h4>
+                                    <h4 data-i18n="contact.info.email">البريد الإلكتروني</h4>
                                     <p class="latin-num"><a href="mailto:contact@goforvisa.ma"
                                             style="color: inherit;">contact@goforvisa.ma</a></p>
                                 </div>
                             </div>
-
                             <div class="contact-info-item">
                                 <div class="contact-info-icon"><i data-lucide="calendar"></i></div>
                                 <div class="contact-info-text">
-                                    <h4>ساعات العمل الرسمية</h4>
-                                    <p>الاثنين - الجمعة: 9:00 صباحاً - 5:00 مساءً</p>
+                                    <h4 data-i18n="contact.info.hours">ساعات العمل الرسمية</h4>
+                                    <p data-i18n="contact.info.hours_desc">الاثنين - الجمعة: 9:00 صباحاً - 5:00 مساءً</p>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ==========================================================================
        LUXURY FOOTER
        ========================================================================== -->
@@ -1938,30 +1764,24 @@
                                 SUCCESS</span>
                         </div>
                     </div>
-                    <p class="footer-desc">
-                        نحن وكالة متخصصة في توجيه وإعداد وتجهيز ملفات التأشيرات السياحية لكافة أنحاء العالم. نعتمد أعلى
-                        المعايير لضمان مطابقة متكاملة مع متطلبات القنصليات لرفع نسب قبولك.
-                    </p>
+                    <p class="footer-desc" data-i18n="footer.desc">نحن وكالة متخصصة في توجيه وإعداد وتجهيز ملفات التأشيرات السياحية لكافة أنحاء العالم. نعتمد أعلى
+                        المعايير لضمان مطابقة متكاملة مع متطلبات القنصليات لرفع نسب قبولك.</p>
                     <div class="social-links">
                         <a href="https://wa.me/212660773153" target="_blank" class="social-btn whatsapp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-
                         <a href="https://www.facebook.com/share/199vywtdhe/?mibextid=wwXIfr" target="_blank"
                             class="social-btn facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-
                         <a href="https://www.instagram.com/goforvisa.ma?igsh=MWdlamFxZHFmamg2bA%3D%3D&utm_source=qr"
                             target="_blank" class="social-btn instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-
                         <a href="https://youtube.com/@goforvisa-d6u?si=cNm6TBgN0ASMnFDy" target="_blank"
                             class="social-btn youtube">
                             <i class="fab fa-youtube"></i>
                         </a>
-
                         <a href="https://www.tiktok.com/@goforvisa?_r=1&_t=ZN-97A98RRnY18" target="_blank"
                             class="social-btn tiktok">
                             <i class="fab fa-tiktok"></i>
@@ -1974,92 +1794,81 @@
                             style="transition: var(--transition-fast);">contact@goforvisa.ma</a>
                     </div>
                 </div>
-
                 <div class="footer-col">
-                    <h4>الوجهات السياحية</h4>
+                    <h4 data-i18n="footer.col_destinations">الوجهات السياحية</h4>
                     <div class="footer-links">
-                        <a href="#countries" data-filter="schengen" class="footer-link">تأشيرة دول شنغن السياحية</a>
-                        <a href="#countries" data-filter="america" class="footer-link">تأشيرة كندا السياحية</a>
-                        <a href="#countries" data-filter="america" class="footer-link">تأشيرة أمريكا السياحية</a>
-                        <a href="#countries" data-filter="commonwealth" class="footer-link">تأشيرة بريطانيا السياحية</a>
-                        <a href="#countries" data-filter="commonwealth" class="footer-link">تأشيرة استراليا السياحية</a>
-                        <a href="#countries" data-filter="express" class="footer-link">التأشيرات الإلكترونية
-                            والباقات</a>
+                        <a href="#countries" data-filter="schengen" class="footer-link" data-i18n="footer.dest.schengen">تأشيرة دول شنغن السياحية</a>
+                        <a href="#countries" data-filter="america" class="footer-link" data-i18n="footer.dest.canada">تأشيرة كندا السياحية</a>
+                        <a href="#countries" data-filter="america" class="footer-link" data-i18n="footer.dest.usa">تأشيرة أمريكا السياحية</a>
+                        <a href="#countries" data-filter="commonwealth" class="footer-link" data-i18n="footer.dest.uk">تأشيرة بريطانيا السياحية</a>
+                        <a href="#countries" data-filter="commonwealth" class="footer-link" data-i18n="footer.dest.australia">تأشيرة استراليا السياحية</a>
+                        <a href="#countries" data-filter="express" class="footer-link"><span><span><span><span><span data-i18n="destinations.filter_express"><span data-i18n="footer.dest.evisa">التأشيرات الإلكترونية
+                            والباقات</span></span></span></span></span></span></a>
                     </div>
                 </div>
-
                 <div class="footer-col">
-                    <h4>روابط سريعة</h4>
+                    <h4 data-i18n="footer.col_links">روابط سريعة</h4>
                     <div class="footer-links">
-                        <a href="#" class="footer-link">الرئيسية</a>
-                        <a href="#process" class="footer-link">خطوات العمل</a>
-                        <a href="#countries" class="footer-link">الوجهات</a>
-                        <a href="#faq" class="footer-link">الأسئلة الشائعة</a>
+                        <a href="#" class="footer-link"><span><span><span><span><span data-i18n="nav.home"><span data-i18n="footer.links.home">الرئيسية</span></span></span></span></span></span></a>
+                        <a href="#process" class="footer-link" data-i18n="footer.links.process">خطوات العمل</a>
+                        <a href="#countries" class="footer-link" data-i18n="footer.links.destinations">الوجهات</a>
+                        <a href="#faq" class="footer-link"><span><span><span><span><span data-i18n="nav.faq"><span data-i18n="footer.links.faq">الأسئلة الشائعة</span></span></span></span></span></span></a>
                         <a href="https://www.facebook.com/share/199vywtdhe/?mibextid=wwXIfr" target="_blank"
-                            class="footer-link">صفحة الفيسبوك</a>
+                            class="footer-link" data-i18n="footer.links.fb">صفحة الفيسبوك</a>
                         <a href="https://www.instagram.com/goforvisa.ma?igsh=MWdlamFxZHFmamg2bA%3D%3D&utm_source=qr"
-                            target="_blank" class="footer-link">حساب الإنستغرام</a>
+                            target="_blank" class="footer-link" data-i18n="footer.links.ig">حساب الإنستغرام</a>
                     </div>
                 </div>
-
                 <div class="footer-col">
-                    <h4>النشرة البريدية</h4>
-                    <p class="footer-desc">اشترك لتصلك آخر مستجدات مواعيد التأشيرات السياحية والتعليمات القنصلية.</p>
+                    <h4 data-i18n="footer.col_newsletter">النشرة البريدية</h4>
+                    <p class="footer-desc" data-i18n="footer.newsletter_desc">اشترك لتصلك آخر مستجدات مواعيد التأشيرات السياحية والتعليمات القنصلية.</p>
                     <div class="footer-subscribe-box">
-                        <input type="email" class="footer-subscribe-input" placeholder="بريدك الإلكتروني">
-                        <button class="footer-subscribe-btn">اشترك</button>
+                        <input type="email" class="footer-subscribe-input" data-i18n-placeholder="footer.email_placeholder" placeholder="بريدك الإلكتروني">
+                        <button class="footer-subscribe-btn" data-i18n="footer.subscribe_btn">اشترك</button>
                     </div>
                 </div>
             </div>
-
             <!-- Legal Info Bar -->
             <div class="footer-legal-bar" data-reveal="blur">
                 <div class="footer-legal-item">
                     <div class="footer-legal-icon"><i data-lucide="building-2"></i></div>
                     <div class="footer-legal-text">
-                        <span class="footer-legal-label">الاسم القانوني للشركة</span>
+                        <span class="footer-legal-label" data-i18n="footer.legal.name">الاسم القانوني للشركة</span>
                         <span class="footer-legal-value">GoForVisa SARL</span>
                     </div>
                 </div>
-
                 <div class="footer-legal-item">
                     <div class="footer-legal-icon"><i data-lucide="file-text"></i></div>
                     <div class="footer-legal-text">
-                        <span class="footer-legal-label">السجل التجاري (RC)</span>
+                        <span class="footer-legal-label" data-i18n="footer.legal.rc">السجل التجاري (RC)</span>
                         <span class="footer-legal-value latin-num">RC 695519</span>
                     </div>
                 </div>
-
                 <div class="footer-legal-item">
                     <div class="footer-legal-icon"><i data-lucide="fingerprint"></i></div>
                     <div class="footer-legal-text">
-                        <span class="footer-legal-label">رقم التعريف الضريبي (ICE)</span>
+                        <span class="footer-legal-label" data-i18n="footer.legal.ice">رقم التعريف الضريبي (ICE)</span>
                         <span class="footer-legal-value latin-num">003807566000004</span>
                     </div>
                 </div>
-
                 <div class="footer-legal-item">
                     <div class="footer-legal-icon"><i data-lucide="map-pin"></i></div>
                     <div class="footer-legal-text">
-                        <span class="footer-legal-label">المقر الرئيسي للشركة</span>
+                        <span class="footer-legal-label"><span><span><span><span><span data-i18n="faq.a13.hq"><span data-i18n="footer.legal.hq">المقر الرئيسي للشركة</span></span></span></span></span></span></span>
                         <span class="footer-legal-value">Angle Rue Al Araaret Bd Lalla Yacout 7ème Étage Appart 20
                             Casablanca, Maroc</span>
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p class="copyright-text latin-num">
-                    &copy; 2026 GoForVisa.ma جميع الحقوق محفوظة.
-                </p>
+                <p class="copyright-text latin-num" data-i18n="footer.copyright">© 2026 GoForVisa.ma جميع الحقوق محفوظة.</p>
                 <div class="footer-bottom-links">
-                    <a href="#" class="footer-bottom-link">سياسة الخصوصية</a>
-                    <a href="#" class="footer-bottom-link">شروط الاستخدام</a>
+                    <a href="#" class="footer-bottom-link" data-i18n="footer.privacy">سياسة الخصوصية</a>
+                    <a href="#" class="footer-bottom-link" data-i18n="footer.terms">شروط الاستخدام</a>
                 </div>
             </div>
         </div>
     </footer>
-
     <!-- ==========================================================================
        PREMIUM LIGHTBOX MODAL FOR VISA IMAGES
        ========================================================================== -->
@@ -2067,14 +1876,13 @@
         <button class="lightbox-close-btn" onclick="closeVisaLightbox()">&times;</button>
         <div class="lightbox-content-wrapper" onclick="event.stopPropagation()">
             <img id="lightbox-img" src="" alt="تأشيرة مكبرة">
-            <h5 id="lightbox-caption">تأشيرة مقبولة لعملائنا</h5>
+            <h5 id="lightbox-caption" data-i18n="lightbox.caption">تأشيرة مقبولة لعملائنا</h5>
         </div>
     </div>
-
     <!-- ==========================================================================
        MOTION DESIGN & INTERACTION SCRIPTS
        ========================================================================== -->
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,3 +1,127 @@
+        // Multi-language Translation Engine
+        window.getCurrentLang = function() {
+            return localStorage.getItem('goforvisa_lang') || 'ar';
+        }
+
+        window.setLanguage = function(lang) {
+            const translationsSource = window.translations || (typeof translations !== 'undefined' ? translations : null);
+            if (!translationsSource || !translationsSource[lang]) return;
+            const t = translationsSource[lang];
+            
+            // Update document language and text direction
+            const htmlTag = document.documentElement;
+            htmlTag.setAttribute('lang', lang);
+            
+            const dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            const isLTR = (dir === 'ltr');
+            htmlTag.setAttribute('dir', dir);
+            
+            // Adjust body font class
+            document.body.className = document.body.className.replace(/\blang-\S+/g, '').trim();
+            document.body.classList.add('lang-' + lang);
+            
+            // ===== FIX INLINE STYLES FOR LTR / RTL =====
+            // Fix inline text-align: right → left for LTR, revert for RTL
+            // Target the contact section header
+            const contactSectionHeader = document.querySelector('#contact .section-header');
+            if (contactSectionHeader) {
+                contactSectionHeader.style.textAlign = 'center';
+                contactSectionHeader.style.marginRight = 'auto';
+                contactSectionHeader.style.marginLeft = 'auto';
+            }
+            
+            // Fix the contact-info-desc
+            const contactInfoDesc = document.querySelector('.contact-info-desc');
+            if (contactInfoDesc) {
+                contactInfoDesc.style.textAlign = isLTR ? 'left' : 'right';
+            }
+            
+            // Fix form question labels with inline text-align: right
+            document.querySelectorAll('[data-i18n="form.cnss_question"], [data-i18n="form.reject_question"]').forEach(el => {
+                el.style.textAlign = isLTR ? 'left' : 'right';
+            });
+            
+            // Fix the bank details / paid notice box with inline text-align: right
+            const paidNoticeBoxes = document.querySelectorAll('[style*="text-align: right"]');
+            paidNoticeBoxes.forEach(el => {
+                // Only fix elements that are NOT the section-header (already handled)
+                // and NOT centered elements
+                if (el.style.textAlign === 'right' || (!isLTR && el.dataset.origAlign === 'right')) {
+                    if (isLTR) {
+                        el.dataset.origAlign = 'right';
+                        el.style.textAlign = 'left';
+                    }
+                }
+            });
+            
+            // Revert to RTL: restore original text-align
+            if (!isLTR) {
+                document.querySelectorAll('[data-orig-align]').forEach(el => {
+                    el.style.textAlign = el.dataset.origAlign;
+                    delete el.dataset.origAlign;
+                });
+            }
+            
+            // Fix inline margin-left on icons (should be margin-right in LTR)
+            const contactIcons = document.querySelectorAll('.contact-info-desc [data-lucide], .contact-info-desc svg, .contact-info-desc i');
+            contactIcons.forEach(icon => {
+                if (isLTR) {
+                    icon.style.marginLeft = '0';
+                    icon.style.marginRight = '8px';
+                } else {
+                    icon.style.marginLeft = '8px';
+                    icon.style.marginRight = '0';
+                }
+            });
+            
+            // Update toggle button text label
+            const toggleLabel = document.querySelector('#lang-toggle .lang-label');
+            if (toggleLabel) {
+                if (lang === 'ar') toggleLabel.textContent = 'ع';
+                else if (lang === 'en') toggleLabel.textContent = 'EN';
+                else if (lang === 'fr') toggleLabel.textContent = 'FR';
+            }
+            
+            // Update active option in the dropdown
+            document.querySelectorAll('.lang-option').forEach(opt => {
+                if (opt.getAttribute('data-lang') == lang) {
+                    opt.classList.add('active');
+                } else {
+                    opt.classList.remove('active');
+                }
+            });
+            
+            // Translate elements containing data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    el.innerHTML = t[key];
+                }
+            });
+            
+            // Translate placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (t[key] !== undefined) {
+                    el.setAttribute('placeholder', t[key]);
+                }
+            });
+
+            // Translate alt tags
+            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+                const key = el.getAttribute('data-i18n-alt');
+                if (t[key] !== undefined) {
+                    el.setAttribute('alt', t[key]);
+                }
+            });
+            
+            // Re-render Lucide icons inside newly translated content
+            lucide.createIcons();
+            
+            // Store preference
+            localStorage.setItem('goforvisa_lang', lang);
+        }
+
         lucide.createIcons();
 
         /* ==========================================================================
@@ -116,7 +240,9 @@
         const dots = Array.from(dotsNav.children);
 
         const updateSlider = (index) => {
-            track.style.transform = `translateX(${index * 100}%)`;
+            const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+            const multiplier = isRtl ? 1 : -1;
+            track.style.transform = `translateX(${index * 100 * multiplier}%)`;
             dots.forEach(d => d.classList.remove('active'));
             dots[index].classList.add('active');
             currentSlideIndex = index;
@@ -408,6 +534,39 @@
             const successTitle = document.getElementById('success-title');
             const successDesc = document.getElementById('success-desc');
 
+            // Initialize language switcher
+            setLanguage(getCurrentLang());
+
+            // Language selector dropdown logic
+            const langToggle = document.getElementById('lang-toggle');
+            const langDropdown = document.getElementById('lang-dropdown');
+            
+            if (langToggle && langDropdown) {
+                langToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle('active');
+                    const expanded = langDropdown.classList.contains('active');
+                    langToggle.setAttribute('aria-expanded', expanded);
+                });
+                
+                document.addEventListener('click', (e) => {
+                    if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                        langDropdown.classList.remove('active');
+                        langToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                
+                document.querySelectorAll('.lang-option').forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const selectedLang = option.getAttribute('data-lang');
+                        setLanguage(selectedLang);
+                        langDropdown.classList.remove('active');
+                        langToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
             if (freeForm) {
                 freeForm.addEventListener('submit', (e) => {
                     e.preventDefault();
@@ -415,7 +574,9 @@
                     const originalText = submitBtn.innerHTML;
 
                     submitBtn.disabled = true;
-                    submitBtn.innerHTML = 'جاري تسجيل ملفك... <i data-lucide="loader-2" class="animate-spin"></i>';
+                    const lang = getCurrentLang();
+                    const loadingText = translations[lang]["form.submit_free_loading"] || 'جاري تسجيل ملفك...';
+                    submitBtn.innerHTML = `${loadingText} <i data-lucide="loader-2" class="animate-spin"></i>`;
                     lucide.createIcons();
 
                     // Read inputs
@@ -423,6 +584,8 @@
                     const phone = document.getElementById('free-phone').value;
                     const destSelect = document.getElementById('free-destination');
                     const destinationText = destSelect.options[destSelect.selectedIndex].text;
+                    const destValue = destSelect.value;
+                    const destinationArabic = (window.translations && window.translations['ar'] && window.translations['ar']['form.dest.' + destValue]) || destinationText;
                     const city = document.getElementById('free-city').value;
                     
                     const jobSelect = document.getElementById('free-job');
@@ -441,7 +604,7 @@
                         form_type: "فتح ملف تقديم",
                         name: name,
                         phone: phone,
-                        destination: destinationText,
+                        destination: destinationArabic,
                         city: city,
                         job: jobText,
                         cnss_coverage: cnssVal,
@@ -465,8 +628,9 @@
                         freeForm.style.display = 'none';
 
                         if (successMsg) {
-                            successTitle.textContent = 'تم تسجيل طلب فتح ملفك بنجاح!';
-                            successDesc.innerHTML = 'لقد تم إرسال معلوماتك بنجاح. سيقوم أحد مستشارينا بالتواصل معك عبر الهاتف أو الواتساب <strong>خلال 15 دقيقة</strong> لمراجعة تفاصيل أوراقك والبدء في الإجراءات اللوجستية بالتعاون مع CTM Messagerie.';
+                            const activeL = getCurrentLang();
+                            successTitle.textContent = translations[activeL]["contact.success.title_free"] || 'تم تسجيل طلب فتح ملفك بنجاح!';
+                            successDesc.innerHTML = translations[activeL]["contact.success.desc_free"] || 'لقد تم إرسال معلوماتك بنجاح. سيقوم أحد مستشارينا بالتواصل معك عبر الهاتف أو الواتساب <strong>خلال 15 دقيقة</strong> لمراجعة تفاصيل أوراقك والبدء في الإجراءات اللوجستية بالتعاون مع CTM Messagerie.';
                             successMsg.style.display = 'block';
                             successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
@@ -482,13 +646,17 @@
                     const originalText = submitBtn.innerHTML;
 
                     submitBtn.disabled = true;
-                    submitBtn.innerHTML = 'جاري إرسال طلبك... <i data-lucide="loader-2" class="animate-spin"></i>';
+                    const lang = getCurrentLang();
+                    const loadingText = translations[lang]["form.submit_paid_loading"] || 'جاري إرسال طلبك...';
+                    submitBtn.innerHTML = `${loadingText} <i data-lucide="loader-2" class="animate-spin"></i>`;
                     lucide.createIcons();
 
                     const name = document.getElementById('paid-name').value;
                     const phone = document.getElementById('paid-phone').value;
                     const destSelect = document.getElementById('paid-destination');
                     const destinationText = destSelect.options[destSelect.selectedIndex].text;
+                    const destValue = destSelect.value;
+                    const destinationArabic = (window.translations && window.translations['ar'] && window.translations['ar']['form.dest.' + destValue]) || destinationText;
                     const durationRadio = document.querySelector('input[name="paid-duration"]:checked');
                     const durationVal = durationRadio ? durationRadio.value : '20 دقيقة';
 
@@ -503,7 +671,14 @@
 
                     const reqId = Math.floor(Math.random() * 90) + 10;
 
-                    const whatsappMessage = `طلب الحصول على رقم حساب التجاري وفا بنك من أجل الدفع\nالطلب: إستشارة حول تأشيرة ${destinationText}\nرقم الطلب: ${reqId}\nالمبلغ: ${amount}\nرقم صاحب الطلب: ${phone}`;
+                    let whatsappMessage = '';
+                    if (lang === 'en') {
+                        whatsappMessage = `Requesting Attijariwafa Bank account number for payment\nRequest: Visa Consultation for ${destinationText}\nOrder No: ${reqId}\nAmount: ${amount}\nClient Phone: ${phone}`;
+                    } else if (lang === 'fr') {
+                        whatsappMessage = `Demande du numéro de compte Attijariwafa Bank pour le paiement\nDemande : Consultation de visa pour ${destinationText}\nNuméro de commande : ${reqId}\nMontant : ${amount}\nTéléphone client : ${phone}`;
+                    } else {
+                        whatsappMessage = `طلب الحصول على رقم حساب التجاري وفا بنك من أجل الدفع\nالطلب: إستشارة حول تأشيرة ${destinationText}\nرقم الطلب: ${reqId}\nالمبلغ: ${amount}\nرقم صاحب الطلب: ${phone}`;
+                    }
                     
                     const whatsappUrl = `https://wa.me/212660773153?text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -511,7 +686,7 @@
                         form_type: "استشارة خاصة مدفوعة",
                         name: name,
                         phone: phone,
-                        destination: destinationText,
+                        destination: destinationArabic,
                         duration: durationVal,
                         amount: amount,
                         request_id: reqId,
@@ -537,8 +712,8 @@
                         window.open(whatsappUrl, '_blank');
 
                         if (successMsg) {
-                            successTitle.textContent = 'تم استلام طلب الاستشارة المدفوعة بنجاح!';
-                            successDesc.innerHTML = 'لقد تم تسجيل طلب الاستشارة بنجاح. سيتم التواصل معك عبر الواتساب لتأكيد الحجز وتنسيق الاستشارة والإجابة عن استفساراتك <strong>خلال مدة أقصاها 24 ساعة</strong>.';
+                            successTitle.textContent = translations[lang]["contact.success.title_paid"] || 'تم استلام طلب الاستشارة المدفوعة بنجاح!';
+                            successDesc.innerHTML = translations[lang]["contact.success.desc_paid"] || 'لقد تم تسجيل طلب الاستشارة بنجاح. سيتم التواصل معك عبر الواتساب لتأكيد الحجز وتنسيق الاستشارة والإجابة عن استفساراتك <strong>خلال مدة أقصاها 24 ساعة</strong>.';
                             successMsg.style.display = 'block';
                             successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
@@ -743,7 +918,9 @@
             const visaDots = Array.from(visaDotsNav.children);
 
             function updateVisaSlider() {
-                visaTrack.style.transform = `translateX(${visaCurrentIndex * 100}%)`;
+                const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+                const multiplier = isRtl ? 1 : -1;
+                visaTrack.style.transform = `translateX(${visaCurrentIndex * 100 * multiplier}%)`;
                 visaDots.forEach((dot, index) => {
                     if (index === visaCurrentIndex) {
                         dot.classList.add('active');

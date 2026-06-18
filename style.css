@@ -69,7 +69,7 @@
             background-color: var(--surface-light);
             color: var(--text-main);
             line-height: 1.6;
-            direction: rtl;
+            direction: inherit;
         }
 
         a {
@@ -461,6 +461,154 @@
             display: flex;
             align-items: center;
             gap: 15px;
+        }
+
+        /* Language Selector UI */
+        .lang-selector {
+            position: relative;
+            z-index: 1000;
+        }
+
+        .lang-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            cursor: pointer;
+            font-family: var(--font-latin);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            transition: var(--transition-fast);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .lang-toggle-btn:hover {
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-1px);
+        }
+
+        .lang-globe-icon {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-blue);
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 160px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 8px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Adjust position in LTR vs RTL */
+        [dir="rtl"] .lang-dropdown {
+            left: 0;
+            right: auto;
+        }
+
+        [dir="ltr"] .lang-dropdown {
+            right: 0;
+            left: auto;
+        }
+
+        .lang-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            color: var(--text-main);
+            font-family: var(--font-latin);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+            cursor: pointer;
+            text-align: right;
+            justify-content: flex-start;
+        }
+
+        [dir="rtl"] .lang-option {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        [dir="ltr"] .lang-option {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        .lang-option[data-lang="ar"] {
+            font-family: var(--font-arabic);
+            font-weight: 600;
+        }
+
+        .lang-option:hover {
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--accent-blue);
+        }
+
+        .lang-check-container {
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lang-check-circle {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            color: #ffffff;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lang-check-circle svg {
+            width: 10px;
+            height: 10px;
+            stroke-width: 3px;
+        }
+
+        .lang-option.active .lang-check-circle {
+            display: flex;
+        }
+
+        /* Latin Font Override for EN/FR languages */
+        body.lang-en, body.lang-fr {
+            font-family: var(--font-latin);
+        }
+
+        body.lang-en select, body.lang-fr select,
+        body.lang-en input, body.lang-fr input,
+        body.lang-en textarea, body.lang-fr textarea,
+        body.lang-en button, body.lang-fr button {
+            font-family: var(--font-latin);
         }
 
         /* Buttons styles */
@@ -4189,5 +4337,274 @@
             }
             .visa-result-content {
                 padding: 20px !important;
+            }
+        }
+
+        /* Directional Arrow Flips for Left-to-Right (LTR) layouts */
+        [dir="ltr"] .arrow-icon,
+        [dir="ltr"] [data-lucide="arrow-left"],
+        [dir="ltr"] [data-lucide="chevron-left"] {
+            transform: scaleX(-1);
+        }
+
+        /* ==========================================================================
+           COMPREHENSIVE LTR LAYOUT OVERRIDES (English / French)
+           ========================================================================== */
+
+        /* --- Form Labels & Inputs --- */
+        [dir="ltr"] .form-label {
+            right: auto;
+            left: 20px;
+        }
+        [dir="ltr"] .form-input:focus ~ .form-label,
+        [dir="ltr"] .form-input:not(:placeholder-shown) ~ .form-label {
+            right: auto;
+            left: 15px;
+        }
+        [dir="ltr"] .form-textarea + .form-label {
+            right: auto;
+            left: 20px;
+        }
+        [dir="ltr"] .form-select-wrapper::after {
+            left: auto;
+            right: 20px;
+        }
+
+        /* --- Visa Results Content --- */
+        [dir="ltr"] .visa-result-content {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+        [dir="ltr"] .visa-result-content h3.client-name {
+            text-align: left !important;
+        }
+        [dir="ltr"] .visa-result-content p.testimonial-text-desc {
+            text-align: left !important;
+        }
+        [dir="ltr"] .visa-result-content .rating-stars {
+            justify-content: flex-start;
+        }
+
+        /* --- Navigation Link Underline --- */
+        [dir="ltr"] .nav-link::after {
+            right: auto;
+            left: 0;
+        }
+
+        /* --- Country Card Badges --- */
+        [dir="ltr"] .country-flag-badge {
+            right: auto;
+            left: 20px;
+        }
+        [dir="ltr"] .country-name-badge {
+            right: auto;
+            left: 20px;
+        }
+
+        /* --- Country CTA Button Icon Hover --- */
+        [dir="ltr"] .btn-country-cta:hover i {
+            transform: translateX(3px);
+        }
+
+        /* --- Timeline (Process Section) --- */
+        [dir="ltr"] .timeline-line {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        [dir="ltr"] .step-indicator {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        [dir="ltr"] .timeline-step:nth-child(even) .step-card {
+            text-align: left;
+        }
+
+        /* --- Timeline Mobile (LTR) --- */
+        @media (max-width: 768px) {
+            [dir="ltr"] .timeline-line {
+                right: auto;
+                left: 30px;
+                transform: none;
+            }
+            [dir="ltr"] .step-indicator {
+                right: auto;
+                left: 8px;
+                transform: none;
+            }
+            [dir="ltr"] .timeline-step {
+                justify-content: flex-start !important;
+                padding-right: 0;
+                padding-left: 50px;
+            }
+            [dir="ltr"] .step-card {
+                text-align: left !important;
+            }
+        }
+
+        /* --- Testimonials --- */
+        [dir="ltr"] .client-details {
+            text-align: left;
+        }
+        [dir="ltr"] .quote-icon {
+            right: auto;
+            left: 40px;
+        }
+
+        /* --- Testimonials Slider Nav Buttons --- */
+        [dir="ltr"] .slider-nav-btn.prev {
+            right: auto;
+            left: -80px;
+        }
+        [dir="ltr"] .slider-nav-btn.next {
+            left: auto;
+            right: -80px;
+        }
+
+        /* --- Footer --- */
+        [dir="ltr"] .footer-logo {
+            justify-content: flex-start;
+        }
+        [dir="ltr"] .footer-col h4::after {
+            right: auto;
+            left: 0;
+        }
+        [dir="ltr"] .footer-link:hover {
+            transform: translateX(5px);
+        }
+
+        /* --- Express Sub-Section Text --- */
+        [dir="ltr"] .express-sub-section {
+            text-align: left;
+        }
+
+        /* --- CTM Section --- */
+        [dir="ltr"] .ctm-include-num {
+            right: auto;
+            left: 15px;
+        }
+
+        /* --- CTM Stepper Mobile --- */
+        @media (max-width: 992px) {
+            [dir="ltr"] .ctm-step-node {
+                text-align: left;
+            }
+            [dir="ltr"] .ctm-stepper-line {
+                right: auto;
+                left: 45px;
+            }
+        }
+
+        /* --- CTM Benefits Separator --- */
+        [dir="ltr"] .ctm-benefits-stripe > .ctm-benefit-item:not(:last-child)::after {
+            left: auto;
+            right: -10px;
+        }
+
+        /* --- Premium Legal Row Hover --- */
+        [dir="ltr"] .premium-legal-row:hover {
+            transform: translateX(4px);
+        }
+
+        /* --- Modal Close Button --- */
+        [dir="ltr"] .modal-close-btn {
+            left: auto;
+            right: 25px;
+        }
+
+        /* --- Service Arrow Hover (LTR) --- */
+        [dir="ltr"] .service-card:hover .service-arrow i {
+            transform: translateX(5px);
+        }
+
+        /* --- Marquee Animation Override for LTR --- */
+        [dir="ltr"] .marquee-track {
+            animation: marquee-ltr 25s linear infinite;
+        }
+        @keyframes marquee-ltr {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* --- FAQ Search Icon Position --- */
+        [dir="ltr"] .faq-search-box i {
+            left: auto;
+            right: 24px;
+        }
+        [dir="ltr"] .faq-search-input {
+            padding: 16px 56px 16px 28px;
+        }
+
+        /* --- Lightbox Close Button --- */
+        [dir="ltr"] .lightbox-close-btn {
+            right: auto;
+            left: 30px;
+        }
+        @media (max-width: 768px) {
+            [dir="ltr"] .lightbox-close-btn {
+                right: auto;
+                left: 20px;
+            }
+        }
+
+        /* --- Overrides for Contact Section --- */
+        #contact .section-header {
+            text-align: center !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+
+        [dir="ltr"] .contact-info-desc i,
+        [dir="ltr"] .contact-info-desc svg {
+            margin-left: 0 !important;
+            margin-right: 8px !important;
+        }
+
+        [dir="rtl"] .contact-info-desc i,
+        [dir="rtl"] .contact-info-desc svg {
+            margin-left: 8px !important;
+            margin-right: 0 !important;
+        }
+
+        /* --- Form Field Note & Input Wrapper --- */
+        .form-input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .form-field-note {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--accent-blue) !important;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* --- Contact Highlight Card (Dashed Border) --- */
+        .contact-info-box {
+            border: 2px dashed rgba(14, 165, 233, 0.35) !important;
+            background: rgba(14, 165, 233, 0.02) !important;
+            border-radius: 20px !important;
+            padding: 24px 30px !important;
+            margin-top: 24px !important;
+            transition: var(--transition-smooth) !important;
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.03) !important;
+        }
+
+        .contact-info-box:hover {
+            border-color: var(--accent-sky) !important;
+            background: rgba(14, 165, 233, 0.04) !important;
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.06) !important;
+        }
+
+        @media (max-width: 576px) {
+            .contact-info-box {
+                padding: 20px 16px !important;
             }
         }
